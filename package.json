@@ -1,0 +1,19 @@
+{
+  "name": "WUI",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm -C play dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@w-ui/components": "workspace:^",
+    "@w-ui/theme-chalk": "workspace:^",
+    "@w-ui/utils": "workspace:^",
+    "typescript": "^5.0.4",
+    "vue": "^3.2.47"
+  }
+}
