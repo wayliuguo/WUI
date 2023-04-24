@@ -1,27 +1,27 @@
 :root {
-  --van-loading-text-color: var(--van-text-color-2);
-  --van-loading-text-font-size: var(--van-font-size-md);
-  --van-loading-spinner-color: var(--van-gray-5);
-  --van-loading-spinner-size: 30px;
-  --van-loading-spinner-duration: 0.8s;
+  --w-loading-text-color: var(--w-text-color-2);
+  --w-loading-text-font-size: var(--w-font-size-md);
+  --w-loading-spinner-color: var(--w-gray-5);
+  --w-loading-spinner-size: 30px;
+  --w-loading-spinner-duration: 0.8s;
 }
 
-.van-loading {
+.w-loading {
   position: relative;
-  color: var(--van-loading-spinner-color);
+  color: var(--w-loading-spinner-color);
   font-size: 0;
   vertical-align: middle;
 
   &__spinner {
     position: relative;
     display: inline-block;
-    width: var(--van-loading-spinner-size);
+    width: var(--w-loading-spinner-size);
     // compatible for 1.x, users may set width or height in root element
     max-width: 100%;
-    height: var(--van-loading-spinner-size);
+    height: var(--w-loading-spinner-size);
     max-height: 100%;
     vertical-align: middle;
-    animation: van-rotate var(--van-loading-spinner-duration) linear infinite;
+    animation: w-rotate var(--w-loading-spinner-duration) linear infinite;
 
     &--spinner {
       animation-timing-function: steps(12);
@@ -56,7 +56,7 @@
     height: 100%;
 
     circle {
-      animation: van-circular 1.5s ease-in-out infinite;
+      animation: w-circular 1.5s ease-in-out infinite;
       stroke: currentColor;
       stroke-width: 3;
       stroke-linecap: round;
@@ -65,24 +65,23 @@
 
   &__text {
     display: inline-block;
-    margin-left: var(--van-padding-xs);
-    color: var(--van-loading-text-color);
-    font-size: var(--van-loading-text-font-size);
+    margin-left: var(--w-padding-xs);
+    color: var(--w-loading-text-color);
+    font-size: var(--w-loading-text-font-size);
     vertical-align: middle;
   }
+}
+.is-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  &--vertical {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .van-loading__text {
-      margin: var(--van-padding-xs) 0 0;
-    }
+  .w-loading__text {
+    margin: var(--w-padding-xs) 0 0;
   }
 }
 
-@keyframes van-circular {
+@keyframes w-circular {
   0% {
     stroke-dasharray: 1, 200;
     stroke-dashoffset: 0;
@@ -100,7 +99,7 @@
 }
 
 .generate-spinner(@n, @i: 1) when (@i =< @n) {
-  .van-loading__line--@{i} {
+  .w-loading__line--@{i} {
     transform: rotate(@i * 30deg);
     opacity: 1 - (0.75 / 12) * (@i - 1);
   }

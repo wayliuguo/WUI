@@ -1,10 +1,9 @@
 <script setup lang="ts">
+import PlayLoading from './components/PlayLoading.vue'
 </script>
 
 <template>
-  <div>
-    <w-loading color="#0094ff" />
-  </div>
+  <PlayLoading></PlayLoading>
 </template>
 
 <style scoped>

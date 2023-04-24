@@ -13,7 +13,7 @@ const name = 'w-loading'
 
 const SpinIcon: JSX.Element[] = Array(12)
   .fill(null)
-  .map((_, index) => <i class={bem.m(`line${index + 1})`)} />)
+  .map((_, index) => <i class={[bem.e('line'), bem.em('line', index + 1)]} />)
 
 const CircularIcon = (
   <svg class={bem.e('circular')} viewBox="25 25 50 50">
@@ -47,7 +47,10 @@ export default defineComponent({
     const renderIcon = () => {
       const DefaultIcon = props.type === 'spinner' ? SpinIcon : CircularIcon
       return (
-        <span class={bem.em('spinner', props.type)} style={spinnerStyle.value}>
+        <span
+          class={[bem.e('spinner'), bem.em('spinner', props.type)]}
+          style={spinnerStyle.value}
+        >
           {slots.icon ? slots.icon() : DefaultIcon}
         </span>
       )
@@ -73,7 +76,7 @@ export default defineComponent({
       const { type, vertical } = props
       return (
         <div
-          class={(bem.is(type, type), bem.is('vertical', vertical))}
+          class={[bem.b(), bem.m(type), bem.is('vertical', vertical)]}
           aria-live="polite"
           aria-busy={true}
         >

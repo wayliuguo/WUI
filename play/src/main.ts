@@ -2,9 +2,8 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 
-// import '@w-ui/theme-chalk/index.less'
+import '@w-ui/theme-chalk/index.less'
 import Loading from '@w-ui/components/Loading'
-
 const plugins = [Loading]
 
 const app = createApp(App)
