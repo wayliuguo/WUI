@@ -5,7 +5,8 @@ import App from './App.vue'
 import '@w-ui/theme-chalk/index.less'
 import Loading from '@w-ui/components/Loading'
 import Icon from '@w-ui/components/Icon'
-const plugins = [Loading, Icon]
+import Badge from '@w-ui/components/Badge'
+const plugins = [Loading, Icon, Badge]
 
 const app = createApp(App)
 

@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import PlayLoading from './components/PlayLoading.vue'
 import PlayIcon from './components/PlayIcon.vue'
+import PlayBadge from './components/PlayBadge.vue';
 </script>
 
 <template>
   <PlayLoading v-if="false"></PlayLoading>
   <PlayIcon></PlayIcon>
+  <PlayBadge></PlayBadge>
 </template>
 
 <style scoped>
