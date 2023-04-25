@@ -4,7 +4,8 @@ import App from './App.vue'
 
 import '@w-ui/theme-chalk/index.less'
 import Loading from '@w-ui/components/Loading'
-const plugins = [Loading]
+import Icon from '@w-ui/components/Icon'
+const plugins = [Loading, Icon]
 
 const app = createApp(App)
 

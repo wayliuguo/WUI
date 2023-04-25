@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import PlayLoading from './components/PlayLoading.vue'
+import PlayIcon from './components/PlayIcon.vue'
 </script>
 
 <template>
-  <PlayLoading></PlayLoading>
+  <PlayLoading v-if="false"></PlayLoading>
+  <PlayIcon></PlayIcon>
 </template>
 
 <style scoped>
