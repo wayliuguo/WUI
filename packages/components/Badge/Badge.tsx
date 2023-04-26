@@ -113,6 +113,7 @@ export default defineComponent({
         return (
           <div
             class={[
+              bem.b(),
               bem.m(props.position),
               props.dot && bem.m('dot'),
               !!slots.default && bem.m('fixed')
