@@ -6,8 +6,8 @@ import PlayBadge from './components/PlayBadge.vue';
 
 <template>
   <PlayLoading v-if="false"></PlayLoading>
+  <PlayBadge v-if="false"></PlayBadge>
   <PlayIcon></PlayIcon>
-  <PlayBadge></PlayBadge>
 </template>
 
 <style scoped>
