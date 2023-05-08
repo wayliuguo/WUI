@@ -2,12 +2,14 @@
 import PlayLoading from './components/PlayLoading.vue'
 import PlayIcon from './components/PlayIcon.vue'
 import PlayBadge from './components/PlayBadge.vue';
+import PlayButton from './components/PlayButton.vue';
 </script>
 
 <template>
   <PlayLoading v-if="false"></PlayLoading>
   <PlayBadge v-if="false"></PlayBadge>
-  <PlayIcon></PlayIcon>
+  <PlayIcon v-if="false"></PlayIcon>
+  <PlayButton></PlayButton>
 </template>
 
 <style scoped>

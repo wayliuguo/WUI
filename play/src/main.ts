@@ -6,7 +6,8 @@ import '@w-ui/theme-chalk/index.less'
 import Loading from '@w-ui/components/Loading'
 import Icon from '@w-ui/components/Icon'
 import Badge from '@w-ui/components/Badge'
-const plugins = [Loading, Icon, Badge]
+import Button from '@w-ui/components/Button'
+const plugins = [Loading, Icon, Badge, Button]
 
 const app = createApp(App)
 
