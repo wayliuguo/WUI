@@ -4,7 +4,7 @@ layout: home
 hero:
   name: w-ui 组件库
   text: 基于 Vue 3 的组件库.
-  tagline: 掌握 vue3 组件编写
+  tagline: 掌握 vue3 组件编写,二次实现vant组件库
   actions:
     - theme: brand
       text: 快速开始
