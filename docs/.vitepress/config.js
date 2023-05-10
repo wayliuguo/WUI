@@ -28,7 +28,11 @@ module.exports = {
       '/component/': [
         {
           text: '基础组件',
-          items: [{ text: 'Loading', link: '/component/loading' }]
+          items: [{ text: 'Button 按钮', link: '/component/button' }]
+        },
+        {
+          text: '反馈组件',
+          items: [{ text: 'Loading 加载', link: '/component/loading' }]
         }
       ]
     }
