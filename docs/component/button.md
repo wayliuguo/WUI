@@ -5,11 +5,11 @@
 
 ## 按钮类型
 按钮支持 `default、primary、success、warning、danger` 五种类型，默认为 default。
-<w-button type="primary">主要按钮</w-button>
-<w-button type="success">成功按钮</w-button>
-<w-button type="default">默认按钮</w-button>
-<w-button type="warning">警告按钮</w-button>
-<w-button type="danger">危险按钮</w-button>
+<w-button :class="$style.button" type="primary">主要按钮</w-button>
+<w-button :class="$style.button" type="success">成功按钮</w-button>
+<w-button :class="$style.button" type="default">默认按钮</w-button>
+<w-button :class="$style.button" type="warning">警告按钮</w-button>
+<w-button :class="$style.button" type="danger">危险按钮</w-button>
 
 
 ```vue
@@ -21,8 +21,8 @@
 ```
 ## 朴素按钮
 通过 `plain` 属性将按钮设置为朴素按钮，朴素按钮的文字为按钮颜色，背景为白色。
-<w-button plain type="primary">朴素按钮</w-button>
-<w-button plain type="success">朴素按钮</w-button>
+<w-button :class="$style.button" plain type="primary">朴素按钮</w-button>
+<w-button :class="$style.button" plain type="success">朴素按钮</w-button>
 
 ```vue
 <w-button plain type="primary">朴素按钮</w-button>
@@ -30,8 +30,8 @@
 ```
 ## 细边框
 设置 `hairline` 属性可以展示 0.5px 的细边框。
-<w-button plain hairline type="primary">细边框按钮</w-button>
-<w-button plain hairline type="success">细边框按钮</w-button>
+<w-button :class="$style.button" plain hairline type="primary">细边框按钮</w-button>
+<w-button :class="$style.button" plain hairline type="success">细边框按钮</w-button>
 
 ```vue
 <w-button plain hairline type="primary">细边框按钮</w-button>
@@ -39,17 +39,17 @@
 ```
 ## 禁用状态
 通过 `disabled` 属性来禁用按钮，禁用状态下按钮不可点击。
-<w-button disabled type="primary">禁用状态</w-button>
-<w-button disabled type="success">禁用状态</w-button>
+<w-button :class="$style.button" disabled type="primary">禁用状态</w-button>
+<w-button :class="$style.button" disabled type="success">禁用状态</w-button>
 ```vue
 <w-button disabled type="primary">禁用状态</w-button>
 <w-button disabled type="success">禁用状态</w-button>
 ```
 ## 加载状态
 通过 `loading` 属性设置按钮为加载状态，加载状态下默认会隐藏按钮文字，可以通过 loading-text 设置加载状态下的文字。
-<w-button loading type="primary" />
-<w-button loading type="primary" loading-type="spinner" />
-<w-button loading type="success" loading-text="加载中..." />
+<w-button :class="$style.button" loading type="primary" />
+<w-button :class="$style.button" loading type="primary" loading-type="spinner" />
+<w-button :class="$style.button" loading type="success" loading-text="加载中..." />
 
 ```vue
 <w-button loading type="primary" />
@@ -59,8 +59,8 @@
 
 ## 按钮形状
 通过 `square` 设置方形按钮，通过 round 设置圆形按钮。
-<w-button square type="primary">方形按钮</w-button>
-<w-button round type="success">圆形按钮</w-button>
+<w-button :class="$style.button" square type="primary">方形按钮</w-button>
+<w-button :class="$style.button" round type="success">圆形按钮</w-button>
 
 ```vue
 <w-button square type="primary">方形按钮</w-button>
@@ -69,9 +69,9 @@
 
 ## 图标按钮
 通过 `icon` 属性设置按钮图标，支持 Icon 组件里的所有图标，也可以传入图标 URL。
-<w-button icon="plus" type="primary" />
-<w-button icon="plus" type="primary">按钮</w-button>
-<w-button
+<w-button :class="$style.button" icon="plus" type="primary" />
+<w-button :class="$style.button" icon="plus" type="primary">按钮</w-button>
+<w-button :class="$style.button"
   icon="https://fastly.jsdelivr.net/npm/@vant/assets/user-active.png"
   type="primary"
 >
@@ -91,10 +91,10 @@
 
 ## 按钮尺寸
 支持 `large`、`normal`、`small`、`mini` 四种尺寸，默认为 `normal`。
-<w-button type="primary" size="large">大号按钮</w-button>
-<w-button type="primary" size="normal">普通按钮</w-button>
-<w-button type="primary" size="small">小型按钮</w-button>
-<w-button type="primary" size="mini">迷你按钮</w-button>
+<w-button :class="$style.button" type="primary" size="large">大号按钮</w-button>
+<w-button :class="$style.button" type="primary" size="normal">普通按钮</w-button>
+<w-button :class="$style.button" type="primary" size="small">小型按钮</w-button>
+<w-button :class="$style.button" type="primary" size="mini">迷你按钮</w-button>
 
 ```vue
 <w-button type="primary" size="large">大号按钮</w-button>
@@ -110,9 +110,9 @@
 ```
 ## 自定义颜色
 通过 `color` 属性可以自定义按钮的颜色。
-<w-button color="#7232dd">单色按钮</w-button>
-<w-button color="#7232dd" plain>单色按钮</w-button>
-<w-button color="linear-gradient(to right, #ff6034, #ee0a24)">
+<w-button :class="$style.button" color="#7232dd">单色按钮</w-button>
+<w-button :class="$style.button" color="#7232dd" plain>单色按钮</w-button>
+<w-button :class="$style.button" color="linear-gradient(to right, #ff6034, #ee0a24)">
   渐变色按钮
 </w-button>
 
@@ -125,30 +125,27 @@
 ```
 # API
 ## Props
-| 参数          | 说明                                                                                          | 类型               | 默认值     |
-| ------------- | --------------------------------------------------------------------------------------------- | ------------------ | ---------- |
-| type          | 类型，可选值为 `primary` `success` `warning` `danger`                                         | _string_           | `default`  |
-| size          | 尺寸，可选值为 `large` `small` `mini`                                                         | _string_           | `normal`   |
-| text          | 按钮文字                                                                                      | _string_           | -          |
-| color         | 按钮颜色，支持传入 `linear-gradient` 渐变色                                                   | _string_           | -          |
-| icon          | 左侧图标名称或图片链接，等同于 Icon 组件的 [name 属性](#/zh-CN/icon#props)                    | _string_           | -          |
-| icon-prefix   | 图标类名前缀，等同于 Icon 组件的 [class-prefix 属性](#/zh-CN/icon#props)                      | _string_           | `van-icon` |
-| icon-position | 图标展示位置，可选值为 `right`                                                                | _string_           | `left`     |
-| tag           | 按钮根节点的 HTML 标签                                                                        | _string_           | `button`   |
-| native-type   | 原生 button 标签的 type 属性                                                                  | _string_           | `button`   |
-| block         | 是否为块级元素                                                                                | _boolean_          | `false`    |
-| plain         | 是否为朴素按钮                                                                                | _boolean_          | `false`    |
-| square        | 是否为方形按钮                                                                                | _boolean_          | `false`    |
-| round         | 是否为圆形按钮                                                                                | _boolean_          | `false`    |
-| disabled      | 是否禁用按钮                                                                                  | _boolean_          | `false`    |
-| hairline      | 是否使用 0.5px 边框                                                                           | _boolean_          | `false`    |
-| loading       | 是否显示为加载状态                                                                            | _boolean_          | `false`    |
-| loading-text  | 加载状态提示文字                                                                              | _string_           | -          |
-| loading-type  | [加载图标类型](#/zh-CN/loading)，可选值为 `spinner`                                           | _string_           | `circular` |
-| loading-size  | 加载图标大小，默认单位为 `px`                                                                 | _number \| string_ | `20px`     |
-| url           | 点击后跳转的链接地址                                                                          | _string_           | -          |
-| to            | 点击后跳转的目标路由对象，等同于 vue-router 的 [to 属性](https://router.vuejs.org/zh/api/#to) | _string \| object_ | -          |
-| replace       | 是否在跳转时替换当前页面历史                                                                  | _boolean_          | `false`    |
+| 参数          | 说明                                                  | 类型               | 默认值     |
+| ------------- | ----------------------------------------------------- | ------------------ | ---------- |
+| type          | 类型，可选值为 `primary` `success` `warning` `danger` | _string_           | `default`  |
+| size          | 尺寸，可选值为 `large` `small` `mini`                 | _string_           | `normal`   |
+| text          | 按钮文字                                              | _string_           | -          |
+| color         | 按钮颜色，支持传入 `linear-gradient` 渐变色           | _string_           | -          |
+| icon          | 左侧图标名称或图片链接，等同于 Icon 组件的name 属性   | _string_           | -          |
+| icon-prefix   | 图标类名前缀，等同于 Icon 组件的 class-prefix 属性    | _string_           | `van-icon` |
+| icon-position | 图标展示位置，可选值为 `right`                        | _string_           | `left`     |
+| tag           | 按钮根节点的 HTML 标签                                | _string_           | `button`   |
+| native-type   | 原生 button 标签的 type 属性                          | _string_           | `button`   |
+| block         | 是否为块级元素                                        | _boolean_          | `false`    |
+| plain         | 是否为朴素按钮                                        | _boolean_          | `false`    |
+| square        | 是否为方形按钮                                        | _boolean_          | `false`    |
+| round         | 是否为圆形按钮                                        | _boolean_          | `false`    |
+| disabled      | 是否禁用按钮                                          | _boolean_          | `false`    |
+| hairline      | 是否使用 0.5px 边框                                   | _boolean_          | `false`    |
+| loading       | 是否显示为加载状态                                    | _boolean_          | `false`    |
+| loading-text  | 加载状态提示文字                                      | _string_           | -          |
+| loading-type  | [加载图标类型](loading.html)，可选值为 `spinner`      | _string_           | `circular` |
+| loading-size  | 加载图标大小，默认单位为 `px`                         | _number \| string_ | `20px`     |
 
 ### Events
 
@@ -220,3 +217,9 @@ import type {
 | --van-button-disabled-opacity     | _var(--van-disabled-opacity)_ | -    |
 | --van-button-icon-size            | _1.2em_                       | -    |
 | --van-button-loading-icon-size    | _20px_                        | -    |
+
+<style module>
+.button {
+  margin: 5px 10px;
+}
+</style>
