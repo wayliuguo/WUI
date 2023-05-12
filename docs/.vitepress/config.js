@@ -33,6 +33,15 @@ module.exports = {
         {
           text: '反馈组件',
           items: [{ text: 'Loading 加载', link: '/component/loading' }]
+        },
+        {
+          text: '展示组件',
+          items: [
+            {
+              text: 'Badge 徽标',
+              link: '/component/badge'
+            }
+          ]
         }
       ]
     }

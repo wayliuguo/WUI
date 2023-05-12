@@ -74,6 +74,7 @@
 <w-button :class="$style.button"
   icon="https://fastly.jsdelivr.net/npm/@vant/assets/user-active.png"
   type="primary"
+  plain
 >
   按钮
 </w-button>
@@ -84,6 +85,7 @@
 <w-button
   icon="https://fastly.jsdelivr.net/npm/@vant/assets/user-active.png"
   type="primary"
+  plain
 >
   按钮
 </w-button>
