@@ -28,11 +28,25 @@ module.exports = {
       '/component/': [
         {
           text: '基础组件',
-          items: [{ text: 'Button 按钮', link: '/component/button' }]
+          items: [
+            {
+              text: 'Button 按钮',
+              link: '/component/button'
+            },
+            {
+              text: 'Icon 图表',
+              link: '/component/icon'
+            }
+          ]
         },
         {
           text: '反馈组件',
-          items: [{ text: 'Loading 加载', link: '/component/loading' }]
+          items: [
+            {
+              text: 'Loading 加载',
+              link: '/component/loading'
+            }
+          ]
         },
         {
           text: '展示组件',
