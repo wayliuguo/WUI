@@ -1,6 +1,7 @@
 module.exports = {
   title: 'W-UI',
   description: 'W-UI',
+  base: '/docs',
   themeConfig: {
     lastUpdated: '最后更新时间',
     docsDir: 'docs',
