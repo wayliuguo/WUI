@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "pnpm -C play dev",
     "docs:dev": "pnpm -C docs dev",
-    "docs:build": "pnpm -C docs build"
+    "docs:build": "pnpm -C docs build",
+    "docs:serve": "pnpm -C docs serve"
   },
   "keywords": [],
   "author": "",
