@@ -11,3 +11,5 @@ export const truthProp = {
   type: Boolean,
   default: true as const
 }
+
+export const unknownProp = null as unknown as PropType<unknown>
