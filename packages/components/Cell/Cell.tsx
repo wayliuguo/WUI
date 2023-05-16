@@ -1,6 +1,7 @@
 import {
   createNamespace,
   extend,
+  isDef,
   makeStringProp,
   numericProp,
   truthProp,
@@ -48,6 +49,7 @@ export default defineComponent({
   props: cellProps,
   setup(props, { slots }) {
     return () => {
+
       const renderLeftIcon = () => {
         if (slots.icon) {
           return slots.icon()
@@ -56,12 +58,77 @@ export default defineComponent({
           return (
             <Icon
               name={props.icon}
-              class={bem.m('left-icon')}
+              class={bem.e('left-icon')}
               classPrefix={props.iconPrefix}
             />
           )
         }
       }
+
+      const renderLabel = () => {
+        const showLabel = slots.label || isDef(props.label);
+  
+        if (showLabel) {
+          return (
+            <div class={[bem.e('label'), props.labelClass]}>
+              {slots.label ? slots.label() : props.label}
+            </div>
+          );
+        }
+      };
+
+      const renderTitle = () => {
+        if (slots.title || isDef(props.title)) {
+          const titleSlot = slots.title?.();
+  
+          if (Array.isArray(titleSlot) && titleSlot.length === 0) {
+            return;
+          }
+  
+          return (
+            <div
+              class={
+                [
+                  bem.e('title'), 
+                  props.titleClass
+                ]
+              }
+              style={props.titleStyle}
+            >
+              {titleSlot || <span>{props.title}</span>}
+              {renderLabel()}
+            </div>
+          );
+        }
+      };
+
+      const renderValue = () => {
+        // slots.default is an alias of slots.value
+        const slot = slots.value || slots.default;
+        const hasValue = slot || isDef(props.value);
+  
+        if (hasValue) {
+          return (
+            <div class={[bem.e('value'), props.valueClass]}>
+              {slot ? slot() : <span>{props.value}</span>}
+            </div>
+          );
+        }
+      };
+
+      const renderRightIcon = () => {
+        if (slots['right-icon']) {
+          return slots['right-icon']();
+        }
+  
+        if (props.isLink) {
+          const name =
+            props.arrowDirection && props.arrowDirection !== 'right'
+              ? `arrow-${props.arrowDirection}`
+              : 'arrow';
+          return <Icon name={name} class={bem.e('right-icon')} />;
+        }
+      };
 
       const { tag, size, center, border, isLink, required } = props
       const clickable = props.clickable ?? isLink
@@ -81,6 +148,10 @@ export default defineComponent({
           tabindex={clickable ? 0 : undefined}
         >
           {renderLeftIcon()}
+          {renderTitle()}
+          {renderValue()}
+          {renderRightIcon()}
+          {slots.extra?.()}
         </tag>
       )
     }
