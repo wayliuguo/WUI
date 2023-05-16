@@ -7,7 +7,8 @@ import Loading from '@w-ui/components/Loading'
 import Icon from '@w-ui/components/Icon'
 import Badge from '@w-ui/components/Badge'
 import Button from '@w-ui/components/Button'
-const plugins = [Loading, Icon, Badge, Button]
+import Cell from '@w-ui/components/Cell'
+const plugins = [Loading, Icon, Badge, Button, Cell]
 
 const app = createApp(App)
 

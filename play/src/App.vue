@@ -3,13 +3,15 @@ import PlayLoading from './components/PlayLoading.vue'
 import PlayIcon from './components/PlayIcon.vue'
 import PlayBadge from './components/PlayBadge.vue';
 import PlayButton from './components/PlayButton.vue';
+import PlayCell from './components/PlayCell.vue';
 </script>
 
 <template>
   <PlayLoading v-if="false"></PlayLoading>
   <PlayBadge v-if="false"></PlayBadge>
   <PlayIcon v-if="false"></PlayIcon>
-  <PlayButton></PlayButton>
+  <PlayButton v-if="false"></PlayButton>
+  <PlayCell></PlayCell>
 </template>
 
 <style scoped>
