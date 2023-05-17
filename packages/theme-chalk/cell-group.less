@@ -1,0 +1,32 @@
+:root {
+  --w-cell-group-background: var(--w-background-2);
+  --w-cell-group-title-color: var(--w-text-color-2);
+  --w-cell-group-title-padding: var(--w-padding-md) var(--w-padding-md);
+  --w-cell-group-title-font-size: var(--w-font-size-md);
+  --w-cell-group-title-line-height: 16px;
+  --w-cell-group-inset-padding: 0 var(--w-padding-md);
+  --w-cell-group-inset-radius: var(--w-radius-lg);
+  --w-cell-group-inset-title-padding: var(--w-padding-md)
+    var(--w-padding-md);
+}
+
+.w-cell-group {
+  background: var(--w-cell-group-background);
+
+  &--inset {
+    margin: var(--w-cell-group-inset-padding);
+    border-radius: var(--w-cell-group-inset-radius);
+    overflow: hidden;
+  }
+
+  &__title {
+    padding: var(--w-cell-group-title-padding);
+    color: var(--w-cell-group-title-color);
+    font-size: var(--w-cell-group-title-font-size);
+    line-height: var(--w-cell-group-title-line-height);
+
+    &--inset {
+      padding: var(--w-cell-group-inset-title-padding);
+    }
+  }
+}

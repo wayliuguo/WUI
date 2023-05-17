@@ -8,7 +8,8 @@ import Icon from '@w-ui/components/Icon'
 import Badge from '@w-ui/components/Badge'
 import Button from '@w-ui/components/Button'
 import Cell from '@w-ui/components/Cell'
-const plugins = [Loading, Icon, Badge, Button, Cell]
+import CellGroup from '@w-ui/components/Cell-Group'
+const plugins = [Loading, Icon, Badge, Button, Cell, CellGroup]
 
 const app = createApp(App)
 
