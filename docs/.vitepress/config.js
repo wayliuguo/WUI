@@ -35,7 +35,11 @@ module.exports = {
               link: '/component/button'
             },
             {
-              text: 'Icon 图表',
+              text: 'Cell 单元格',
+              link: '/component/cell'
+            },
+            {
+              text: 'Icon 图标',
               link: '/component/icon'
             }
           ]

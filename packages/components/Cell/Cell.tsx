@@ -139,7 +139,7 @@ export default defineComponent({
         required && bem.m('required'),
         clickable && bem.m('clickable'),
         !border && bem.m('borderless'),
-        size && bem.m('size')
+        size && bem.m(`${size}`)
       ]
       return (
         <tag
