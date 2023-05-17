@@ -62,16 +62,16 @@
 
 ## Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| name | 图标名称或图片链接 | _string_ | - |
-| dot | 是否显示图标右上角小红点 | _boolean_ | `false` |
-| badge | 图标右上角徽标的内容 | _number \| string_ | - |
-| badge-props | 自定义徽标的属性，传入的对象会被透传给 [Badge 组件的 props](#/zh-CN/badge#props) | _BadgeProps_ | - |
-| color | 图标颜色 | _string_ | `inherit` |
-| size | 图标大小，如 `20px` `2em`，默认单位为 `px` | _number \| string_ | `inherit` |
-| class-prefix | 类名前缀，用于使用自定义图标 | _string_ | `van-icon` |
-| tag | 根节点对应的 HTML 标签名 | _string_ | `i` |
+| 参数         | 说明                                                                          | 类型               | 默认值     |
+| ------------ | ----------------------------------------------------------------------------- | ------------------ | ---------- |
+| name         | 图标名称或图片链接                                                            | _string_           | -          |
+| dot          | 是否显示图标右上角小红点                                                      | _boolean_          | `false`    |
+| badge        | 图标右上角徽标的内容                                                          | _number \| string_ | -          |
+| badge-props  | 自定义徽标的属性，传入的对象会被透传给 [Badge 组件的 props](badge.html#props) | _BadgeProps_       | -          |
+| color        | 图标颜色                                                                      | _string_           | `inherit`  |
+| size         | 图标大小，如 `20px` `2em`，默认单位为 `px`                                    | _number \| string_ | `inherit`  |
+| class-prefix | 类名前缀，用于使用自定义图标                                                  | _string_           | `van-icon` |
+| tag          | 根节点对应的 HTML 标签名                                                      | _string_           | `i`        |
 
 ## Events
 
