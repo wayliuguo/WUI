@@ -109,7 +109,7 @@
   </w-cell>
 </div>
 
-<style>
+<style scoped>
   .custom-title {
     margin-right: 4px;
     vertical-align: middle;
@@ -269,7 +269,7 @@ import type {
 | --w-cell-group-inset-radius        | _var(--w-radius-lg)_                                                              | -    |
 | --w-cell-group-inset-title-padding | _var(--w-padding-md) var(--w-padding-md) var(--w-padding-xs) var(--w-padding-xl)_ | -    |
 
-<style>
+<style scoped>
 .mobile {
   width: 375px;
   padding: 10px;

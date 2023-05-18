@@ -186,7 +186,7 @@
 | --w-badge-font         | _-apple-system-font, Helvetica Neue, Arial, sans-serif_ | -    |
 
 
-<style>
+<style scoped>
   .badge {
     margin: 5px 10px;
   }

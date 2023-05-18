@@ -220,8 +220,11 @@ import type {
 | --van-button-icon-size            | _1.2em_                       | -    |
 | --van-button-loading-icon-size    | _20px_                        | -    |
 
-<style>
+<style scoped lang="less">
 .button {
   margin: 5px 10px !important;
+  &>div {
+    border: 1px solid red;
+  }
 }
 </style>
