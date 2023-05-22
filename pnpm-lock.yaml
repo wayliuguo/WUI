@@ -10,6 +10,9 @@ importers:
       '@w-ui/theme-chalk':
         specifier: workspace:^
         version: link:packages/theme-chalk
+      '@w-ui/use':
+        specifier: workspace:^
+        version: link:packages/use
       '@w-ui/utils':
         specifier: workspace:^
         version: link:packages/utils
@@ -48,6 +51,8 @@ importers:
   packages/components: {}
 
   packages/theme-chalk: {}
+
+  packages/use: {}
 
   packages/utils: {}
 

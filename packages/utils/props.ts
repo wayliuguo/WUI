@@ -7,6 +7,11 @@ export const makeStringProp = <T>(defaultVal: T) => ({
   default: defaultVal
 })
 
+export const makeNumericProp = <T>(defaultVal: T) => ({
+  type: numericProp,
+  default: defaultVal
+})
+
 export const truthProp = {
   type: Boolean,
   default: true as const
