@@ -102,11 +102,11 @@ export default defineComponent({
       return (
         <tag
           class={[
+            bem.b(),
             align && bem.m(`align-${align}`),
             justify && bem.m(`justify-${justify}`),
             !wrap && bem.m('nowrap')
-          ]}
-        >
+          ]}>
           {slots.default?.()}
         </tag>
       )

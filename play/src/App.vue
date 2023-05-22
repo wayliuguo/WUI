@@ -4,6 +4,7 @@ import PlayIcon from './components/PlayIcon.vue'
 import PlayBadge from './components/PlayBadge.vue';
 import PlayButton from './components/PlayButton.vue';
 import PlayCell from './components/PlayCell.vue';
+import PlayLayOut from './components/PlayLayOut.vue';
 </script>
 
 <template>
@@ -11,7 +12,8 @@ import PlayCell from './components/PlayCell.vue';
   <PlayBadge v-if="false"></PlayBadge>
   <PlayIcon v-if="false"></PlayIcon>
   <PlayButton v-if="false"></PlayButton>
-  <PlayCell></PlayCell>
+  <PlayCell v-if="false"></PlayCell>
+  <PlayLayOut></PlayLayOut>
 </template>
 
 <style scoped>

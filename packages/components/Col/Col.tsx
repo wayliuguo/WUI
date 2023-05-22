@@ -5,7 +5,7 @@ import {
   makeStringProp,
   numericProp
 } from '@w-ui/utils'
-import { ExtractPropTypes, defineComponent } from 'vue'
+import { ExtractPropTypes, computed, defineComponent } from 'vue'
 import { ROW_KEY } from '../Row/Row'
 
 const bem = createNamespace('col')
@@ -25,13 +25,35 @@ export default defineComponent({
   setup(props, { slots }) {
     const { parent, index } = useParent(ROW_KEY)
 
+    const style = computed(() => {
+      if (!parent) {
+        return
+      }
+
+      const { spaces } = parent
+
+      if (spaces && spaces.value && spaces.value[index.value]) {
+        const { left, right } = spaces.value[index.value]
+        return {
+          paddingLeft: left ? `${left}px` : null,
+          paddingRight: right ? `${right}px` : null
+        }
+      }
+      return {}
+    })
+
     return () => {
       const { tag, span, offset } = props
 
       return (
         <tag
-        >
-
+          style={style.value}
+          class={[
+            bem.b(),
+            bem.m(`${span}`),
+            offset && bem.m(`offset-${offset}`)
+          ]}>
+          {slots.default?.()}
         </tag>
       )
     }
