@@ -11,7 +11,8 @@ import Cell from '@w-ui/components/Cell'
 import CellGroup from '@w-ui/components/Cell-Group'
 import Col from '@w-ui/components/Col'
 import Row from '@w-ui/components/Row'
-const plugins = [Loading, Icon, Badge, Button, Cell, CellGroup, Col, Row]
+import Space from '@w-ui/components/Space'
+const plugins = [Loading, Icon, Badge, Button, Cell, CellGroup, Col, Row, Space]
 
 const app = createApp(App)
 
