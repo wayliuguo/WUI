@@ -41,6 +41,10 @@ module.exports = {
             {
               text: 'Icon 图标',
               link: '/component/icon'
+            },
+            {
+              text: 'Layout 布局',
+              link: '/component/layout'
             }
           ]
         },
