@@ -21,7 +21,7 @@
   </w-loading> -->
 </template>
 
-<style>
+<style scoped>
 /* 覆盖样式 */
 :root:root {
   --w-padding-xs: 40px;

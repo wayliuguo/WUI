@@ -12,7 +12,9 @@ import CellGroup from '@w-ui/components/Cell-Group'
 import Col from '@w-ui/components/Col'
 import Row from '@w-ui/components/Row'
 import Space from '@w-ui/components/Space'
-const plugins = [Loading, Icon, Badge, Button, Cell, CellGroup, Col, Row, Space]
+import CheckboxGroup from '@w-ui/components/CheckboxGroup'
+import Checkbox from '@w-ui/components/Checkbox'
+const plugins = [Loading, Icon, Badge, Button, Cell, CellGroup, Col, Row, Space, CheckboxGroup, Checkbox]
 
 const app = createApp(App)
 

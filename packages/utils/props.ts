@@ -17,4 +17,14 @@ export const truthProp = {
   default: true as const
 }
 
+export const makeRequiredProp = <T>(type: T) => ({
+  type,
+  required: true as const
+})
+
+export const makeArrayProp = <T>() => ({
+  type: Array as PropType<T[]>,
+  default: () => []
+})
+
 export const unknownProp = null as unknown as PropType<unknown>

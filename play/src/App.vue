@@ -6,6 +6,7 @@ import PlayButton from './components/PlayButton.vue'
 import PlayCell from './components/PlayCell.vue'
 import PlayLayOut from './components/PlayLayOut.vue'
 import PlaySpace from './components/PlaySpace.vue'
+import PlayCheckbox from './components/PlayCheckbox.vue'
 </script>
 
 <template>
@@ -15,5 +16,6 @@ import PlaySpace from './components/PlaySpace.vue'
   <PlayButton v-if="false"></PlayButton>
   <PlayCell v-if="false"></PlayCell>
   <PlayLayOut v-if="false"></PlayLayOut>
-  <PlaySpace></PlaySpace>
+  <PlaySpace v-if="false"></PlaySpace>
+  <PlayCheckbox></PlayCheckbox>
 </template>
