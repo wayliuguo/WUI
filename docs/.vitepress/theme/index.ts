@@ -8,6 +8,8 @@ import WCllGroud from '@w-ui/components/Cell-Group'
 import WCell from '@w-ui/components/Cell'
 import WRow from '@w-ui/components/Row'
 import WCol from '@w-ui/components/Col'
+import WCheckboxGroup from '@w-ui/components/CheckboxGroup'
+import wCheckbox from '@w-ui/components/Checkbox'
 import '@w-ui/theme-chalk/index.less'
 
 export default {
@@ -22,5 +24,7 @@ export default {
       .use(WCell)
       .use(WRow)
       .use(WCol)
+      .use(WCheckboxGroup)
+      .use(wCheckbox)
   }
 }

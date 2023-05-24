@@ -49,6 +49,15 @@ module.exports = {
           ]
         },
         {
+          text: '表单组件',
+          items: [
+            {
+              text: 'Checkbox 复选框',
+              link: '/component/checkbox'
+            }
+          ]
+        },
+        {
           text: '反馈组件',
           items: [
             {
