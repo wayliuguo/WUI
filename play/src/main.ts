@@ -14,7 +14,23 @@ import Row from '@w-ui/components/Row'
 import Space from '@w-ui/components/Space'
 import CheckboxGroup from '@w-ui/components/CheckboxGroup'
 import Checkbox from '@w-ui/components/Checkbox'
-const plugins = [Loading, Icon, Badge, Button, Cell, CellGroup, Col, Row, Space, CheckboxGroup, Checkbox]
+import RadioGroup from '@w-ui/components/RadioGroup'
+import Radio from '@w-ui/components/Radio'
+const plugins = [
+  Loading,
+  Icon,
+  Badge,
+  Button,
+  Cell,
+  CellGroup,
+  Col,
+  Row,
+  Space,
+  CheckboxGroup,
+  Checkbox,
+  RadioGroup,
+  Radio
+]
 
 const app = createApp(App)
 

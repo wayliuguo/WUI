@@ -1,5 +1,11 @@
 import { createNamespace, numericProp, unknownProp } from '@w-ui/utils'
-import { ExtractPropTypes, InjectionKey, PropType, defineComponent, watch } from 'vue'
+import {
+  ExtractPropTypes,
+  InjectionKey,
+  PropType,
+  defineComponent,
+  watch
+} from 'vue'
 import { CheckerDirection } from '../Checkbox/Checker'
 import { useChildren, useCustomFieldValue } from '@w-ui/use'
 
@@ -19,7 +25,7 @@ export const radioGroupProps = {
 export type RadioGroupProps = ExtractPropTypes<typeof radioGroupProps>
 
 export type RadioGroupProvide = {
-  props: RadioGroupProps,
+  props: RadioGroupProps
   updateValue: (value: unknown) => void
 }
 
@@ -30,7 +36,6 @@ export default defineComponent({
   props: radioGroupProps,
   emits: ['change', 'update:modelValue'],
   setup(props, { emit, slots }) {
-
     const { linkChildren } = useChildren(RADIO_KEY)
 
     const updateValue = (value: unknown) => emit('update:modelValue', value)
@@ -51,8 +56,8 @@ export default defineComponent({
       <div
         class={[bem.b(), props.direction && bem.m(props.direction)]}
         role="radiogroup">
-          {slots.default?.()}
-        </div>
+        {slots.default?.()}
+      </div>
     )
   }
 })
