@@ -14,7 +14,7 @@ module.exports = {
     },
     nav: [
       { text: '指南', link: '/guide/installation', activeMatch: '/guide/' },
-      { text: '组件', link: '/component/button', activeMatch: '/component/' }
+      { text: '组件', link: '/component/button', activeMatch: '/component/button' }
     ],
     sidebar: {
       '/guide/': [
@@ -45,6 +45,10 @@ module.exports = {
             {
               text: 'Layout 布局',
               link: '/component/layout'
+            },
+            {
+              text: 'Space 间距',
+              link: '/component/space'
             }
           ]
         },

@@ -12,6 +12,7 @@ import WCheckboxGroup from '@w-ui/components/CheckboxGroup'
 import wCheckbox from '@w-ui/components/Checkbox'
 import wRadioGroup from '@w-ui/components/RadioGroup'
 import wRadio from '@w-ui/components/Radio'
+import wSpace from '@w-ui/components/Space'
 import '@w-ui/theme-chalk/index.less'
 
 export default {
@@ -30,5 +31,6 @@ export default {
       .use(wCheckbox)
       .use(wRadioGroup)
       .use(wRadio)
+      .use(wSpace)
   }
 }
