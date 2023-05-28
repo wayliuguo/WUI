@@ -52,6 +52,10 @@ module.exports = {
           text: '表单组件',
           items: [
             {
+              text: 'Radio 单选框',
+              link: '/component/radio'
+            },
+            {
               text: 'Checkbox 复选框',
               link: '/component/checkbox'
             }

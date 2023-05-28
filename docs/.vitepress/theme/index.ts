@@ -10,6 +10,8 @@ import WRow from '@w-ui/components/Row'
 import WCol from '@w-ui/components/Col'
 import WCheckboxGroup from '@w-ui/components/CheckboxGroup'
 import wCheckbox from '@w-ui/components/Checkbox'
+import wRadioGroup from '@w-ui/components/RadioGroup'
+import wRadio from '@w-ui/components/Radio'
 import '@w-ui/theme-chalk/index.less'
 
 export default {
@@ -26,5 +28,7 @@ export default {
       .use(WCol)
       .use(WCheckboxGroup)
       .use(wCheckbox)
+      .use(wRadioGroup)
+      .use(wRadio)
   }
 }
