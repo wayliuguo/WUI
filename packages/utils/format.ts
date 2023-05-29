@@ -26,3 +26,11 @@ export function getSizeStyle(
     }
   }
 }
+
+export function getZIndexStyle(zIndex?: Numeric) {
+  const style: CSSProperties = {}
+  if (zIndex !== undefined) {
+    style.zIndex = +zIndex
+  }
+  return style
+}

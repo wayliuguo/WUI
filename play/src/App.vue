@@ -20,4 +20,5 @@ import PlayRadio from './components/PlayRadio.vue'
   <PlaySpace v-if="false"></PlaySpace>
   <PlayCheckbox v-if="false"></PlayCheckbox>
   <PlayRadio></PlayRadio>
+  <w-overlay :show="true"></w-overlay>
 </template>

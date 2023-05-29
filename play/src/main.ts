@@ -16,6 +16,7 @@ import CheckboxGroup from '@w-ui/components/CheckboxGroup'
 import Checkbox from '@w-ui/components/Checkbox'
 import RadioGroup from '@w-ui/components/RadioGroup'
 import Radio from '@w-ui/components/Radio'
+import Overlay from '@w-ui/components/Overlay'
 const plugins = [
   Loading,
   Icon,
@@ -29,7 +30,8 @@ const plugins = [
   CheckboxGroup,
   Checkbox,
   RadioGroup,
-  Radio
+  Radio,
+  Overlay
 ]
 
 const app = createApp(App)
