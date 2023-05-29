@@ -9,6 +9,6 @@ export type { OverlayThemeVars } from './types'
 
 declare module 'vue' {
   export interface GlobalComponents {
-    VanOverlay: typeof Overlay
+    WOverlay: typeof Overlay
   }
 }
