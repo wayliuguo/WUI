@@ -17,7 +17,7 @@ import {
   ref
 } from 'vue'
 import { useLazyRender } from '../../composables/use-lazy-render'
-import { useEventListener } from '@w-ui/use/useEventListener'
+import { useEventListener } from '@w-ui/use'
 
 const name = 'w-overlay'
 const bem = createNamespace('overlay')

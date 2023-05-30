@@ -8,6 +8,7 @@ import PlayLayOut from './components/PlayLayOut.vue'
 import PlaySpace from './components/PlaySpace.vue'
 import PlayCheckbox from './components/PlayCheckbox.vue'
 import PlayRadio from './components/PlayRadio.vue'
+import PlayPopup from './components/PlayPopup.vue'
 </script>
 
 <template>
@@ -19,6 +20,6 @@ import PlayRadio from './components/PlayRadio.vue'
   <PlayLayOut v-if="false"></PlayLayOut>
   <PlaySpace v-if="false"></PlaySpace>
   <PlayCheckbox v-if="false"></PlayCheckbox>
-  <PlayRadio></PlayRadio>
-  <w-overlay :show="true"></w-overlay>
+  <PlayRadio v-if="false"></PlayRadio>
+  <PlayPopup></PlayPopup>
 </template>

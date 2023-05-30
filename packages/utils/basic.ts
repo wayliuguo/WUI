@@ -1,5 +1,8 @@
 import { isObject } from './validate'
 
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+export function noop() {}
+
 export const extend = Object.assign
 
 export type Numeric = number | string
