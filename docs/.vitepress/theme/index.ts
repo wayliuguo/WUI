@@ -13,6 +13,8 @@ import wCheckbox from '@w-ui/components/Checkbox'
 import wRadioGroup from '@w-ui/components/RadioGroup'
 import wRadio from '@w-ui/components/Radio'
 import wSpace from '@w-ui/components/Space'
+import WOverlay from '@w-ui/components/Overlay'
+import WPopup from '@w-ui/components/Popup'
 import '@w-ui/theme-chalk/index.less'
 
 export default {
@@ -32,5 +34,7 @@ export default {
       .use(wRadioGroup)
       .use(wRadio)
       .use(wSpace)
+      .use(WOverlay)
+      .use(WPopup)
   }
 }

@@ -147,6 +147,7 @@ export default defineComponent({
             tabindex={0}
             name={props.closeIcon}
             class={[
+              bem.e('close-icon'),
               bem.em('close-icon', props.closeIconPosition),
               HAPTICS_FEEDBACK
             ]}

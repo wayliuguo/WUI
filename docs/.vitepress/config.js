@@ -49,6 +49,10 @@ module.exports = {
             {
               text: 'Space 间距',
               link: '/component/space'
+            },
+            {
+              text: 'Popup 弹窗',
+              link: '/component/popup'
             }
           ]
         },
