@@ -28,3 +28,8 @@ export const makeArrayProp = <T>() => ({
 })
 
 export const unknownProp = null as unknown as PropType<unknown>
+
+export const makeNumberProp = <T>(defaultVal: T) => ({
+  type: Number,
+  default: defaultVal
+})
