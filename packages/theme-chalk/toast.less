@@ -1,0 +1,100 @@
+:root {
+  --w-toast-max-width: 70%;
+  --w-toast-font-size: var(--w-font-size-md);
+  --w-toast-text-color: var(--w-white);
+  --w-toast-loading-icon-color: var(--w-white);
+  --w-toast-line-height: var(--w-line-height-md);
+  --w-toast-radius: var(--w-radius-lg);
+  --w-toast-background: rgba(0, 0, 0, 0.7);
+  --w-toast-icon-size: 36px;
+  --w-toast-text-min-width: 96px;
+  --w-toast-text-padding: var(--w-padding-xs) var(--w-padding-sm);
+  --w-toast-default-padding: var(--w-padding-md);
+  --w-toast-default-width: 88px;
+  --w-toast-default-min-height: 88px;
+  --w-toast-position-top-distance: 20%;
+  --w-toast-position-bottom-distance: 20%;
+}
+
+.w-toast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: content-box;
+  transition: all var(--w-duration-fast);
+
+  // hack for avoid max-width when use left & fixed
+  width: var(--w-toast-default-width);
+  max-width: var(--w-toast-max-width);
+  min-height: var(--w-toast-default-min-height);
+  padding: var(--w-toast-default-padding);
+  color: var(--w-toast-text-color);
+  font-size: var(--w-toast-font-size);
+  line-height: var(--w-toast-line-height);
+
+  // allow newline character
+  white-space: pre-wrap;
+  word-break: break-all;
+  text-align: center;
+  background: var(--w-toast-background);
+  border-radius: var(--w-toast-radius);
+
+  &--break {
+    &-normal {
+      word-break: normal;
+      word-wrap: normal;
+    }
+
+    &-word {
+      word-break: normal;
+      word-wrap: break-word;
+    }
+  }
+
+  &--unclickable {
+    // lock scroll
+    overflow: hidden;
+    cursor: not-allowed;
+
+    // should not add pointer-events: none directly to body tag
+    // that will cause unexpected tap-highlight-color in mobile safari
+    * {
+      pointer-events: none;
+    }
+  }
+
+  &--text,
+  &--html {
+    width: fit-content;
+    min-width: var(--w-toast-text-min-width);
+    min-height: 0;
+    padding: var(--w-toast-text-padding);
+
+    .w-toast__text {
+      margin-top: 0;
+    }
+  }
+
+  &--top {
+    top: var(--w-toast-position-top-distance);
+  }
+
+  &--bottom {
+    top: auto;
+    bottom: var(--w-toast-position-bottom-distance);
+  }
+
+  &__icon {
+    font-size: var(--w-toast-icon-size);
+  }
+
+  &__loading {
+    padding: var(--w-padding-base);
+    color: var(--w-toast-loading-icon-color);
+  }
+
+  &__text {
+    margin-top: var(--w-padding-xs);
+  }
+}
