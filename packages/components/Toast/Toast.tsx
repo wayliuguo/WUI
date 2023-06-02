@@ -115,14 +115,14 @@ export default defineComponent({
       const { type, message } = props
 
       if (slots.message) {
-        return <div class={bem.m('text')}>{slots.message()}</div>
+        return <div class={bem.b('text')}>{slots.message()}</div>
       }
 
       if (isDef(message) && message !== '') {
         return type === 'html' ? (
-          <div key={0} class={bem.m('text')} innerHTML={String(message)} />
+          <div key={0} class={bem.b('text')} innerHTML={String(message)} />
         ) : (
-          <div class={bem.m('text')}>{message}</div>
+          <div class={bem.b('text')}>{message}</div>
         )
       }
     }
