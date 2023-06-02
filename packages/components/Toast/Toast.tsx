@@ -98,7 +98,7 @@ export default defineComponent({
           <Icon
             name={icon || type}
             size={iconSize}
-            class={bem.m('icon')}
+            class={bem.e('icon')}
             classPrefix={iconPrefix}
           />
         )
@@ -149,7 +149,7 @@ export default defineComponent({
         class={[
           bem.b(),
           bem.m(props.position),
-          props.wordBreak === 'normal' ? 'break-normal' : props.wordBreak,
+          props.wordBreak === 'normal' ? bem.m('break-normal') : bem.m(props.wordBreak),
           !props.icon && bem.m(props.type),
           props.className
         ]}
