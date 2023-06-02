@@ -9,6 +9,7 @@ import PlaySpace from './components/PlaySpace.vue'
 import PlayCheckbox from './components/PlayCheckbox.vue'
 import PlayRadio from './components/PlayRadio.vue'
 import PlayPopup from './components/PlayPopup.vue'
+import PlayToast from './components/PlayToast.vue'
 </script>
 
 <template>
@@ -21,5 +22,6 @@ import PlayPopup from './components/PlayPopup.vue'
   <PlaySpace v-if="false"></PlaySpace>
   <PlayCheckbox v-if="false"></PlayCheckbox>
   <PlayRadio v-if="false"></PlayRadio>
-  <PlayPopup></PlayPopup>
+  <PlayPopup v-if="false"></PlayPopup>
+  <PlayToast></PlayToast>
 </template>

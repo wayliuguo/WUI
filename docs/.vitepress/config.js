@@ -53,6 +53,10 @@ module.exports = {
             {
               text: 'Popup 弹窗',
               link: '/component/popup'
+            },
+            {
+              text: 'Toast 轻提示',
+              link: '/component/toast'
             }
           ]
         },

@@ -18,6 +18,7 @@ import RadioGroup from '@w-ui/components/RadioGroup'
 import Radio from '@w-ui/components/Radio'
 import Overlay from '@w-ui/components/Overlay'
 import Popup from '@w-ui/components/Popup'
+import Toast from '@w-ui/components/Toast'
 const plugins = [
   Loading,
   Icon,
@@ -33,7 +34,8 @@ const plugins = [
   RadioGroup,
   Radio,
   Overlay,
-  Popup
+  Popup,
+  Toast
 ]
 
 const app = createApp(App)
