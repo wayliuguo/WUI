@@ -7,6 +7,7 @@ export const extend = Object.assign
 
 export type Numeric = number | string
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function get(object: any, path: string): any {
   const keys = path.split('.')
   let result = object

@@ -26,6 +26,7 @@ export type ToastOptions = {
   forbidClick?: boolean
   closeOnClick?: boolean
   overlayClass?: unknown
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   overlayStyle?: Record<string, any>
   closeOnClickOverlay?: boolean
 }
@@ -37,6 +38,7 @@ export type ToastWrapperInstance = ComponentPublicInstance<
     /**
      * @private
      */
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     open: (props: Record<string, any>) => void
   }
 >

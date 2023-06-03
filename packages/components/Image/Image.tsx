@@ -1,5 +1,4 @@
 import {
-  createNamespace,
   makeStringProp,
   numericProp,
   truthProp
@@ -37,14 +36,10 @@ export const imageProps = {
 
 const name = 'w-image'
 
-const bem = createNamespace('image')
-
 export default defineComponent({
   name,
 
   props: imageProps,
 
-  emits: ['load', 'error'],
-
-  setup(props, { emit, slots }) {}
+  emits: ['load', 'error']
 })

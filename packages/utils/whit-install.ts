@@ -1,8 +1,10 @@
 import type { App, Component } from 'vue'
 
 type EventShim = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   new (...args: any[]): {
     $props: {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       onClick?: (...args: any[]) => void
     }
   }

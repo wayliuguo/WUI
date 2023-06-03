@@ -5,6 +5,7 @@ import { useExpose } from '../composables/use-expose'
 export function usePopupState() {
   const state = reactive<{
     show: boolean
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [key: string]: any
   }>({
     show: false
@@ -14,6 +15,7 @@ export function usePopupState() {
     state.show = show
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const open = (props: Record<string, any>) => {
     extend(state, props, { transitionAppear: true })
     toggle(true)

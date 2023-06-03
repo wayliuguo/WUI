@@ -48,6 +48,7 @@ export default defineComponent({
 
       const { checked, skipDisabled } = options
 
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const checkedChildren = children.filter((item: any) => {
         if (!item.props.bindGroup) {
           return false
@@ -58,6 +59,7 @@ export default defineComponent({
         return checked ?? !item.checked.value
       })
 
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const names = checkedChildren.map((item: any) => item.name)
       updateValue(names)
     }

@@ -27,6 +27,7 @@ export default defineComponent({
 
     const setParentValue = (checked: boolean) => {
       const { name } = props
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       const { max, modelValue } = parent!.props
       const value = modelValue.slice()
 
@@ -37,6 +38,7 @@ export default defineComponent({
           value.push(name)
 
           if (props.bindGroup) {
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             parent!.updateValue(value)
           }
         }
@@ -47,6 +49,7 @@ export default defineComponent({
           value.splice(index, 1)
 
           if (props.bindGroup) {
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             parent!.updateValue(value)
           }
         }

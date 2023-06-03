@@ -7,7 +7,9 @@
     "dev": "pnpm -C play dev",
     "docs:dev": "pnpm -C docs dev",
     "docs:build": "pnpm -C docs build",
-    "docs:serve": "pnpm -C docs serve"
+    "docs:serve": "pnpm -C docs serve",
+    "lint": "eslint . --cache",
+    "lint:fix": "pnpm run lint --fix"
   },
   "keywords": [],
   "author": "",
