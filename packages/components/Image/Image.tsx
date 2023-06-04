@@ -1,9 +1,4 @@
-import {
-  createNamespace,
-  makeStringProp,
-  numericProp,
-  truthProp
-} from '@w-ui/utils'
+import { makeStringProp, numericProp, truthProp } from '@w-ui/utils'
 import { PropType, defineComponent } from 'vue'
 
 export type ImageFit = 'contain' | 'cover' | 'fill' | 'none' | 'scale-down'
@@ -37,14 +32,10 @@ export const imageProps = {
 
 const name = 'w-image'
 
-const bem = createNamespace('image')
-
 export default defineComponent({
   name,
 
   props: imageProps,
 
-  emits: ['load', 'error'],
-
-  setup(props, { emit, slots }) {}
+  emits: ['load', 'error']
 })

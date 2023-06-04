@@ -49,7 +49,7 @@ export const toastProps = {
   wordBreak: String as PropType<ToastWordBreak>,
   className: unknownProp,
   iconPrefix: String,
-  transition: makeStringProp('van-fade'),
+  transition: makeStringProp('w-fade'),
   loadingType: String as PropType<LoadingType>,
   forbidClick: Boolean,
   overlayClass: unknownProp,
@@ -106,7 +106,11 @@ export default defineComponent({
 
       if (type === 'loading') {
         return (
-          <Loading class={bem.m('loading')} size={iconSize} type={loadingType} />
+          <Loading
+            class={bem.m('loading')}
+            size={iconSize}
+            type={loadingType}
+          />
         )
       }
     }
@@ -149,7 +153,9 @@ export default defineComponent({
         class={[
           bem.b(),
           bem.m(props.position),
-          props.wordBreak === 'normal' ? bem.m('break-normal') : bem.m(props.wordBreak),
+          props.wordBreak === 'normal'
+            ? bem.m('break-normal')
+            : bem.m(props.wordBreak),
           !props.icon && bem.m(props.type),
           props.className
         ]}

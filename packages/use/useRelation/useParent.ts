@@ -20,6 +20,7 @@ export function useParent<T>(key: InjectionKey<ParentProvide<T>>) {
   const parent = inject(key, null)
 
   if (parent) {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const instance = getCurrentInstance()!
     const { link, unlink, internalChildren } = parent
 

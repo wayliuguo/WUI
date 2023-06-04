@@ -335,28 +335,28 @@ export default {
 
 ## Checkbox Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| v-model | 是否为选中状态 | _boolean_ | `false` |
-| name | 标识符，通常为一个唯一的字符串或数字 | _any_ | - |
-| shape | 形状，可选值为 `square` | _string_ | `round` |
-| disabled | 是否禁用复选框 | _boolean_ | `false` |
-| label-disabled | 是否禁用复选框文本点击 | _boolean_ | `false` |
-| label-position | 文本位置，可选值为 `left` | _string_ | `right` |
-| icon-size | 图标大小，默认单位为 `px` | _number \| string_ | `20px` |
-| checked-color | 选中状态颜色 | _string_ | `#1989fa` |
-| bind-group | 是否与复选框组绑定 | _boolean_ | `true` |
+| 参数           | 说明                                 | 类型               | 默认值    |
+| -------------- | ------------------------------------ | ------------------ | --------- |
+| v-model        | 是否为选中状态                       | _boolean_          | `false`   |
+| name           | 标识符，通常为一个唯一的字符串或数字 | _any_              | -         |
+| shape          | 形状，可选值为 `square`              | _string_           | `round`   |
+| disabled       | 是否禁用复选框                       | _boolean_          | `false`   |
+| label-disabled | 是否禁用复选框文本点击               | _boolean_          | `false`   |
+| label-position | 文本位置，可选值为 `left`            | _string_           | `right`   |
+| icon-size      | 图标大小，默认单位为 `px`            | _number \| string_ | `20px`    |
+| checked-color  | 选中状态颜色                         | _string_           | `#1989fa` |
+| bind-group     | 是否与复选框组绑定                   | _boolean_          | `true`    |
 
 ## CheckboxGroup Props
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| v-model | 所有选中项的标识符 | _any[]_ | - |
-| disabled | 是否禁用所有复选框 | _boolean_ | `false` |
-| max | 最大可选数，`0` 为无限制 | _number \| string_ | `0` |
-| direction | 排列方向，可选值为 `horizontal` | _string_ | `vertical` |
-| icon-size | 所有复选框的图标大小，默认单位为 `px` | _number \| string_ | `20px` |
-| checked-color | 所有复选框的选中状态颜色 | _string_ | `#1989fa` |
+| 参数          | 说明                                  | 类型               | 默认值     |
+| ------------- | ------------------------------------- | ------------------ | ---------- |
+| v-model       | 所有选中项的标识符                    | _any[]_            | -          |
+| disabled      | 是否禁用所有复选框                    | _boolean_          | `false`    |
+| max           | 最大可选数，`0` 为无限制              | _number \| string_ | `0`        |
+| direction     | 排列方向，可选值为 `horizontal`       | _string_           | `vertical` |
+| icon-size     | 所有复选框的图标大小，默认单位为 `px` | _number \| string_ | `20px`     |
+| checked-color | 所有复选框的选中状态颜色              | _string_           | `#1989fa`  |
 
 ## Checkbox Events
 
@@ -382,15 +382,15 @@ export default {
 
 通过 ref 可以获取到 CheckboxGroup 实例并调用实例方法。
 
-| 方法名 | 说明 | 参数 | 返回值 |
-| --- | --- | --- | --- |
-| toggleAll | 切换所有复选框，传 `true` 为选中，`false` 为取消选中，不传参为取反 | _options?: boolean \| object_ | - |
+| 方法名    | 说明                                                               | 参数                          | 返回值 |
+| --------- | ------------------------------------------------------------------ | ----------------------------- | ------ |
+| toggleAll | 切换所有复选框，传 `true` 为选中，`false` 为取消选中，不传参为取反 | _options?: boolean \| object_ | -      |
 
 ## toggleAll 方法示例
 
 ```js
 import { ref } from 'vue';
-import type { CheckboxGroupInstance } from 'vant';
+import type { CheckboxGroupInstance } from 'WUI';
 
 const checkboxGroupRef = ref<CheckboxGroupInstance>();
 
@@ -416,9 +416,9 @@ checkboxGroupRef?.value.toggleAll({
 
 通过 ref 可以获取到 Checkbox 实例并调用实例方法。
 
-| 方法名 | 说明 | 参数 | 返回值 |
-| --- | --- | --- | --- |
-| toggle | 切换选中状态，传 `true` 为选中，`false` 为取消选中，不传参为取反 | _checked?: boolean_ | - |
+| 方法名 | 说明                                                             | 参数                | 返回值 |
+| ------ | ---------------------------------------------------------------- | ------------------- | ------ |
+| toggle | 切换选中状态，传 `true` 为选中，`false` 为取消选中，不传参为取反 | _checked?: boolean_ | -      |
 
 
 # 主题定制
@@ -427,9 +427,9 @@ checkboxGroupRef?.value.toggleAll({
 
 组件提供了下列 CSS 变量，可用于自定义样式。
 
-| 名称                                | 默认值                     | 描述 |
-| ----------------------------------- | -------------------------- | ---- |
-| --w-checkbox-size                 | _20px_                     | -    |
+| 名称                              | 默认值                   | 描述 |
+| --------------------------------- | ------------------------ | ---- |
+| --w-checkbox-size                 | _20px_                   | -    |
 | --w-checkbox-border-color         | _var(--w-gray-5)_        | -    |
 | --w-checkbox-duration             | _var(--w-duration-fast)_ | -    |
 | --w-checkbox-label-margin         | _var(--w-padding-xs)_    | -    |

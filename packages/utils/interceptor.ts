@@ -1,7 +1,8 @@
-import { noop } from "./basic"
-import { isPromise } from "./validate"
+import { noop } from './basic'
+import { isPromise } from './validate'
 
 export type Interceptor = (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ...args: any[]
 ) => Promise<boolean> | boolean | undefined | void
 

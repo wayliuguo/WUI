@@ -62,6 +62,7 @@ export default defineComponent({
           return slots.content()
         }
 
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         if (isDef(max) && isNumeric(content!) && +content > +max) {
           return `${max}+`
         }

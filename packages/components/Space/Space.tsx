@@ -104,12 +104,14 @@ export default defineComponent({
             mergedAlign.value && bem.m(`align-${mergedAlign.value}`),
             props.wrap && bem.m('wrap'),
             props.fill && bem.m('fill')
-          ]}>
+          ]}
+        >
           {children.map((c, i) => (
             <div
               key={`item-${i}`}
               class={`${name}-item`}
-              style={getMarginStyle(i === children.length - 1)}>
+              style={getMarginStyle(i === children.length - 1)}
+            >
               {c}
             </div>
           ))}

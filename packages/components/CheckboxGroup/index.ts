@@ -1,18 +1,18 @@
-import { withInstall } from '@w-ui/utils';
-import _CheckboxGroup from './CheckboxGroup';
+import { withInstall } from '@w-ui/utils'
+import _CheckboxGroup from './CheckboxGroup'
 
-export const CheckboxGroup = withInstall(_CheckboxGroup);
-export default CheckboxGroup;
-export { checkboxGroupProps } from './CheckboxGroup';
-export type { CheckboxGroupProps } from './CheckboxGroup';
+export const CheckboxGroup = withInstall(_CheckboxGroup)
+export default CheckboxGroup
+export { checkboxGroupProps } from './CheckboxGroup'
+export type { CheckboxGroupProps } from './CheckboxGroup'
 export type {
   CheckboxGroupInstance,
   CheckboxGroupDirection,
-  CheckboxGroupToggleAllOptions,
-} from './types';
+  CheckboxGroupToggleAllOptions
+} from './types'
 
 declare module 'vue' {
   export interface GlobalComponents {
-    WCheckboxGroup: typeof CheckboxGroup;
+    WCheckboxGroup: typeof CheckboxGroup
   }
 }

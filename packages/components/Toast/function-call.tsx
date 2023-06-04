@@ -17,7 +17,7 @@ const defaultOptions: ToastOptions = {
   iconSize: undefined,
   iconPrefix: undefined,
   position: 'middle',
-  transition: 'van-fade',
+  transition: 'w-fade',
   forbidClick: false,
   loadingType: undefined,
   overlayClass: '',
@@ -67,6 +67,7 @@ function createInstance() {
       })
 
       // rewrite render function
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ;(getCurrentInstance() as any).render = render
 
       return {
@@ -101,6 +102,7 @@ export function showToast(options: string | ToastOptions = {}) {
     extend(
       {},
       currentOptions,
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       defaultOptionsMap.get(parsedOptions.type || currentOptions.type!),
       parsedOptions
     )
@@ -141,6 +143,7 @@ export function setToastDefaultOptions(
   options?: ToastOptions
 ) {
   if (typeof type === 'string') {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     defaultOptionsMap.set(type, options!)
   } else {
     extend(currentOptions, type)

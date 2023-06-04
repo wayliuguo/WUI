@@ -63,6 +63,7 @@ export function sortChildren(
     (a, b) => findVNodeIndex(vnodes, a.vnode) - findVNodeIndex(vnodes, b.vnode)
   )
 
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const orderedPublicChildren = internalChildren.map(item => item.proxy!)
 
   publicChildren.sort((a, b) => {
@@ -73,11 +74,13 @@ export function sortChildren(
 }
 
 export function useChildren<
-  Child extends ComponentPublicInstance = ComponentPublicInstance<{}, any>,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  Child extends ComponentPublicInstance = ComponentPublicInstance<object, any>,
   ProvideValue = never
 >(key: InjectionKey<ProvideValue>) {
   const publicChildren: Child[] = reactive([])
   const internalChildren: ComponentInternalInstance[] = reactive([])
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   const parent = getCurrentInstance()!
 
   const linkChildren = (value?: ProvideValue) => {

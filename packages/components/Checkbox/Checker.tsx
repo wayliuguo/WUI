@@ -92,7 +92,8 @@ export default defineComponent({
             disabled.value && bem.em('icon', 'disabled'),
             checked && bem.em('icon', 'checked')
           ]}
-          style={{ fontSize: addUnit(iconSize) }}>
+          style={{ fontSize: addUnit(iconSize) }}
+        >
           {slots.icon ? (
             slots.icon({ checked, disabled: disabled.value })
           ) : (
@@ -110,7 +111,8 @@ export default defineComponent({
               props.bem.e('label'),
               props.labelPosition && props.bem.em('label', props.labelPosition),
               disabled.value && props.bem.em('label', 'disabled')
-            ]}>
+            ]}
+          >
             {slots.default()}
           </span>
         )
@@ -133,7 +135,8 @@ export default defineComponent({
           ]}
           tabindex={disabled.value ? undefined : 0}
           aria-checked={props.checked}
-          onClick={onClick}>
+          onClick={onClick}
+        >
           {nodes}
         </div>
       )

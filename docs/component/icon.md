@@ -84,6 +84,6 @@
 组件导出以下类型定义：
 
 ```ts
-import type { IconProps } from 'vant';
+import type { IconProps } from 'WUI';
 ```
 

@@ -9,6 +9,6 @@ export type { CellThemeVars } from './types'
 
 declare module 'vue' {
   export interface GlobalComponents {
-    VanCell: typeof Cell
+    WCell: typeof Cell
   }
 }
