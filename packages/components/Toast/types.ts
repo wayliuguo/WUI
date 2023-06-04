@@ -1,6 +1,6 @@
-import { Numeric } from "@w-ui/utils"
-import { ComponentPublicInstance, TeleportProps } from "vue"
-import { LoadingType } from "../Loading"
+import { Numeric } from '@w-ui/utils'
+import { ComponentPublicInstance, TeleportProps } from 'vue'
+import { LoadingType } from '../Loading'
 
 export type ToastType = 'text' | 'loading' | 'success' | 'fail' | 'html'
 export type ToastPosition = 'top' | 'middle' | 'bottom'

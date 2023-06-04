@@ -52,7 +52,8 @@ export default defineComponent({
             bem.b(),
             bem.m(`${span}`),
             offset && bem.m(`offset-${offset}`)
-          ]}>
+          ]}
+        >
           {slots.default?.()}
         </tag>
       )

@@ -1,8 +1,4 @@
-import {
-  makeStringProp,
-  numericProp,
-  truthProp
-} from '@w-ui/utils'
+import { makeStringProp, numericProp, truthProp } from '@w-ui/utils'
 import { PropType, defineComponent } from 'vue'
 
 export type ImageFit = 'contain' | 'cover' | 'fill' | 'none' | 'scale-down'

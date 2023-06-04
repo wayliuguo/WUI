@@ -55,7 +55,8 @@ export default defineComponent({
     return () => (
       <div
         class={[bem.b(), props.direction && bem.m(props.direction)]}
-        role="radiogroup">
+        role="radiogroup"
+      >
         {slots.default?.()}
       </div>
     )

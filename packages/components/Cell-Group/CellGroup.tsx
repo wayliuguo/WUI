@@ -17,7 +17,6 @@ export default defineComponent({
   inheritAttrs: false,
   props: cellGroupProps,
   setup(props, { slots, attrs }) {
-
     const renderTitle = () => (
       <div class={[bem.e('title'), props.inset && bem.m('inset')]}>
         {slots.title ? slots.title() : props.title}
@@ -35,7 +34,7 @@ export default defineComponent({
       >
         {slots.default?.()}
       </div>
-    );
+    )
 
     return () => {
       if (props.title || slots.title) {

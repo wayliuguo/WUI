@@ -1,5 +1,5 @@
-import { extend } from "@w-ui/utils"
-import { getCurrentInstance } from "vue"
+import { extend } from '@w-ui/utils'
+import { getCurrentInstance } from 'vue'
 
 // expose public api
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

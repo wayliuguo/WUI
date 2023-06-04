@@ -9,7 +9,8 @@
     "docs:build": "pnpm -C docs build",
     "docs:serve": "pnpm -C docs serve",
     "lint": "eslint . --cache",
-    "lint:fix": "pnpm run lint --fix"
+    "lint:fix": "pnpm run lint --fix",
+    "prettier": "prettier --write ."
   },
   "keywords": [],
   "author": "",

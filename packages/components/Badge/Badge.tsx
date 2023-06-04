@@ -119,7 +119,8 @@ export default defineComponent({
               props.dot && bem.m('dot'),
               !!slots.default && bem.m('fixed')
             ]}
-            style={style.value}>
+            style={style.value}
+          >
             {renderContent()}
           </div>
         )

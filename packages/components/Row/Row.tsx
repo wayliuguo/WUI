@@ -106,7 +106,8 @@ export default defineComponent({
             align && bem.m(`align-${align}`),
             justify && bem.m(`justify-${justify}`),
             !wrap && bem.m('nowrap')
-          ]}>
+          ]}
+        >
           {slots.default?.()}
         </tag>
       )

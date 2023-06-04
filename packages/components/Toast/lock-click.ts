@@ -1,17 +1,17 @@
-let lockCount = 0;
+let lockCount = 0
 
 export function lockClick(lock: boolean) {
   if (lock) {
     if (!lockCount) {
-      document.body.classList.add('w-toast--unclickable');
+      document.body.classList.add('w-toast--unclickable')
     }
 
-    lockCount++;
+    lockCount++
   } else if (lockCount) {
-    lockCount--;
+    lockCount--
 
     if (!lockCount) {
-      document.body.classList.remove('w-toast--unclickable');
+      document.body.classList.remove('w-toast--unclickable')
     }
   }
 }

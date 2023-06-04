@@ -60,7 +60,8 @@ export default defineComponent({
           v-show={props.show}
           ref={root}
           style={style}
-          class={[bem.b(), props.className]}>
+          class={[bem.b(), props.className]}
+        >
           {slots.default?.()}
         </div>
       )

@@ -129,7 +129,8 @@ export default defineComponent({
             customStyle={props.overlayStyle}
             role={props.closeOnClickOverlay ? 'button' : undefined}
             tabindex={props.closeOnClickOverlay ? 0 : undefined}
-            onClick={onClickOverlay}></Overlay>
+            onClick={onClickOverlay}
+          ></Overlay>
         )
       }
     }
@@ -185,7 +186,8 @@ export default defineComponent({
             safeAreaInsetBottom && 'w-safe-area-bottom'
           ]}
           onKeydown={onKeydown}
-          {...attrs}>
+          {...attrs}
+        >
           {slots.default?.()}
           {renderCloseIcon()}
         </div>
@@ -203,7 +205,8 @@ export default defineComponent({
           name={transition || name}
           appear={transitionAppear}
           onAfterEnter={onOpened}
-          onAfterLeave={onClosed}></Transition>
+          onAfterLeave={onClosed}
+        ></Transition>
       )
     }
 

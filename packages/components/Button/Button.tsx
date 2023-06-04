@@ -1,4 +1,10 @@
-import { BORDER_SURROUND, createNamespace, makeStringProp, numericProp, preventDefault } from '@w-ui/utils'
+import {
+  BORDER_SURROUND,
+  createNamespace,
+  makeStringProp,
+  numericProp,
+  preventDefault
+} from '@w-ui/utils'
 import { CSSProperties, ExtractPropTypes, PropType, defineComponent } from 'vue'
 import {
   ButtonIconPosition,
@@ -31,7 +37,7 @@ export const buttonProps = {
   iconPosition: makeStringProp<ButtonIconPosition>('left')
 }
 
-export type ButtonProps = ExtractPropTypes<typeof buttonProps>;
+export type ButtonProps = ExtractPropTypes<typeof buttonProps>
 
 const name = 'w-button'
 const bem = createNamespace('button')
@@ -41,7 +47,6 @@ export default defineComponent({
   props: buttonProps,
   emits: ['click'],
   setup(props, { emit, slots }) {
-
     const renderLoadingIcon = () => {
       if (slots.loading) {
         return slots.loading()
@@ -58,11 +63,11 @@ export default defineComponent({
 
     const renderIcon = () => {
       if (props.loading) {
-        return renderLoadingIcon();
+        return renderLoadingIcon()
       }
 
       if (slots.icon) {
-        return <div class={bem.e('icon')}>{slots.icon()}</div>;
+        return <div class={bem.e('icon')}>{slots.icon()}</div>
       }
 
       if (props.icon) {
@@ -72,53 +77,53 @@ export default defineComponent({
             class={bem.e('icon')}
             classPrefix={props.iconPrefix}
           />
-        );
+        )
       }
-    };
+    }
 
     const renderText = () => {
-      let text;
+      let text
       if (props.loading) {
-        text = props.loadingText;
+        text = props.loadingText
       } else {
-        text = slots.default ? slots.default() : props.text;
+        text = slots.default ? slots.default() : props.text
       }
 
       if (text) {
-        return <span class={bem.m('text')}>{text}</span>;
+        return <span class={bem.m('text')}>{text}</span>
       }
-    };
+    }
 
     const getStyle = () => {
-      const { color, plain } = props;
+      const { color, plain } = props
       if (color) {
         const style: CSSProperties = {
-          color: plain ? color : 'white',
-        };
+          color: plain ? color : 'white'
+        }
 
         if (!plain) {
           // Use background instead of backgroundColor to make linear-gradient work
-          style.background = color;
+          style.background = color
         }
 
         // hide border when color is linear-gradient
         if (color.includes('gradient')) {
-          style.border = 0;
+          style.border = 0
         } else {
-          style.borderColor = color;
+          style.borderColor = color
         }
 
-        return style;
+        return style
       }
-    };
+    }
 
     const onClick = (event: MouseEvent) => {
       if (props.loading) {
-        preventDefault(event);
+        preventDefault(event)
       } else if (!props.disabled) {
-        emit('click', event);
+        emit('click', event)
       }
-    };
+    }
 
     return () => {
       const {
@@ -133,8 +138,8 @@ export default defineComponent({
         disabled,
         hairline,
         nativeType,
-        iconPosition,
-      } = props;
+        iconPosition
+      } = props
 
       const classes = [
         bem.b(),
@@ -147,8 +152,8 @@ export default defineComponent({
         loading && bem.m('loading'),
         disabled && bem.m('disabled'),
         hairline && bem.m('hairline'),
-        { [BORDER_SURROUND]: hairline },
-      ];
+        { [BORDER_SURROUND]: hairline }
+      ]
 
       return (
         <tag
@@ -164,7 +169,7 @@ export default defineComponent({
             {iconPosition === 'right' && renderIcon()}
           </div>
         </tag>
-      );
-    };
+      )
+    }
   }
 })
