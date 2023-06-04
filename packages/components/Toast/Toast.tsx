@@ -49,7 +49,7 @@ export const toastProps = {
   wordBreak: String as PropType<ToastWordBreak>,
   className: unknownProp,
   iconPrefix: String,
-  transition: makeStringProp('van-fade'),
+  transition: makeStringProp('w-fade'),
   loadingType: String as PropType<LoadingType>,
   forbidClick: Boolean,
   overlayClass: unknownProp,
@@ -163,8 +163,7 @@ export default defineComponent({
         onClick={onClick}
         onClosed={clearTimer}
         onUpdate:show={updateShow}
-        {...pick(props, popupInheritProps)}
-      >
+        {...pick(props, popupInheritProps)}>
         {renderIcon()}
         {renderMessage()}
       </Popup>

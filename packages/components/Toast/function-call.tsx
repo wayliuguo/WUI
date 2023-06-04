@@ -17,7 +17,7 @@ const defaultOptions: ToastOptions = {
   iconSize: undefined,
   iconPrefix: undefined,
   position: 'middle',
-  transition: 'van-fade',
+  transition: 'w-fade',
   forbidClick: false,
   loadingType: undefined,
   overlayClass: '',

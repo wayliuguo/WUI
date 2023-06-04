@@ -8,6 +8,6 @@ export type { RadioGroupProps, RadioGroupDirection } from './RadioGroup'
 
 declare module 'vue' {
   export interface GlobalComponents {
-    VanRadioGroup: typeof RadioGroup
+    WRadioGroup: typeof RadioGroup
   }
 }

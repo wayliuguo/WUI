@@ -231,45 +231,45 @@ export default {
 
 ## 方法
 
-Vant 中导出了以下 Toast 相关的辅助函数：
+WUI 中导出了以下 Toast 相关的辅助函数：
 
-| 方法名 | 说明 | 参数 | 返回值 |
-| --- | --- | --- | --- |
-| showToast | 展示提示 | `ToastOptions \| string` | toast 实例 |
-| showLoadingToast | 展示加载提示 | `ToastOptions \| string` | toast 实例 |
-| showSuccessToast | 展示成功提示 | `ToastOptions \| string` | toast 实例 |
-| showFailToast | 展示失败提示 | `ToastOptions \| string` | toast 实例 |
-| closeToast | 关闭提示 | `closeAll: boolean` | `void` |
-| allowMultipleToast | 允许同时存在多个 Toast | - | `void` |
-| setToastDefaultOptions | 修改默认配置，影响所有的 `showToast` 调用。<br>传入 type 可以修改指定类型的默认配置 | `type \| ToastOptions` | `void` |
-| resetToastDefaultOptions | 重置默认配置，影响所有的 `showToast` 调用。<br>传入 type 可以重置指定类型的默认配置 | `type` | `void` |
+| 方法名                   | 说明                                                                                | 参数                     | 返回值     |
+| ------------------------ | ----------------------------------------------------------------------------------- | ------------------------ | ---------- |
+| showToast                | 展示提示                                                                            | `ToastOptions \| string` | toast 实例 |
+| showLoadingToast         | 展示加载提示                                                                        | `ToastOptions \| string` | toast 实例 |
+| showSuccessToast         | 展示成功提示                                                                        | `ToastOptions \| string` | toast 实例 |
+| showFailToast            | 展示失败提示                                                                        | `ToastOptions \| string` | toast 实例 |
+| closeToast               | 关闭提示                                                                            | `closeAll: boolean`      | `void`     |
+| allowMultipleToast       | 允许同时存在多个 Toast                                                              | -                        | `void`     |
+| setToastDefaultOptions   | 修改默认配置，影响所有的 `showToast` 调用。<br>传入 type 可以修改指定类型的默认配置 | `type \| ToastOptions`   | `void`     |
+| resetToastDefaultOptions | 重置默认配置，影响所有的 `showToast` 调用。<br>传入 type 可以重置指定类型的默认配置 | `type`                   | `void`     |
 
 ## ToastOptions 数据结构
 
 调用 `showToast` 等方法时，支持传入以下选项：
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| type | 提示类型，可选值为 `loading` `success`<br>`fail` `html` | _ToastType_ | `text` |
-| position | 位置，可选值为 `top` `bottom` | _ToastPosition_ | `middle` |
-| message | 文本内容，支持通过`\n`换行 | _string_ | `''` |
-| wordBreak | 文本内容的换行方式，可选值为 `normal` `break-all` `break-word` | _ToastWordBreak_ | `'break-all'` |
-| icon | 自定义图标，支持传入图标名称或图片链接，等同于 Icon 组件的 [name 属性](icon.html#props) | _string_ | - |
-| iconSize | 图标大小，如 `20px` `2em`，默认单位为 `px` | _number \| string_ | `36px` |
-| iconPrefix | 图标类名前缀，等同于 Icon 组件的 [class-prefix 属性](icon.html#props) | _string_ | `w-icon` |
-| overlay | 是否显示背景遮罩层 | _boolean_ | `false` |
-| forbidClick | 是否禁止背景点击 | _boolean_ | `false` |
-| closeOnClick | 是否在点击后关闭 | _boolean_ | `false` |
-| closeOnClickOverlay | 是否在点击遮罩层后关闭 | _boolean_ | `false` |
-| loadingType | [加载图标类型](loading.html), 可选值为 `spinner` | _string_ | `circular` |
-| duration | 展示时长(ms)，值为 0 时，toast 不会消失 | _number_ | `2000` |
-| className | 自定义类名 | _string \| Array \| object_ | - |
-| overlayClass | 自定义遮罩层类名 | _string \| Array \| object_ | - |
-| overlayStyle | 自定义遮罩层样式 | _object_ | - |
-| onOpened | 完全展示后的回调函数 | _Function_ | - |
-| onClose | 关闭时的回调函数 | _Function_ | - |
-| transition | 动画类名，等价于 [transition](https://v3.cn.vuejs.org/api/built-in-components.html#transition) 的`name`属性 | _string_ | `w-fade` |
-| teleport | 指定挂载的节点，等同于 Teleport 组件的 [to 属性](https://v3.cn.vuejs.org/api/built-in-components.html#teleport) | _string \| Element_ | `body` |
+| 参数                | 说明                                                                                                            | 类型                        | 默认值        |
+| ------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------- | ------------- |
+| type                | 提示类型，可选值为 `loading` `success`<br>`fail` `html`                                                         | _ToastType_                 | `text`        |
+| position            | 位置，可选值为 `top` `bottom`                                                                                   | _ToastPosition_             | `middle`      |
+| message             | 文本内容，支持通过`\n`换行                                                                                      | _string_                    | `''`          |
+| wordBreak           | 文本内容的换行方式，可选值为 `normal` `break-all` `break-word`                                                  | _ToastWordBreak_            | `'break-all'` |
+| icon                | 自定义图标，支持传入图标名称或图片链接，等同于 Icon 组件的 [name 属性](icon.html#props)                         | _string_                    | -             |
+| iconSize            | 图标大小，如 `20px` `2em`，默认单位为 `px`                                                                      | _number \| string_          | `36px`        |
+| iconPrefix          | 图标类名前缀，等同于 Icon 组件的 [class-prefix 属性](icon.html#props)                                           | _string_                    | `w-icon`      |
+| overlay             | 是否显示背景遮罩层                                                                                              | _boolean_                   | `false`       |
+| forbidClick         | 是否禁止背景点击                                                                                                | _boolean_                   | `false`       |
+| closeOnClick        | 是否在点击后关闭                                                                                                | _boolean_                   | `false`       |
+| closeOnClickOverlay | 是否在点击遮罩层后关闭                                                                                          | _boolean_                   | `false`       |
+| loadingType         | [加载图标类型](loading.html), 可选值为 `spinner`                                                                | _string_                    | `circular`    |
+| duration            | 展示时长(ms)，值为 0 时，toast 不会消失                                                                         | _number_                    | `2000`        |
+| className           | 自定义类名                                                                                                      | _string \| Array \| object_ | -             |
+| overlayClass        | 自定义遮罩层类名                                                                                                | _string \| Array \| object_ | -             |
+| overlayStyle        | 自定义遮罩层样式                                                                                                | _object_                    | -             |
+| onOpened            | 完全展示后的回调函数                                                                                            | _Function_                  | -             |
+| onClose             | 关闭时的回调函数                                                                                                | _Function_                  | -             |
+| transition          | 动画类名，等价于 [transition](https://v3.cn.vuejs.org/api/built-in-components.html#transition) 的`name`属性     | _string_                    | `w-fade`      |
+| teleport            | 指定挂载的节点，等同于 Teleport 组件的 [to 属性](https://v3.cn.vuejs.org/api/built-in-components.html#teleport) | _string \| Element_         | `body`        |
 
 ## Slots
 
@@ -299,23 +299,23 @@ import type {
 
 组件提供了下列 CSS 变量，可用于自定义样式，使用方法请参考 [ConfigProvider 组件](#/zh-CN/config-provider)。
 
-| 名称 | 默认值 | 描述 |
-| --- | --- | --- |
-| --w-toast-max-width | _70%_ | - |
-| --w-toast-font-size | _var(--w-font-size-md)_ | - |
-| --w-toast-text-color | _var(--w-white)_ | - |
-| --w-toast-loading-icon-color | _var(--w-white)_ | - |
-| --w-toast-line-height | _var(--w-line-height-md)_ | - |
-| --w-toast-radius | _var(--w-radius-lg)_ | - |
-| --w-toast-background | _fade(var(--w-black), 70%)_ | - |
-| --w-toast-icon-size | _36px_ | - |
-| --w-toast-text-min-width | _96px_ | - |
-| --w-toast-text-padding | _var(--w-padding-xs) var(--w-padding-sm)_ | - |
-| --w-toast-default-padding | _var(--w-padding-md)_ | - |
-| --w-toast-default-width | _88px_ | - |
-| --w-toast-default-min-height | _88px_ | - |
-| --w-toast-position-top-distance | _20%_ | - |
-| --w-toast-position-bottom-distance | _20%_ | - |
+| 名称                               | 默认值                                    | 描述 |
+| ---------------------------------- | ----------------------------------------- | ---- |
+| --w-toast-max-width                | _70%_                                     | -    |
+| --w-toast-font-size                | _var(--w-font-size-md)_                   | -    |
+| --w-toast-text-color               | _var(--w-white)_                          | -    |
+| --w-toast-loading-icon-color       | _var(--w-white)_                          | -    |
+| --w-toast-line-height              | _var(--w-line-height-md)_                 | -    |
+| --w-toast-radius                   | _var(--w-radius-lg)_                      | -    |
+| --w-toast-background               | _fade(var(--w-black), 70%)_               | -    |
+| --w-toast-icon-size                | _36px_                                    | -    |
+| --w-toast-text-min-width           | _96px_                                    | -    |
+| --w-toast-text-padding             | _var(--w-padding-xs) var(--w-padding-sm)_ | -    |
+| --w-toast-default-padding          | _var(--w-padding-md)_                     | -    |
+| --w-toast-default-width            | _88px_                                    | -    |
+| --w-toast-default-min-height       | _88px_                                    | -    |
+| --w-toast-position-top-distance    | _20%_                                     | -    |
+| --w-toast-position-bottom-distance | _20%_                                     | -    |
 
 <script setup>
   import { showToast, showLoadingToast, showSuccessToast, showFailToast, closeToast } from '@w-ui/components/Toast'

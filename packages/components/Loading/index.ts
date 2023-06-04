@@ -9,6 +9,6 @@ export type { LoadingThemeVars } from './types'
 
 declare module 'vue' {
   export interface GlobalComponents {
-    VanLoading: typeof Loading
+    WLoading: typeof Loading
   }
 }

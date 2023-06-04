@@ -9,6 +9,6 @@ export type { BadgeThemeVars } from './types'
 
 declare module 'vue' {
   export interface GlobalComponents {
-    VanBadge: typeof Badge
+    WBadge: typeof Badge
   }
 }

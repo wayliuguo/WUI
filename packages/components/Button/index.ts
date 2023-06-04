@@ -15,6 +15,6 @@ export type {
 
 declare module 'vue' {
   export interface GlobalComponents {
-    VanButton: typeof Button
+    WButton: typeof Button
   }
 }

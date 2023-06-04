@@ -6,6 +6,6 @@ export default Icon
 
 declare module 'vue' {
   export interface GlobalComponents {
-    VanIcon: typeof Icon
+    WIcon: typeof Icon
   }
 }
