@@ -199,7 +199,11 @@ export default (): UserConfigExport => {
 
 /** 打包结束之后将一些静态文件进行移入 */
 const move = (): void => {
-  const files = [{ input: './LICENSE', outDir: 'dist/LICENSE' }] as const
+  const files = [
+    { input: './LICENSE', outDir: 'dist/LICENSE' }, 
+    { input: './packages/package.json', outDir: 'dist/package.json' },
+    { input: './README.md', outDir: 'dist/README.md' }
+  ] as const
 
   files.forEach((item): void => {
     copyFileSync(item.input, item.outDir)
