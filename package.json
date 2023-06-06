@@ -10,8 +10,9 @@
     "docs:dev": "pnpm -C docs dev",
     "docs:build": "pnpm -C docs build",
     "docs:serve": "pnpm -C docs serve",
-    "build": "pnpm clean && vite build",
+    "build": "pnpm clean && pnpm build:css && pnpm build:theme && vite build",
     "build:css": "vite build --config vite.config.css.ts",
+    "build:theme": "vite build --config vite.config.theme.ts",
     "lint": "eslint . --cache",
     "lint:fix": "pnpm run lint --fix",
     "prettier": "prettier --write ."

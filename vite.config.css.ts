@@ -6,7 +6,7 @@ import type { UserConfigExport } from 'vite'
 
 const input: string = resolve(__dirname, 'packages/theme-chalk')
 // 只获取less文件，由于这里有个mixins文件夹
-const inputList = readdirSync(input).filter(item => item.includes('.less'))
+const inputList = readdirSync(input).filter(item => item.includes('.less') && !item.includes('index'))
 
 export default (): UserConfigExport => {
   return {
