@@ -201,7 +201,8 @@ export default (): UserConfigExport => {
 const move = (): void => {
   const files = [
     { input: './LICENSE', outDir: 'dist/LICENSE' }, 
-    { input: './packages/package.json', outDir: 'dist/package.json' }
+    { input: './packages/package.json', outDir: 'dist/package.json' },
+    { input: './README.md', outDir: 'dist/README.md' }
   ] as const
 
   files.forEach((item): void => {
