@@ -6,9 +6,10 @@
   "type": "module",
   "scripts": {
     "clean": "rimraf dist",
+    "clean:docs": "rimraf docs/.vitepress/dist",
     "dev": "pnpm -C play dev",
     "docs:dev": "pnpm -C docs dev",
-    "docs:build": "pnpm -C docs build",
+    "docs:build": "pnpm clean:docs && pnpm -C docs build",
     "docs:serve": "pnpm -C docs serve",
     "build": "pnpm clean && pnpm build:css && pnpm build:theme && vite build",
     "build:css": "vite build --config vite.config.css.ts",
