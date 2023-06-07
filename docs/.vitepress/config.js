@@ -28,6 +28,23 @@ module.exports = {
             { text: '安装', link: '/guide/installation' },
             { text: '快速开始', link: '/guide/quieStart' }
           ]
+        },
+        {
+          text: "笔记",
+          items: [
+            {
+              text: '工程搭建', link: '/guide/notes/project'
+            },
+            {
+              text: '工具函数', link: '/guide/notes/utilsFunction'
+            },
+            {
+              text: 'Loading 加载', link: '/guide/notes/loading'
+            },
+            {
+              text: 'Button 按钮', link: '/guide/notes/button'
+            }
+          ]
         }
       ],
       '/component/': [
