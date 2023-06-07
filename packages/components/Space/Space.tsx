@@ -6,7 +6,9 @@ import {
   type VNode,
   Fragment,
   computed,
-  CSSProperties
+  CSSProperties,
+  Comment,
+  Text
 } from 'vue'
 
 export type SpaceSize = number | string
