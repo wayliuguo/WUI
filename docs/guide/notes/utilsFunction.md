@@ -62,7 +62,7 @@ function _bem(
 ```
 
 ### createBEM
-通过_bem生成对应功能的函数
+- 通过_bem生成对应功能的函数
 ```
 function createBEM(prefixName: string) {
   const b = (blockSuffix = '') => _bem(prefixName, blockSuffix, '', '')
@@ -97,7 +97,7 @@ function createBEM(prefixName: string) {
 ```
 
 ### createNamespace
-生成指导前缀的函数并导出。
+- 生成指导前缀的函数并导出。
 ```
 export function createNamespace(name: string) {
   const prefixName = `w-${name}`
@@ -108,7 +108,7 @@ export function createNamespace(name: string) {
 ## props.ts
 
 ### numericProp
-把 pros 指定为 Number | String
+- 把 pros 指定为 Number | String
 ```
 export const numericProp = [Number, String]
 ```
@@ -120,6 +120,16 @@ export const makeStringProp = <T>(defaultVal: T) => ({
   type: String as unknown as PropType<T>,
   default: defaultVal
 })
+```
+
+### truthProp
+- 指定该`prop` 为 `Boolean`
+- 默认值：true
+```
+export const truthProp = {
+  type: Boolean,
+  default: true as const
+}
 ```
 
 ## format.ts
@@ -143,4 +153,13 @@ export function getSizeStyle(
     }
   }
 }
+```
+
+## validate.ts
+
+### isDef
+- 指定 val 属于泛型T类型且 `NonNullable`，返回其是否非 `undefined` | `null`
+```
+export const isDef = <T>(val: T): val is NonNullable<T> =>
+  val !== undefined && val !== null
 ```

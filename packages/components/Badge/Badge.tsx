@@ -129,7 +129,6 @@ export default defineComponent({
 
     return () => {
       if (slots.default) {
-        const { tag } = props
         return (
           <tag class={bem.e('wrapper')}>
             {slots.default()}
