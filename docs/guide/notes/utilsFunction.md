@@ -134,6 +134,18 @@ export const truthProp = {
 
 ## format.ts
 
+### addUnit
+- 判断是否有值
+- 如果值是数字或数字的字符串则拼接`px`，否则直接使用
+```
+export function addUnit(value?: Numeric): string | undefined {
+  if (isDef(value)) {
+    return isNumeric(value) ? `${value}px` : String(value)
+  }
+  return undefined
+}
+```
+
 ### getSizeStyle
 ```
 export function getSizeStyle(
@@ -162,4 +174,10 @@ export function getSizeStyle(
 ```
 export const isDef = <T>(val: T): val is NonNullable<T> =>
   val !== undefined && val !== null
+```
+### isNumeric
+- 判断传入值是否是数字或者数字字符串
+```
+export const isNumeric = (val: Numeric): val is string =>
+  typeof val === 'number' || /^\d+(\.\d+)?$/.test(val)
 ```

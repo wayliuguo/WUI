@@ -42,7 +42,7 @@ const renderIcon = () => {
 }
 ```
 
-# SpinIcon & CircularIcon
+### SpinIcon & CircularIcon
 - 两种类型的加载默认样式
 ```
 onst SpinIcon: JSX.Element[] = Array(12)
