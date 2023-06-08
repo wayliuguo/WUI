@@ -104,3 +104,43 @@ export function createNamespace(name: string) {
   return createBEM(prefixName)
 }
 ```
+
+## props.ts
+
+### numericProp
+把 pros 指定为 Number | String
+```
+export const numericProp = [Number, String]
+```
+### makeStringProp
+- 指定属于该泛型的类型，并提供默认值
+- Vue3 中属性发生了变化，需要使用`unknown`类型再转为`PropType`类型来实现转换
+```
+export const makeStringProp = <T>(defaultVal: T) => ({
+  type: String as unknown as PropType<T>,
+  default: defaultVal
+})
+```
+
+## format.ts
+
+### getSizeStyle
+```
+export function getSizeStyle(
+  originSize?: Numeric | Numeric[]
+): CSSProperties | undefined {
+  if (isDef(originSize)) {
+    if (Array.isArray(originSize)) {
+      return {
+        width: addUnit(originSize[0]),
+        height: addUnit(originSize[1])
+      }
+    }
+    const size = addUnit(originSize)
+    return {
+      width: size,
+      height: size
+    }
+  }
+}
+```
