@@ -62,7 +62,7 @@ function _bem(
 ```
 
 ### createBEM
-通过_bem生成对应功能的函数
+- 通过_bem生成对应功能的函数
 ```
 function createBEM(prefixName: string) {
   const b = (blockSuffix = '') => _bem(prefixName, blockSuffix, '', '')
@@ -97,10 +97,99 @@ function createBEM(prefixName: string) {
 ```
 
 ### createNamespace
-生成指导前缀的函数并导出。
+- 生成指导前缀的函数并导出。
 ```
 export function createNamespace(name: string) {
   const prefixName = `w-${name}`
   return createBEM(prefixName)
 }
 ```
+
+## props.ts
+
+### numericProp
+- 把 pros 指定为 Number | String
+```
+export const numericProp = [Number, String]
+```
+### makeStringProp
+- 指定属于该泛型的类型，并提供默认值
+- Vue3 中属性发生了变化，需要使用`unknown`类型再转为`PropType`类型来实现转换
+```
+export const makeStringProp = <T>(defaultVal: T) => ({
+  type: String as unknown as PropType<T>,
+  default: defaultVal
+})
+```
+
+### truthProp
+- 指定该`prop` 为 `Boolean`
+- 默认值：true
+```
+export const truthProp = {
+  type: Boolean,
+  default: true as const
+}
+```
+
+### unknownProp
+- 定义该`prop`为未知类型
+```
+export const unknownProp = null as unknown as PropType<unknown>
+```
+
+## format.ts
+
+### addUnit
+- 判断是否有值
+- 如果值是数字或数字的字符串则拼接`px`，否则直接使用
+```
+export function addUnit(value?: Numeric): string | undefined {
+  if (isDef(value)) {
+    return isNumeric(value) ? `${value}px` : String(value)
+  }
+  return undefined
+}
+```
+
+### getSizeStyle
+```
+export function getSizeStyle(
+  originSize?: Numeric | Numeric[]
+): CSSProperties | undefined {
+  if (isDef(originSize)) {
+    if (Array.isArray(originSize)) {
+      return {
+        width: addUnit(originSize[0]),
+        height: addUnit(originSize[1])
+      }
+    }
+    const size = addUnit(originSize)
+    return {
+      width: size,
+      height: size
+    }
+  }
+}
+```
+
+## validate.ts
+
+### isDef
+- 指定 val 属于泛型T类型且 `NonNullable`，返回其是否非 `undefined` | `null`
+```
+export const isDef = <T>(val: T): val is NonNullable<T> =>
+  val !== undefined && val !== null
+```
+### isNumeric
+- 判断传入值是否是数字或者数字字符串
+```
+export const isNumeric = (val: Numeric): val is string =>
+  typeof val === 'number' || /^\d+(\.\d+)?$/.test(val)
+```
+
+## constant.ts
+export const BORDER = 'w-hairline'
+export const BORDER_SURROUND = `${BORDER}--surround`
+export const BORDER_TOP_BOTTOM = `${BORDER}--top-bottom`
+export const HAPTICS_FEEDBACK = 'w-haptics-feedback'

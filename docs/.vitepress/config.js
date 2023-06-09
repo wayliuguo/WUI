@@ -36,13 +36,28 @@ module.exports = {
               text: '工程搭建', link: '/guide/notes/project'
             },
             {
+              text: 'vue', link: '/guide/notes/vue'
+            },
+            {
               text: '工具函数', link: '/guide/notes/utilsFunction'
             },
             {
               text: 'Loading 加载', link: '/guide/notes/loading'
             },
             {
+              text: 'Badge 徽标', link: '/guide/notes/badge'
+            },
+            {
+              text: 'Icon 图标', link: '/guide/notes/icon'
+            },
+            {
               text: 'Button 按钮', link: '/guide/notes/button'
+            },
+            {
+              text: 'Cell 单元格', link: '/guide/notes/cell'
+            },
+            {
+              text: 'Space 间距', link: '/guide/notes/space'
             }
           ]
         }
