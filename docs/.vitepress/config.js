@@ -55,6 +55,9 @@ module.exports = {
             },
             {
               text: 'Cell 单元格', link: '/guide/notes/cell'
+            },
+            {
+              text: 'Space 间距', link: '/guide/notes/space'
             }
           ]
         }
