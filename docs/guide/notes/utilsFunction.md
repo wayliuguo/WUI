@@ -132,6 +132,12 @@ export const truthProp = {
 }
 ```
 
+### unknownProp
+- 定义该`prop`为未知类型
+```
+export const unknownProp = null as unknown as PropType<unknown>
+```
+
 ## format.ts
 
 ### addUnit

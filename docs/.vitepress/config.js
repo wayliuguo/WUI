@@ -52,6 +52,9 @@ module.exports = {
             },
             {
               text: 'Button 按钮', link: '/guide/notes/button'
+            },
+            {
+              text: 'Cell 单元格', link: '/guide/notes/cell'
             }
           ]
         }
