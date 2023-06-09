@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,O as e}from"./chunks/framework.27bfc947.js";const m=JSON.parse('{"title":"工具函数","description":"","frontmatter":{},"headers":[],"relativePath":"guide/notes/utilsFunction.md"}'),l={name:"guide/notes/utilsFunction.md"},t=e("",51),p=[t];function o(i,c,r,d,C,u){return a(),n("div",null,p)}const h=s(l,[["render",o]]);export{m as __pageData,h as default};
