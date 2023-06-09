@@ -127,7 +127,6 @@ export default defineComponent({
 
     return () => {
       const {
-        tag,
         type,
         size,
         block,

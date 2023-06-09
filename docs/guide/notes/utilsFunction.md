@@ -181,3 +181,9 @@ export const isDef = <T>(val: T): val is NonNullable<T> =>
 export const isNumeric = (val: Numeric): val is string =>
   typeof val === 'number' || /^\d+(\.\d+)?$/.test(val)
 ```
+
+## constant.ts
+export const BORDER = 'w-hairline'
+export const BORDER_SURROUND = `${BORDER}--surround`
+export const BORDER_TOP_BOTTOM = `${BORDER}--top-bottom`
+export const HAPTICS_FEEDBACK = 'w-haptics-feedback'
