@@ -42,6 +42,9 @@ module.exports = {
               text: '工具函数', link: '/guide/notes/utilsFunction'
             },
             {
+              text: 'hooks', link: '/guide/notes/hooks'
+            },
+            {
               text: 'Loading 加载', link: '/guide/notes/loading'
             },
             {
@@ -58,6 +61,12 @@ module.exports = {
             },
             {
               text: 'Space 间距', link: '/guide/notes/space'
+            },
+            {
+              text: 'Layout Row ', link: '/guide/notes/row'
+            },
+            {
+              text: 'Layout Col', link: '/guide/notes/col'
             }
           ]
         }
