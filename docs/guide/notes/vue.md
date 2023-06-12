@@ -25,3 +25,6 @@ provide(treeInjectKey, {
   slots: useSlots()
 })
 ```
+
+## ComponentInternalInstance
+其是一个内部类型，用于表示组件实例。

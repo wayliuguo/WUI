@@ -41,12 +41,17 @@ export const ROW_KEY: InjectionKey<RowProvide> = Symbol(name)
 ```
 
 ### useChildren
-- 使用 [useChildren](hooks.html#useChildren.ts) 处理元素
+- 使用 [useChildren](hooks.html#useChildren.ts)
+- 通过`linkChildren`，导出方法和值。
 ```
 const { children, linkChildren } = useChildren(ROW_KEY)
+
+linkChildren({ spaces })
 ```
 
-## groups
+### groups
+- groups 依赖的是 `useChildren` 的 `children`
+- 这是一个二维数组，每一项包括了包含的24份内的项的下标`[[0,1,2],[3,4],[5]]`
 ```
 const groups = computed(() => {
   const groups: number[][] = [[]]
@@ -65,4 +70,89 @@ const groups = computed(() => {
 
   return groups
 })
+```
+
+### spaces
+- `averagePadding`：平均的padding，如`[0,1,2]`需要`2*gutter/3`
+```
+const spaces = computed(() => {
+  const gutter = Number(props.gutter)
+  const spaces: RowSpaces = []
+
+  if (!gutter) {
+    return spaces
+  }
+
+  groups.value.forEach(group => {
+    const averagePadding = (gutter * (group.length - 1)) / group.length
+
+    group.forEach((item, index) => {
+      if (index === 0) {
+        spaces.push({ right: averagePadding })
+      } else {
+        const left = gutter - spaces[item - 1].right
+        const right = averagePadding - left
+        spaces.push({ left, right })
+      }
+    })
+  })
+
+  return spaces
+})
+```
+
+### render
+- 添加上属性控制的样式
+- 把插槽渲染
+```
+return () => {
+  const { tag, wrap, align, justify } = props
+  return (
+    <tag
+      class={[
+        bem.b(),
+        align && bem.m(`align-${align}`),
+        justify && bem.m(`justify-${justify}`),
+        !wrap && bem.m('nowrap')
+      ]}
+    >
+      {slots.default?.()}
+    </tag>
+  )
+}
+```
+## style
+```
+.w-row {
+  display: flex;
+  flex-wrap: wrap;
+
+  &--nowrap {
+    flex-wrap: nowrap;
+  }
+
+  &--justify-center {
+    justify-content: center;
+  }
+
+  &--justify-end {
+    justify-content: flex-end;
+  }
+
+  &--justify-space-between {
+    justify-content: space-between;
+  }
+
+  &--justify-space-around {
+    justify-content: space-around;
+  }
+
+  &--align-center {
+    align-items: center;
+  }
+
+  &--align-bottom {
+    align-items: flex-end;
+  }
+}
 ```
