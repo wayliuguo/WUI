@@ -18,10 +18,10 @@ import PlayToast from './components/PlayToast.vue'
   <PlayIcon v-if="false"></PlayIcon>
   <PlayButton v-if="false"></PlayButton>
   <PlayCell v-if="false"></PlayCell>
-  <PlayLayOut v-if="false"></PlayLayOut>
+  <PlayLayOut></PlayLayOut>
   <PlaySpace v-if="false"></PlaySpace>
   <PlayCheckbox v-if="false"></PlayCheckbox>
   <PlayRadio v-if="false"></PlayRadio>
   <PlayPopup v-if="false"></PlayPopup>
-  <PlayToast></PlayToast>
+  <PlayToast v-if="false"></PlayToast>
 </template>
