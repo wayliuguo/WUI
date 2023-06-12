@@ -138,6 +138,15 @@ export const truthProp = {
 export const unknownProp = null as unknown as PropType<unknown>
 ```
 
+### makeRequiredProp
+- 定义该`props`为泛型类型且`require`
+```
+export const makeRequiredProp = <T>(type: T) => ({
+  type,
+  required: true as const
+})
+```
+
 ## format.ts
 
 ### addUnit
@@ -189,7 +198,15 @@ export const isNumeric = (val: Numeric): val is string =>
 ```
 
 ## constant.ts
+```
 export const BORDER = 'w-hairline'
 export const BORDER_SURROUND = `${BORDER}--surround`
 export const BORDER_TOP_BOTTOM = `${BORDER}--top-bottom`
 export const HAPTICS_FEEDBACK = 'w-haptics-feedback'
+```
+
+## basic.ts
+### extend
+```
+export const extend = Object.assign
+```

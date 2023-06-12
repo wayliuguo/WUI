@@ -67,6 +67,9 @@ module.exports = {
             },
             {
               text: 'Layout Col', link: '/guide/notes/col'
+            },
+            {
+              text: 'Checker', link: '/guide/notes/checker'
             }
           ]
         }
