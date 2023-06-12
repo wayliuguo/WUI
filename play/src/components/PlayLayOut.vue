@@ -2,16 +2,12 @@
 
 <template>
   <div class="cell">
-    <w-row>
+    <w-row gutter="20">
       <w-col span="8">span: 8</w-col>
       <w-col span="8">span: 8</w-col>
       <w-col span="8">span: 8</w-col>
-    </w-row>
-    <w-row>
       <w-col span="4">span: 4</w-col>
       <w-col span="10" offset="4">offset: 4, span: 10</w-col>
-    </w-row>
-    <w-row>
       <w-col offset="12" span="12">offset: 12, span: 12</w-col>
     </w-row>
   </div>

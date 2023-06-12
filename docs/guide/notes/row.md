@@ -25,3 +25,44 @@ export const rowProps = {
 
 export type RowProps = ExtractPropTypes<typeof rowProps>
 ```
+
+## setup
+
+### injection
+- 使用 InjectionKey 指定注入的类型。
+```
+export type RowSpaces = { left?: number; right: number }[]
+
+export type RowProvide = {
+  spaces: ComputedRef<RowSpaces>
+}
+
+export const ROW_KEY: InjectionKey<RowProvide> = Symbol(name)
+```
+
+### useChildren
+- 使用 [useChildren](hooks.html#useChildren.ts) 处理元素
+```
+const { children, linkChildren } = useChildren(ROW_KEY)
+```
+
+## groups
+```
+const groups = computed(() => {
+  const groups: number[][] = [[]]
+
+  let totalSpan = 0
+  children.forEach((child, index) => {
+    totalSpan += Number(child.span)
+
+    if (totalSpan > 24) {
+      groups.push([index])
+      totalSpan -= 24
+    } else {
+      groups[groups.length - 1].push(index)
+    }
+  })
+
+  return groups
+})
+```
