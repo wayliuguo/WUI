@@ -28,3 +28,30 @@ provide(treeInjectKey, {
 
 ## ComponentInternalInstance
 其是一个内部类型，用于表示组件实例。
+
+## expose
+- 可以暴露组件内部的数据或方法
+- 不可以暴露`props`
+- [expose hooks](hooks.html#use-expose-ts)
+```
+// expose
+setup(props, {expose}) {
+  name: 'w-checkbox'
+  const toggle = () => {}
+  expose({toggle})
+}
+
+...
+// 使用
+const checkboxRef = ref()
+const toggle = () => {
+  checkboxRef.value.toggle()
+}
+
+<w-checkbox ref="checkboxRef" v-model="checked">复选框</w-checkbox>
+<w-button @click="toggle">toggle</w-button>
+```
+
+## getCurrentInstance
+- 用于获取当前组件实例，可以在组件的任何地方调用。
+- 返回一个组件实例对象，包含了当前组件实例的所有属性和方法。

@@ -187,3 +187,15 @@ export function useCustomFieldValue(customValue: () => unknown) {
   }
 }
 ```
+
+## use-expose.ts
+- `vue` 中 `expose` 的升级版
+- [expose](vue.html#expose)
+```
+export function useExpose<T = Record<string, any>>(apis: T) {
+  const instance = getCurrentInstance()
+  if (instance) {
+    extend(instance.proxy as object, apis)
+  }
+}
+```

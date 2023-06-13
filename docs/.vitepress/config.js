@@ -76,6 +76,12 @@ module.exports = {
             },
             {
               text: 'RadioGroup', link: '/guide/notes/radioGroup'
+            },
+            {
+              text: 'Checkbox', link: '/guide/notes/checkbox'
+            },
+            {
+              text: 'CheckboxGroup', link: '/guide/notes/checkboxGroup'
             }
           ]
         }
