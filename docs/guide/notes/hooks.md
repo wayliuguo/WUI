@@ -160,3 +160,30 @@ export function useParent<T>(key: InjectionKey<ParentProvide<T>>) {
   }
 }
 ```
+
+## useCustomFieldValue
+- `CustomFieldInjectionValue` 定义类型
+- `InjectionKey` 定义注入类型为`CustomFieldInjectionValue`
+```
+export type CustomFieldInjectionValue = {
+  customValue: Ref<(() => unknown) | undefined>
+  resetValidation: () => void
+  validateWithTrigger: (trigger: 'onBlur' | 'onChange' | 'onSubmit') => void
+}
+
+export const CUSTOM_FIELD_INJECTION_KEY: InjectionKey<CustomFieldInjectionValue> =
+  Symbol('w-field')
+
+export function useCustomFieldValue(customValue: () => unknown) {
+  const field = inject(CUSTOM_FIELD_INJECTION_KEY, null)
+
+  if (field && !field.customValue.value) {
+    field.customValue.value = customValue
+
+    watch(customValue, () => {
+      field.resetValidation()
+      field.validateWithTrigger('onChange')
+    })
+  }
+}
+```

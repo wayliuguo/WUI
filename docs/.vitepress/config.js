@@ -70,6 +70,12 @@ module.exports = {
             },
             {
               text: 'Checker', link: '/guide/notes/checker'
+            },
+            {
+              text: 'Radio', link: '/guide/notes/radio'
+            },
+            {
+              text: 'RadioGroup', link: '/guide/notes/radioGroup'
             }
           ]
         }
