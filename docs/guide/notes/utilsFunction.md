@@ -182,6 +182,18 @@ export function getSizeStyle(
 }
 ```
 
+### getZIndexStyle
+- 返回一个`style`对象包含`zIndex`
+```
+export function getZIndexStyle(zIndex?: Numeric) {
+  const style: CSSProperties = {}
+  if (zIndex !== undefined) {
+    style.zIndex = +zIndex
+  }
+  return style
+}
+```
+
 ## validate.ts
 
 ### isDef
@@ -209,4 +221,32 @@ export const HAPTICS_FEEDBACK = 'w-haptics-feedback'
 ### extend
 ```
 export const extend = Object.assign
+```
+
+## dom.ts
+
+### stopPropagation & preventDefault
+- stopPropagation
+- preventDefault
+```
+export const stopPropagation = (event: Event) => event.stopPropagation()
+
+export function preventDefault(event: Event, isStopPropagation?: boolean) {
+  /* istanbul ignore else */
+  if (typeof event.cancelable !== 'boolean' || event.cancelable) {
+    event.preventDefault()
+  }
+
+  if (isStopPropagation) {
+    stopPropagation(event)
+  }
+}
+```
+
+## utils
+
+### inBrowser
+- 判断是否在浏览器环境
+```
+export const inBrowser = typeof window !== 'undefined'
 ```

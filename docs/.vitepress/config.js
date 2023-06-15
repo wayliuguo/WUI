@@ -82,6 +82,9 @@ module.exports = {
             },
             {
               text: 'CheckboxGroup', link: '/guide/notes/checkboxGroup'
+            },
+            {
+              text: 'Overlay', link: '/guide/notes/overlay'
             }
           ]
         }

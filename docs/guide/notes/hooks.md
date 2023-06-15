@@ -199,3 +199,117 @@ export function useExpose<T = Record<string, any>>(apis: T) {
   }
 }
 ```
+
+## use-lazy-render.ts
+- 依据入参的`show`作为`watch`的监听源。
+- `(render: () => JSX.Element)` 参数列表，定义render
+- `(render: () => JSX.Element) => () => inited.value ? render() : null` 在参数列表中定义render函数，这里返回一个函数`() => inited.value ? render() : null`,这个函数根据`inited.value`判断是否调用`render()`
+```
+export function useLazyRender(show: WatchSource<boolean | undefined>) {
+  const inited = ref(false)
+
+  watch(
+    show,
+    value => {
+      if (value) {
+        inited.value = value
+      }
+    },
+    { immediate: true }
+  )
+
+  return (render: () => JSX.Element) => () => inited.value ? render() : null
+}
+```
+
+## useEventListener
+- 利用函数重载，定义多个函数签名，以便在调用函数时根据传入的参数类型和数量来自动选择正确的函数签名。
+- 如果当前不在浏览器环境中，直接退出。
+- target: 监听的目标，如果是元素则使用[addEventListener](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener),如果是`Ref`对象则使用`watch`监听，并在值变化后自动添加或移除事件监听器。
+- capture：一个布尔值，表示 `listener` 会在该类型的事件捕获阶段传播到该 `EventTarget` 时触发。
+- 一个布尔值，设置为 true 时，表示 `listener` 永远不会调用 preventDefault()。
+- 定义了两个内部函数 add 和 remove，用于添加和移除事件监听器。这两个函数会根据传入的目标元素和配置选项来添加或移除事件监听器。
+- 在组件卸载时（使用 onUnmounted）和组件失活时（使用 onDeactivated）移除事件监听器。
+- 在组件挂载时（使用 onMountedOrActivated）添加事件监听器。
+- 返回一个函数，用于手动移除事件监听器。
+```
+export type UseEventListenerOptions = {
+  target?: TargetRef
+  capture?: boolean
+  passive?: boolean
+}
+
+export function useEventListener<K extends keyof DocumentEventMap>(
+  type: K,
+  listener: (event: DocumentEventMap[K]) => void,
+  options?: UseEventListenerOptions
+): () => void
+export function useEventListener(
+  type: string,
+  listener: EventListener,
+  options?: UseEventListenerOptions
+): () => void
+export function useEventListener(
+  type: string,
+  listener: EventListener,
+  options: UseEventListenerOptions = {}
+) {
+  if (!inBrowser) {
+    return
+  }
+
+  const { target = window, passive = false, capture = false } = options
+
+  let cleaned = false
+  let attached: boolean
+
+  const add = (target?: TargetRef) => {
+    if (cleaned) {
+      return
+    }
+    const element = unref(target)
+
+    if (element && !attached) {
+      element.addEventListener(type, listener, {
+        capture,
+        passive
+      })
+      attached = true
+    }
+  }
+
+  const remove = (target?: TargetRef) => {
+    if (cleaned) {
+      return
+    }
+    const element = unref(target)
+
+    if (element && attached) {
+      element.removeEventListener(type, listener, capture)
+      attached = false
+    }
+  }
+
+  onUnmounted(() => remove(target))
+  onDeactivated(() => remove(target))
+  onMountedOrActivated(() => add(target))
+
+  let stopWatch: WatchStopHandle
+
+  if (isRef(target)) {
+    stopWatch = watch(target, (val, oldVal) => {
+      remove(oldVal)
+      add(val)
+    })
+  }
+
+  /**
+   * Clean up the event listener
+   */
+  return () => {
+    stopWatch?.()
+    remove(target)
+    cleaned = true
+  }
+}
+```
