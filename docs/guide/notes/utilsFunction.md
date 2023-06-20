@@ -250,3 +250,49 @@ export function preventDefault(event: Event, isStopPropagation?: boolean) {
 ```
 export const inBrowser = typeof window !== 'undefined'
 ```
+
+## interceptor.ts
+- 如果传递了需要拦截的函数`interceptor`，则拦截，否则直接执行`done`。
+- 支持拦截的函数为`Promise`,根据返回值执行`done`或者`canceled`
+```
+export type Interceptor = (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ...args: any[]
+) => Promise<boolean> | boolean | undefined | void
+
+export function callInterceptor(
+  interceptor: Interceptor | undefined,
+  {
+    args = [],
+    done,
+    canceled
+  }: {
+    args?: unknown[]
+    done: () => void
+    canceled?: () => void
+  }
+) {
+  if (interceptor) {
+    // eslint-disable-next-line prefer-spread
+    const returnVal = interceptor.apply(null, args)
+
+    if (isPromise(returnVal)) {
+      returnVal
+        .then(value => {
+          if (value) {
+            done()
+          } else if (canceled) {
+            canceled()
+          }
+        })
+        .catch(noop)
+    } else if (returnVal) {
+      done()
+    } else if (canceled) {
+      canceled()
+    }
+  } else {
+    done()
+  }
+}
+```

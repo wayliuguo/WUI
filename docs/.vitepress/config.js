@@ -85,6 +85,9 @@ module.exports = {
             },
             {
               text: 'Overlay', link: '/guide/notes/overlay'
+            },
+            {
+              text: 'Popup', link: '/guide/notes/popup'
             }
           ]
         }
