@@ -28,3 +28,56 @@ provide(treeInjectKey, {
 
 ## ComponentInternalInstance
 其是一个内部类型，用于表示组件实例。
+
+## expose
+- 可以暴露组件内部的数据或方法
+- 不可以暴露`props`
+- [expose hooks](hooks.html#use-expose-ts)
+```
+// expose
+setup(props, {expose}) {
+  name: 'w-checkbox'
+  const toggle = () => {}
+  expose({toggle})
+}
+
+...
+// 使用
+const checkboxRef = ref()
+const toggle = () => {
+  checkboxRef.value.toggle()
+}
+
+<w-checkbox ref="checkboxRef" v-model="checked">复选框</w-checkbox>
+<w-button @click="toggle">toggle</w-button>
+```
+
+## getCurrentInstance
+- 用于获取当前组件实例，可以在组件的任何地方调用。
+- 返回一个组件实例对象，包含了当前组件实例的所有属性和方法。
+
+## WatchSource
+- 是一个泛型接口，用于表示可以作为监视器的值的类型。
+
+## createApp
+- 创建一个应用实例。
+- 第一个参数是根组件。第二个参数可选，它是要传递给根组件的 props。
+```
+function createApp(rootComponent: Component, rootProps?: object): App
+```
+
+## app.mount
+- 将应用实例挂载在一个容器元素中。
+```
+interface App {
+  mount(rootContainer: Element | string): ComponentPublicInstance
+}
+```
+
+## app.unmount
+- 卸载一个已挂载的应用实例。卸载一个应用会触发该应用组件树内所有组件的卸载生命周期钩子。
+```
+interface App {
+  unmount(): void
+}
+```

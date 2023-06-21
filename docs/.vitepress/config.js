@@ -67,6 +67,30 @@ module.exports = {
             },
             {
               text: 'Layout Col', link: '/guide/notes/col'
+            },
+            {
+              text: 'Checker', link: '/guide/notes/checker'
+            },
+            {
+              text: 'Radio', link: '/guide/notes/radio'
+            },
+            {
+              text: 'RadioGroup', link: '/guide/notes/radioGroup'
+            },
+            {
+              text: 'Checkbox', link: '/guide/notes/checkbox'
+            },
+            {
+              text: 'CheckboxGroup', link: '/guide/notes/checkboxGroup'
+            },
+            {
+              text: 'Overlay', link: '/guide/notes/overlay'
+            },
+            {
+              text: 'Popup', link: '/guide/notes/popup'
+            },
+            {
+              text: 'Toast', link: '/guide/notes/toast'
             }
           ]
         }
