@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,O as e}from"./chunks/framework.4015372c.js";const D=JSON.parse('{"title":"Row","description":"","frontmatter":{},"headers":[],"relativePath":"guide/notes/checker.md"}'),l={name:"guide/notes/checker.md"},p=e("",24),o=[p];function c(t,r,i,C,A,d){return n(),a("div",null,o)}const h=s(l,[["render",c]]);export{D as __pageData,h as default};

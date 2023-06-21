@@ -1,0 +1,1 @@
+import{_ as a,o as s,c as n,O as e}from"./chunks/framework.4015372c.js";const A=JSON.parse('{"title":"RadioGroup","description":"","frontmatter":{},"headers":[],"relativePath":"guide/notes/radioGroup.md"}'),l={name:"guide/notes/radioGroup.md"},o=e("",23),p=[o];function t(i,r,c,d,u,C){return s(),n("div",null,p)}const y=a(l,[["render",t]]);export{A as __pageData,y as default};

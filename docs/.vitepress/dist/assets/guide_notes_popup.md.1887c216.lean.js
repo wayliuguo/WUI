@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,O as l}from"./chunks/framework.4015372c.js";const F=JSON.parse('{"title":"Popup","description":"","frontmatter":{},"headers":[],"relativePath":"guide/notes/popup.md"}'),p={name:"guide/notes/popup.md"},o=l("",63),e=[o];function c(t,r,C,A,D,y){return n(),a("div",null,e)}const d=s(p,[["render",c]]);export{F as __pageData,d as default};

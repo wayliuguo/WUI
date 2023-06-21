@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,O as l}from"./chunks/framework.4015372c.js";const F=JSON.parse('{"title":"Icon","description":"","frontmatter":{},"headers":[],"relativePath":"guide/notes/icon.md"}'),p={name:"guide/notes/icon.md"},o=l("",12),e=[o];function t(c,r,i,D,C,y){return a(),n("div",null,e)}const d=s(p,[["render",t]]);export{F as __pageData,d as default};

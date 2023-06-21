@@ -1,1 +1,0 @@
-import{_ as n,o as s,c as a,O as l}from"./chunks/framework.27bfc947.js";const h=JSON.parse('{"title":"hooks","description":"","frontmatter":{},"headers":[],"relativePath":"guide/notes/hooks.md"}'),e={name:"guide/notes/hooks.md"},p=l("",18),o=[p];function c(i,t,r,C,d,A){return s(),a("div",null,o)}const u=n(e,[["render",c]]);export{h as __pageData,u as default};

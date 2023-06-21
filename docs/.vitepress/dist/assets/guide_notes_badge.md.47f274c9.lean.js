@@ -1,1 +1,0 @@
-import{_ as s,o as n,c as a,O as l}from"./chunks/framework.27bfc947.js";const F=JSON.parse('{"title":"Badge","description":"","frontmatter":{},"headers":[],"relativePath":"guide/notes/badge.md"}'),p={name:"guide/notes/badge.md"},o=l("",21),e=[o];function t(c,r,C,D,A,y){return n(),a("div",null,e)}const d=s(p,[["render",t]]);export{F as __pageData,d as default};

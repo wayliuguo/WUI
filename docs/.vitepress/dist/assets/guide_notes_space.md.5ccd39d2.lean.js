@@ -1,1 +1,0 @@
-import{_ as s,o as n,c as a,O as l}from"./chunks/framework.27bfc947.js";const d=JSON.parse('{"title":"Space","description":"","frontmatter":{},"headers":[],"relativePath":"guide/notes/space.md"}'),p={name:"guide/notes/space.md"},e=l("",21),o=[e];function c(t,r,i,C,A,y){return n(),a("div",null,o)}const g=s(p,[["render",c]]);export{d as __pageData,g as default};

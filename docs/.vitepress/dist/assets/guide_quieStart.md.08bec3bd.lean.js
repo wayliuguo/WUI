@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,O as p}from"./chunks/framework.27bfc947.js";const C=JSON.parse('{"title":"快速开始","description":"","frontmatter":{},"headers":[],"relativePath":"guide/quieStart.md"}'),l={name:"guide/quieStart.md"},o=p("",8),t=[o];function e(c,r,D,y,F,i){return a(),n("div",null,t)}const d=s(l,[["render",e]]);export{C as __pageData,d as default};

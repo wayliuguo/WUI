@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Toast | W-UI</title>
+    <meta name="description" content="W-UI">
+    <link rel="preload stylesheet" href="/wui/assets/style.17e71fe9.css" as="style">
+    <script type="module" src="/wui/assets/app.eaf4af7a.js"></script>
+    <link rel="preload" href="/wui/assets/inter-roman-latin.2ed14f66.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="modulepreload" href="/wui/assets/chunks/framework.4015372c.js">
+  <link rel="modulepreload" href="/wui/assets/chunks/theme.ac736a04.js">
+  <link rel="modulepreload" href="/wui/assets/chunks/index.495254c3.js">
+  <link rel="modulepreload" href="/wui/assets/guide_notes_toast.md.30dc88aa.lean.js">
+  <script id="check-dark-light">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+  </head>
+  <body>
+    <div id="app"><div class="Layout" data-v-74341577><!--[--><!--]--><!--[--><span tabindex="-1" data-v-ca0f91c2></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-ca0f91c2> Skip to content </a><!--]--><!----><header class="VPNav" data-v-74341577 data-v-98bf47f0><div class="VPNavBar has-sidebar" data-v-98bf47f0 data-v-6a8586ad><div class="container" data-v-6a8586ad><div class="title" data-v-6a8586ad><div class="VPNavBarTitle has-sidebar" data-v-6a8586ad data-v-04508eda><a class="title" href="/wui/" data-v-04508eda><!--[--><!--]--><!----><!--[-->W-UI<!--]--><!--[--><!--]--></a></div></div><div class="content" data-v-6a8586ad><div class="curtain" data-v-6a8586ad></div><div class="content-body" data-v-6a8586ad><!--[--><!--]--><div class="VPNavBarSearch search" style="--vp-meta-key:&#39;Meta&#39;;" data-v-6a8586ad><!----></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-6a8586ad data-v-1cdd85cf><span id="main-nav-aria-label" class="visually-hidden" data-v-1cdd85cf>Main Navigation</span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink active" href="/wui/guide/installation.html" tabindex="0" data-v-1cdd85cf data-v-260170b2 data-v-fdcb1ff4><!--[-->指南<!--]--><!----></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/wui/component/button.html" tabindex="0" data-v-1cdd85cf data-v-260170b2 data-v-fdcb1ff4><!--[-->组件<!--]--><!----></a><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-6a8586ad data-v-43764607><label title="toggle dark mode" data-v-43764607 data-v-c6fae2ac><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" aria-checked="false" data-v-c6fae2ac data-v-ccfde87d><span class="check" data-v-ccfde87d><span class="icon" data-v-ccfde87d><!--[--><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="sun" data-v-c6fae2ac><path d="M12,18c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6S15.3,18,12,18zM12,8c-2.2,0-4,1.8-4,4c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4C16,9.8,14.2,8,12,8z"></path><path d="M12,4c-0.6,0-1-0.4-1-1V1c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,3.6,12.6,4,12,4z"></path><path d="M12,24c-0.6,0-1-0.4-1-1v-2c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,23.6,12.6,24,12,24z"></path><path d="M5.6,6.6c-0.3,0-0.5-0.1-0.7-0.3L3.5,4.9c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C6.2,6.5,5.9,6.6,5.6,6.6z"></path><path d="M19.8,20.8c-0.3,0-0.5-0.1-0.7-0.3l-1.4-1.4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C20.3,20.7,20,20.8,19.8,20.8z"></path><path d="M3,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S3.6,13,3,13z"></path><path d="M23,13h-2c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path><path d="M4.2,20.8c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C4.7,20.7,4.5,20.8,4.2,20.8z"></path><path d="M18.4,6.6c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C18.9,6.5,18.6,6.6,18.4,6.6z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="moon" data-v-c6fae2ac><path d="M12.1,22c-0.3,0-0.6,0-0.9,0c-5.5-0.5-9.5-5.4-9-10.9c0.4-4.8,4.2-8.6,9-9c0.4,0,0.8,0.2,1,0.5c0.2,0.3,0.2,0.8-0.1,1.1c-2,2.7-1.4,6.4,1.3,8.4c2.1,1.6,5,1.6,7.1,0c0.3-0.2,0.7-0.3,1.1-0.1c0.3,0.2,0.5,0.6,0.5,1c-0.2,2.7-1.5,5.1-3.6,6.8C16.6,21.2,14.4,22,12.1,22zM9.3,4.4c-2.9,1-5,3.6-5.2,6.8c-0.4,4.4,2.8,8.3,7.2,8.7c2.1,0.2,4.2-0.4,5.8-1.8c1.1-0.9,1.9-2.1,2.4-3.4c-2.5,0.9-5.3,0.5-7.5-1.1C9.2,11.4,8.1,7.7,9.3,4.4z"></path></svg><!--]--></span></span></button></label></div><!----><div class="VPFlyout VPNavBarExtra extra" data-v-6a8586ad data-v-34170014 data-v-d594c0dc><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-d594c0dc><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="icon" data-v-d594c0dc><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle><circle cx="5" cy="12" r="2"></circle></svg></button><div class="menu" data-v-d594c0dc><div class="VPMenu" data-v-d594c0dc data-v-e8b21dfa><!----><!--[--><!--[--><!----><div class="group" data-v-34170014><div class="item appearance" data-v-34170014><p class="label" data-v-34170014>Appearance</p><div class="appearance-action" data-v-34170014><label title="toggle dark mode" data-v-34170014 data-v-c6fae2ac><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" aria-checked="false" data-v-c6fae2ac data-v-ccfde87d><span class="check" data-v-ccfde87d><span class="icon" data-v-ccfde87d><!--[--><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="sun" data-v-c6fae2ac><path d="M12,18c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6S15.3,18,12,18zM12,8c-2.2,0-4,1.8-4,4c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4C16,9.8,14.2,8,12,8z"></path><path d="M12,4c-0.6,0-1-0.4-1-1V1c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,3.6,12.6,4,12,4z"></path><path d="M12,24c-0.6,0-1-0.4-1-1v-2c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,23.6,12.6,24,12,24z"></path><path d="M5.6,6.6c-0.3,0-0.5-0.1-0.7-0.3L3.5,4.9c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C6.2,6.5,5.9,6.6,5.6,6.6z"></path><path d="M19.8,20.8c-0.3,0-0.5-0.1-0.7-0.3l-1.4-1.4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C20.3,20.7,20,20.8,19.8,20.8z"></path><path d="M3,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S3.6,13,3,13z"></path><path d="M23,13h-2c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path><path d="M4.2,20.8c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C4.7,20.7,4.5,20.8,4.2,20.8z"></path><path d="M18.4,6.6c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C18.9,6.5,18.6,6.6,18.4,6.6z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="moon" data-v-c6fae2ac><path d="M12.1,22c-0.3,0-0.6,0-0.9,0c-5.5-0.5-9.5-5.4-9-10.9c0.4-4.8,4.2-8.6,9-9c0.4,0,0.8,0.2,1,0.5c0.2,0.3,0.2,0.8-0.1,1.1c-2,2.7-1.4,6.4,1.3,8.4c2.1,1.6,5,1.6,7.1,0c0.3-0.2,0.7-0.3,1.1-0.1c0.3,0.2,0.5,0.6,0.5,1c-0.2,2.7-1.5,5.1-3.6,6.8C16.6,21.2,14.4,22,12.1,22zM9.3,4.4c-2.9,1-5,3.6-5.2,6.8c-0.4,4.4,2.8,8.3,7.2,8.7c2.1,0.2,4.2-0.4,5.8-1.8c1.1-0.9,1.9-2.1,2.4-3.4c-2.5,0.9-5.3,0.5-7.5-1.1C9.2,11.4,8.1,7.7,9.3,4.4z"></path></svg><!--]--></span></span></button></label></div></div></div><!----><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-6a8586ad data-v-8e03eb06><span class="container" data-v-8e03eb06><span class="top" data-v-8e03eb06></span><span class="middle" data-v-8e03eb06></span><span class="bottom" data-v-8e03eb06></span></span></button></div></div></div></div><!----></header><div class="VPLocalNav" data-v-74341577 data-v-8129c5fa><button class="menu" aria-expanded="false" aria-controls="VPSidebarNav" data-v-8129c5fa><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="menu-icon" data-v-8129c5fa><path d="M17,11H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S17.6,11,17,11z"></path><path d="M21,7H3C2.4,7,2,6.6,2,6s0.4-1,1-1h18c0.6,0,1,0.4,1,1S21.6,7,21,7z"></path><path d="M21,15H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h18c0.6,0,1,0.4,1,1S21.6,15,21,15z"></path><path d="M17,19H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S17.6,19,17,19z"></path></svg><span class="menu-text" data-v-8129c5fa>Menu</span></button><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-8129c5fa data-v-78cfb33f><button data-v-78cfb33f>Return to top</button><!----></div></div><aside class="VPSidebar" data-v-74341577 data-v-1864c444><div class="curtain" data-v-1864c444></div><nav class="nav" id="VPSidebarNav" aria-labelledby="sidebar-aria-label" tabindex="-1" data-v-1864c444><span class="visually-hidden" id="sidebar-aria-label" data-v-1864c444> Sidebar Navigation </span><!--[--><!--]--><!--[--><div class="group" data-v-1864c444><section class="VPSidebarItem level-0" data-v-1864c444 data-v-2fab235f><div class="item" role="button" tabindex="0" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><h2 class="text" data-v-2fab235f>指南</h2><!----></div><div class="items" data-v-2fab235f><!--[--><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/installation.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>安装</p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/quieStart.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>快速开始</p><!--]--><!----></a><!----></div><!----></div><!--]--></div></section></div><div class="group" data-v-1864c444><section class="VPSidebarItem level-0 has-active" data-v-1864c444 data-v-2fab235f><div class="item" role="button" tabindex="0" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><h2 class="text" data-v-2fab235f>笔记</h2><!----></div><div class="items" data-v-2fab235f><!--[--><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/project.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>工程搭建</p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/vue.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>vue</p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/utilsFunction.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>工具函数</p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/hooks.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>hooks</p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/loading.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>Loading 加载</p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/badge.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>Badge 徽标</p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/icon.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>Icon 图标</p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/button.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>Button 按钮</p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/cell.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>Cell 单元格</p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/space.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>Space 间距</p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/row.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>Layout Row </p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/col.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>Layout Col</p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/checker.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>Checker</p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/radio.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>Radio</p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/radioGroup.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>RadioGroup</p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/checkbox.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>Checkbox</p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/checkboxGroup.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>CheckboxGroup</p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/overlay.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>Overlay</p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/popup.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>Popup</p><!--]--><!----></a><!----></div><!----></div><div class="VPSidebarItem level-1 is-link is-active has-active" data-v-2fab235f data-v-2fab235f><div class="item" data-v-2fab235f><div class="indicator" data-v-2fab235f></div><a class="VPLink link link" href="/wui/guide/notes/toast.html" data-v-2fab235f data-v-fdcb1ff4><!--[--><p class="text" data-v-2fab235f>Toast</p><!--]--><!----></a><!----></div><!----></div><!--]--></div></section></div><!--]--><!--[--><!--]--></nav></aside><div class="VPContent has-sidebar" id="VPContent" data-v-74341577 data-v-9d8d9d32><div class="VPDoc has-sidebar has-aside" data-v-9d8d9d32 data-v-6c002a39><!--[--><!--]--><div class="container" data-v-6c002a39><div class="aside" data-v-6c002a39><div class="aside-curtain" data-v-6c002a39></div><div class="aside-container" data-v-6c002a39><div class="aside-content" data-v-6c002a39><div class="VPDocAside" data-v-6c002a39 data-v-aef52c28><!--[--><!--]--><!--[--><!--]--><div class="VPDocAsideOutline" data-v-aef52c28 data-v-6292888b><div class="content" data-v-6292888b><div class="outline-marker" data-v-6292888b></div><div class="outline-title" data-v-6292888b>On this page</div><nav aria-labelledby="doc-outline-aria-label" data-v-6292888b><span class="visually-hidden" id="doc-outline-aria-label" data-v-6292888b> Table of Contents for current page </span><ul class="root" data-v-6292888b data-v-2fee3d2a><!--[--><!--]--></ul></nav></div></div><!--[--><!--]--><div class="spacer" data-v-aef52c28></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-6c002a39><div class="content-container" data-v-6c002a39><!--[--><!--]--><!----><main class="main" data-v-6c002a39><div style="position:relative;" class="vp-doc _wui_guide_notes_toast" data-v-6c002a39><div><h1 id="toast" tabindex="-1">Toast <a class="header-anchor" href="#toast" aria-label="Permalink to &quot;Toast&quot;">​</a></h1><h2 id="props" tabindex="-1">props <a class="header-anchor" href="#props" aria-label="Permalink to &quot;props&quot;">​</a></h2><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">export const toastProps = {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  icon: String,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  show: Boolean,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  type: makeStringProp&lt;ToastType&gt;(&#39;text&#39;),</span></span>
+<span class="line"><span style="color:#A6ACCD;">  overlay: Boolean,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  message: numericProp,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  iconSize: numericProp,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  duration: makeNumberProp(2000),</span></span>
+<span class="line"><span style="color:#A6ACCD;">  position: makeStringProp&lt;ToastPosition&gt;(&#39;middle&#39;),</span></span>
+<span class="line"><span style="color:#A6ACCD;">  teleport: [String, Object] as PropType&lt;TeleportProps[&#39;to&#39;]&gt;,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  wordBreak: String as PropType&lt;ToastWordBreak&gt;,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  className: unknownProp,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  iconPrefix: String,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  transition: makeStringProp(&#39;w-fade&#39;),</span></span>
+<span class="line"><span style="color:#A6ACCD;">  loadingType: String as PropType&lt;LoadingType&gt;,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  forbidClick: Boolean,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  overlayClass: unknownProp,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  overlayStyle: Object as PropType&lt;CSSProperties&gt;,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  closeOnClick: Boolean,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  closeOnClickOverlay: Boolean</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">export type ToastProps = ExtractPropTypes&lt;typeof toastProps&gt;</span></span></code></pre></div><h2 id="emits" tabindex="-1">emits <a class="header-anchor" href="#emits" aria-label="Permalink to &quot;emits&quot;">​</a></h2><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">emits: [&#39;update:show&#39;]</span></span></code></pre></div><h2 id="setup" tabindex="-1">setup <a class="header-anchor" href="#setup" aria-label="Permalink to &quot;setup&quot;">​</a></h2><h3 id="toggleclickable" tabindex="-1">toggleClickable <a class="header-anchor" href="#toggleclickable" aria-label="Permalink to &quot;toggleClickable&quot;">​</a></h3><ul><li>切换是否可以点击。</li></ul><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">let clickable = false</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">const toggleClickable = () =&gt; {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  const newValue = props.show &amp;&amp; props.forbidClick</span></span>
+<span class="line"><span style="color:#A6ACCD;">  if (clickable !== newValue) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">    clickable = newValue</span></span>
+<span class="line"><span style="color:#A6ACCD;">    lockClick(clickable)</span></span>
+<span class="line"><span style="color:#A6ACCD;">  }</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span></code></pre></div><h3 id="onclick" tabindex="-1">onClick <a class="header-anchor" href="#onclick" aria-label="Permalink to &quot;onClick&quot;">​</a></h3><ul><li>点击更新。</li></ul><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">const updateShow = (show: boolean) =&gt; emit(&#39;update:show&#39;, show)</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">const onClick = () =&gt; {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  if (props.closeOnClick) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">    updateShow(false)</span></span>
+<span class="line"><span style="color:#A6ACCD;">  }</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span></code></pre></div><h3 id="rendericon" tabindex="-1">renderIcon <a class="header-anchor" href="#rendericon" aria-label="Permalink to &quot;renderIcon&quot;">​</a></h3><ul><li>渲染 <code>icon</code>。</li></ul><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">const renderIcon = () =&gt; {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  const { icon, type, iconSize, iconPrefix, loadingType } = props</span></span>
+<span class="line"><span style="color:#A6ACCD;">  const hasIcon = icon || type === &#39;success&#39; || type === &#39;fail&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">  if (hasIcon) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">    return (</span></span>
+<span class="line"><span style="color:#A6ACCD;">      &lt;Icon</span></span>
+<span class="line"><span style="color:#A6ACCD;">        name={icon || type}</span></span>
+<span class="line"><span style="color:#A6ACCD;">        size={iconSize}</span></span>
+<span class="line"><span style="color:#A6ACCD;">        class={bem.e(&#39;icon&#39;)}</span></span>
+<span class="line"><span style="color:#A6ACCD;">        classPrefix={iconPrefix}</span></span>
+<span class="line"><span style="color:#A6ACCD;">      /&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">    )</span></span>
+<span class="line"><span style="color:#A6ACCD;">  }</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">  if (type === &#39;loading&#39;) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">    return (</span></span>
+<span class="line"><span style="color:#A6ACCD;">      &lt;Loading</span></span>
+<span class="line"><span style="color:#A6ACCD;">        class={bem.m(&#39;loading&#39;)}</span></span>
+<span class="line"><span style="color:#A6ACCD;">        size={iconSize}</span></span>
+<span class="line"><span style="color:#A6ACCD;">        type={loadingType}</span></span>
+<span class="line"><span style="color:#A6ACCD;">      /&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">    )</span></span>
+<span class="line"><span style="color:#A6ACCD;">  }</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span></code></pre></div><h3 id="watch" tabindex="-1">watch <a class="header-anchor" href="#watch" aria-label="Permalink to &quot;watch&quot;">​</a></h3><ul><li>监听值切换是否可以点击。</li><li>监听值进行更新值<code>show</code>，如果是0则不关闭。</li></ul><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">let timer: ReturnType&lt;typeof setTimeout&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">const clearTimer = () =&gt; clearTimeout(timer)</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">watch(() =&gt; [props.show, props.forbidClick], toggleClickable)</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">watch(</span></span>
+<span class="line"><span style="color:#A6ACCD;">  () =&gt; [props.show, props.type, props.message, props.duration],</span></span>
+<span class="line"><span style="color:#A6ACCD;">  () =&gt; {</span></span>
+<span class="line"><span style="color:#A6ACCD;">    clearTimer()</span></span>
+<span class="line"><span style="color:#A6ACCD;">    if (props.show &amp;&amp; props.duration &gt; 0) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">      timer = setTimeout(() =&gt; {</span></span>
+<span class="line"><span style="color:#A6ACCD;">        updateShow(false)</span></span>
+<span class="line"><span style="color:#A6ACCD;">      }, props.duration)</span></span>
+<span class="line"><span style="color:#A6ACCD;">    }</span></span>
+<span class="line"><span style="color:#A6ACCD;">  }</span></span>
+<span class="line"><span style="color:#A6ACCD;">)</span></span></code></pre></div><h3 id="onmounted-onunmounted" tabindex="-1">onMounted &amp; onUnmounted <a class="header-anchor" href="#onmounted-onunmounted" aria-label="Permalink to &quot;onMounted &amp; onUnmounted&quot;">​</a></h3><ul><li>在这两个钩子中进行是否可以点击更新。</li></ul><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">onMounted(toggleClickable)</span></span>
+<span class="line"><span style="color:#A6ACCD;">onUnmounted(toggleClickable)</span></span></code></pre></div><h3 id="render" tabindex="-1">render <a class="header-anchor" href="#render" aria-label="Permalink to &quot;render&quot;">​</a></h3><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">return () =&gt; (</span></span>
+<span class="line"><span style="color:#A6ACCD;">  &lt;Popup</span></span>
+<span class="line"><span style="color:#A6ACCD;">    class={[</span></span>
+<span class="line"><span style="color:#A6ACCD;">      bem.b(),</span></span>
+<span class="line"><span style="color:#A6ACCD;">      bem.m(props.position),</span></span>
+<span class="line"><span style="color:#A6ACCD;">      props.wordBreak === &#39;normal&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;">        ? bem.m(&#39;break-normal&#39;)</span></span>
+<span class="line"><span style="color:#A6ACCD;">        : bem.m(props.wordBreak),</span></span>
+<span class="line"><span style="color:#A6ACCD;">      !props.icon &amp;&amp; bem.m(props.type),</span></span>
+<span class="line"><span style="color:#A6ACCD;">      props.className</span></span>
+<span class="line"><span style="color:#A6ACCD;">    ]}</span></span>
+<span class="line"><span style="color:#A6ACCD;">    lockScroll={false}</span></span>
+<span class="line"><span style="color:#A6ACCD;">    onClick={onClick}</span></span>
+<span class="line"><span style="color:#A6ACCD;">    onClosed={clearTimer}</span></span>
+<span class="line"><span style="color:#A6ACCD;">    onUpdate:show={updateShow}</span></span>
+<span class="line"><span style="color:#A6ACCD;">    {...pick(props, popupInheritProps)}&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">    {renderIcon()}</span></span>
+<span class="line"><span style="color:#A6ACCD;">    {renderMessage()}</span></span>
+<span class="line"><span style="color:#A6ACCD;">  &lt;/Popup&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">)</span></span></code></pre></div><h2 id="lock-click-ts" tabindex="-1">lock-click.ts <a class="header-anchor" href="#lock-click-ts" aria-label="Permalink to &quot;lock-click.ts&quot;">​</a></h2><ul><li>lockCount：表示当前页面被锁定的次数。</li><li>lockClick：接受一个布尔值参数 lock，表示是否需要锁定页面。如果需要锁定页面，则会将 lockCount 加 1，并向文档的 body 元素添加一个类，使得整个页面不可点击。如果需要解除锁定，则会将 lockCount 减 1，并在 lockCount 变为 0 时，从文档的 body 元素中移除该类，使得页面重新可点击。</li></ul><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">let lockCount = 0</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">export function lockClick(lock: boolean) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  if (lock) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">    if (!lockCount) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">      document.body.classList.add(&#39;w-toast--unclickable&#39;)</span></span>
+<span class="line"><span style="color:#A6ACCD;">    }</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">    lockCount++</span></span>
+<span class="line"><span style="color:#A6ACCD;">  } else if (lockCount) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">    lockCount--</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">    if (!lockCount) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">      document.body.classList.remove(&#39;w-toast--unclickable&#39;)</span></span>
+<span class="line"><span style="color:#A6ACCD;">    }</span></span>
+<span class="line"><span style="color:#A6ACCD;">  }</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span></code></pre></div><h2 id="function-call-tsx" tabindex="-1">function-call.tsx <a class="header-anchor" href="#function-call-tsx" aria-label="Permalink to &quot;function-call.tsx&quot;">​</a></h2><ul><li>类型声明。</li><li>定义了一个 Toast 实例队列 <code>queue</code> 和一个允许同时存在多个 Toast 实例的标志 <code>allowMultiple</code>，并初始化为 false。</li><li><code>parseOptions</code>： 用于解析传入的 options 对象或字符串，将其转为统一的 ToastOptions 类型。</li><li><code>createInstance</code>: 用于创建实例。 <ul><li><a href="./utilsFunction.html#mountcomponent">mountComponent</a>,传入组件，返回组件实例与卸载组件方法。</li><li><a href="./utilsFunction.html#usepopupstate">usePopupState</a>,导出<code>open、state、close、toggle</code>等属性和方法，<code>state</code> 用于传递给<code>WToast</code>控制状态。</li><li><code>onClosed</code>: 如果允许多个存在，则清空队列中这个实例，调用<a href="./vue.html#app-unmount">unmount</a>卸载。</li><li><code>render</code>: 传入<code>onClosed</code>方法及<code>onUpdate:show</code>。</li><li><code>watch</code>：监听<code>message</code>并导出给，用于动态更改。</li><li><code>(getCurrentInstance() as any).render = render</code>： 重写<code>render</code>方法。</li></ul></li><li><code>getInstance</code>：用于调用<code>createInstance</code>并把实例入栈。</li><li><code>showToast</code>：展示 <code>toast</code>。 <ul><li>调用<code>getInstance</code>得到实例。</li><li>调用 <code>open</code>，更新 <code>state</code>，这里的state的更改会传递到组件中，打开组件。</li></ul></li><li><code>closeToast</code>: 关闭<code>toast</code><ul><li>调用<code>queue</code>中实例的<code>close</code>进而更新<code>state</code>。</li></ul></li><li><code>createMethod</code>: 返回一个传入了类型的<code>showToast</code>。</li><li><code>setToastDefaultOptions</code>: 设置默认参数。</li><li><code>resetToastDefaultOptions</code>: 重置默认参数。</li><li><code>allowMultipleToast</code>: 控制是否支持多个<code>toast</code>。</li></ul><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">const defaultOptions: ToastOptions = {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  icon: &#39;&#39;,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  type: &#39;text&#39;,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  message: &#39;&#39;,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  className: &#39;&#39;,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  overlay: false,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  onClose: undefined,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  onOpened: undefined,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  duration: 2000,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  teleport: &#39;body&#39;,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  iconSize: undefined,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  iconPrefix: undefined,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  position: &#39;middle&#39;,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  transition: &#39;w-fade&#39;,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  forbidClick: false,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  loadingType: undefined,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  overlayClass: &#39;&#39;,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  overlayStyle: undefined,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  closeOnClick: false,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  closeOnClickOverlay: false</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">let queue: ToastWrapperInstance[] = []</span></span>
+<span class="line"><span style="color:#A6ACCD;">let allowMultiple = false</span></span>
+<span class="line"><span style="color:#A6ACCD;">let currentOptions = extend({}, defaultOptions)</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">// default options of specific type</span></span>
+<span class="line"><span style="color:#A6ACCD;">const defaultOptionsMap = new Map&lt;string, ToastOptions&gt;()</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">function parseOptions(message: string | ToastOptions): ToastOptions {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  if (isObject(message)) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">    return message</span></span>
+<span class="line"><span style="color:#A6ACCD;">  }</span></span>
+<span class="line"><span style="color:#A6ACCD;">  return { message }</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">function createInstance() {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  const { instance, unmount } = mountComponent({</span></span>
+<span class="line"><span style="color:#A6ACCD;">    setup() {</span></span>
+<span class="line"><span style="color:#A6ACCD;">      const message = ref(&#39;&#39;)</span></span>
+<span class="line"><span style="color:#A6ACCD;">      const { open, state, close, toggle } = usePopupState()</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">      const onClosed = () =&gt; {</span></span>
+<span class="line"><span style="color:#A6ACCD;">        if (allowMultiple) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">          queue = queue.filter(item =&gt; item !== instance)</span></span>
+<span class="line"><span style="color:#A6ACCD;">          unmount()</span></span>
+<span class="line"><span style="color:#A6ACCD;">        }</span></span>
+<span class="line"><span style="color:#A6ACCD;">      }</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">      const render = () =&gt; {</span></span>
+<span class="line"><span style="color:#A6ACCD;">        const attrs: Record&lt;string, unknown&gt; = {</span></span>
+<span class="line"><span style="color:#A6ACCD;">          onClosed,</span></span>
+<span class="line"><span style="color:#A6ACCD;">          &#39;onUpdate:show&#39;: toggle</span></span>
+<span class="line"><span style="color:#A6ACCD;">        }</span></span>
+<span class="line"><span style="color:#A6ACCD;">        return &lt;WToast {...state} {...attrs} /&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">      }</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">      // support dynamic modification of message</span></span>
+<span class="line"><span style="color:#A6ACCD;">      watch(message, val =&gt; {</span></span>
+<span class="line"><span style="color:#A6ACCD;">        state.message = val</span></span>
+<span class="line"><span style="color:#A6ACCD;">      })</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">      // rewrite render function</span></span>
+<span class="line"><span style="color:#A6ACCD;">      // eslint-disable-next-line @typescript-eslint/no-explicit-any</span></span>
+<span class="line"><span style="color:#A6ACCD;">      ;(getCurrentInstance() as any).render = render</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">      return {</span></span>
+<span class="line"><span style="color:#A6ACCD;">        open,</span></span>
+<span class="line"><span style="color:#A6ACCD;">        close,</span></span>
+<span class="line"><span style="color:#A6ACCD;">        message</span></span>
+<span class="line"><span style="color:#A6ACCD;">      }</span></span>
+<span class="line"><span style="color:#A6ACCD;">    }</span></span>
+<span class="line"><span style="color:#A6ACCD;">  })</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">  return instance as ToastWrapperInstance</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">function getInstance() {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  if (!queue.length || allowMultiple) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">    const instance = createInstance()</span></span>
+<span class="line"><span style="color:#A6ACCD;">    queue.push(instance)</span></span>
+<span class="line"><span style="color:#A6ACCD;">  }</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">  return queue[queue.length - 1]</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">export function showToast(options: string | ToastOptions = {}) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  if (!inBrowser) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">    return {} as ToastWrapperInstance</span></span>
+<span class="line"><span style="color:#A6ACCD;">  }</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">  const toast = getInstance()</span></span>
+<span class="line"><span style="color:#A6ACCD;">  const parsedOptions = parseOptions(options)</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">  toast.open(</span></span>
+<span class="line"><span style="color:#A6ACCD;">    extend(</span></span>
+<span class="line"><span style="color:#A6ACCD;">      {},</span></span>
+<span class="line"><span style="color:#A6ACCD;">      currentOptions,</span></span>
+<span class="line"><span style="color:#A6ACCD;">      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion</span></span>
+<span class="line"><span style="color:#A6ACCD;">      defaultOptionsMap.get(parsedOptions.type || currentOptions.type!),</span></span>
+<span class="line"><span style="color:#A6ACCD;">      parsedOptions</span></span>
+<span class="line"><span style="color:#A6ACCD;">    )</span></span>
+<span class="line"><span style="color:#A6ACCD;">  )</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">  return toast</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">const createMethod = (type: ToastType) =&gt; (options: string | ToastOptions) =&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  showToast(extend({ type }, parseOptions(options)))</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">export const showLoadingToast = createMethod(&#39;loading&#39;)</span></span>
+<span class="line"><span style="color:#A6ACCD;">export const showSuccessToast = createMethod(&#39;success&#39;)</span></span>
+<span class="line"><span style="color:#A6ACCD;">export const showFailToast = createMethod(&#39;fail&#39;)</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">export const closeToast = (all?: boolean) =&gt; {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  if (queue.length) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">    if (all) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">      queue.forEach(toast =&gt; {</span></span>
+<span class="line"><span style="color:#A6ACCD;">        toast.close()</span></span>
+<span class="line"><span style="color:#A6ACCD;">      })</span></span>
+<span class="line"><span style="color:#A6ACCD;">      queue = []</span></span>
+<span class="line"><span style="color:#A6ACCD;">    } else if (!allowMultiple) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">      queue[0].close()</span></span>
+<span class="line"><span style="color:#A6ACCD;">    } else {</span></span>
+<span class="line"><span style="color:#A6ACCD;">      queue.shift()?.close()</span></span>
+<span class="line"><span style="color:#A6ACCD;">    }</span></span>
+<span class="line"><span style="color:#A6ACCD;">  }</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">export function setToastDefaultOptions(options: ToastOptions): void</span></span>
+<span class="line"><span style="color:#A6ACCD;">export function setToastDefaultOptions(</span></span>
+<span class="line"><span style="color:#A6ACCD;">  type: ToastType,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  options: ToastOptions</span></span>
+<span class="line"><span style="color:#A6ACCD;">): void</span></span>
+<span class="line"><span style="color:#A6ACCD;">export function setToastDefaultOptions(</span></span>
+<span class="line"><span style="color:#A6ACCD;">  type: ToastType | ToastOptions,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  options?: ToastOptions</span></span>
+<span class="line"><span style="color:#A6ACCD;">) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  if (typeof type === &#39;string&#39;) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion</span></span>
+<span class="line"><span style="color:#A6ACCD;">    defaultOptionsMap.set(type, options!)</span></span>
+<span class="line"><span style="color:#A6ACCD;">  } else {</span></span>
+<span class="line"><span style="color:#A6ACCD;">    extend(currentOptions, type)</span></span>
+<span class="line"><span style="color:#A6ACCD;">  }</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">export const resetToastDefaultOptions = (type?: ToastType) =&gt; {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  if (typeof type === &#39;string&#39;) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">    defaultOptionsMap.delete(type)</span></span>
+<span class="line"><span style="color:#A6ACCD;">  } else {</span></span>
+<span class="line"><span style="color:#A6ACCD;">    currentOptions = extend({}, defaultOptions)</span></span>
+<span class="line"><span style="color:#A6ACCD;">    defaultOptionsMap.clear()</span></span>
+<span class="line"><span style="color:#A6ACCD;">  }</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">export const allowMultipleToast = (value = true) =&gt; {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  allowMultiple = value</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span></code></pre></div><h2 id="style" tabindex="-1">style <a class="header-anchor" href="#style" aria-label="Permalink to &quot;style&quot;">​</a></h2><div class="language-less"><button title="Copy Code" class="copy"></button><span class="lang">less</span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#89DDFF;">:</span><span style="color:#C792EA;">root</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">--</span><span style="color:#A6ACCD;">w-toast-max-width</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#F78C6C;">70%</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">--</span><span style="color:#A6ACCD;">w-toast-font-size</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-font-size-md</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">--</span><span style="color:#A6ACCD;">w-toast-text-color</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-white</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">--</span><span style="color:#A6ACCD;">w-toast-loading-icon-color</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-white</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">--</span><span style="color:#A6ACCD;">w-toast-line-height</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-line-height-md</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">--</span><span style="color:#A6ACCD;">w-toast-radius</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-radius-lg</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">--</span><span style="color:#A6ACCD;">w-toast-background</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">rgba</span><span style="color:#89DDFF;">(</span><span style="color:#F78C6C;">0</span><span style="color:#89DDFF;">,</span><span style="color:#A6ACCD;"> </span><span style="color:#F78C6C;">0</span><span style="color:#89DDFF;">,</span><span style="color:#A6ACCD;"> </span><span style="color:#F78C6C;">0</span><span style="color:#89DDFF;">,</span><span style="color:#A6ACCD;"> </span><span style="color:#F78C6C;">0.7</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">--</span><span style="color:#A6ACCD;">w-toast-icon-size</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#F78C6C;">36px</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">--</span><span style="color:#A6ACCD;">w-toast-text-min-width</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#F78C6C;">96px</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">--</span><span style="color:#A6ACCD;">w-toast-text-padding</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-padding-xs</span><span style="color:#89DDFF;">)</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-padding-sm</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">--</span><span style="color:#A6ACCD;">w-toast-default-padding</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-padding-md</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">--</span><span style="color:#A6ACCD;">w-toast-default-width</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#F78C6C;">88px</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">--</span><span style="color:#A6ACCD;">w-toast-default-min-height</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#F78C6C;">88px</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">--</span><span style="color:#A6ACCD;">w-toast-position-top-distance</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#F78C6C;">20%</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">--</span><span style="color:#A6ACCD;">w-toast-position-bottom-distance</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#F78C6C;">20%</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#89DDFF;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#89DDFF;">.</span><span style="color:#FFCB6B;">w-toast</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#B2CCD6;">display</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> flex</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#B2CCD6;">flex-direction</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> column</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#B2CCD6;">align-items</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> center</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#B2CCD6;">justify-content</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> center</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#B2CCD6;">box-sizing</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> content-box</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#B2CCD6;">transition</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> all </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-duration-fast</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#89DDFF;">  </span><span style="color:#676E95;font-style:italic;">// hack for avoid max-width when use left &amp; fixed</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#B2CCD6;">width</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-toast-default-width</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#B2CCD6;">max-width</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-toast-max-width</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#B2CCD6;">min-height</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-toast-default-min-height</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#B2CCD6;">padding</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-toast-default-padding</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#B2CCD6;">color</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-toast-text-color</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#B2CCD6;">font-size</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-toast-font-size</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#B2CCD6;">line-height</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-toast-line-height</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#89DDFF;">  </span><span style="color:#676E95;font-style:italic;">// allow newline character</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#B2CCD6;">white-space</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> pre-wrap</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#B2CCD6;">word-break</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> break-all</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#B2CCD6;">text-align</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> center</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#B2CCD6;">background</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-toast-background</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#B2CCD6;">border-radius</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-toast-radius</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">&amp;</span><span style="color:#C792EA;">--break</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#89DDFF;">&amp;</span><span style="color:#C792EA;">-normal</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;">      </span><span style="color:#B2CCD6;">word-break</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> normal</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">      </span><span style="color:#B2CCD6;">word-wrap</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> normal</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#89DDFF;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#89DDFF;">&amp;</span><span style="color:#C792EA;">-word</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;">      </span><span style="color:#B2CCD6;">word-break</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> normal</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">      </span><span style="color:#B2CCD6;">word-wrap</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> break-word</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#89DDFF;">}</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">&amp;</span><span style="color:#C792EA;">--unclickable</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#89DDFF;">    </span><span style="color:#676E95;font-style:italic;">// lock scroll</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#B2CCD6;">overflow</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> hidden</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#FFCB6B;">cursor</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> not-allowed</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#89DDFF;">    </span><span style="color:#676E95;font-style:italic;">// should not add pointer-events: none directly to body tag</span></span>
+<span class="line"><span style="color:#89DDFF;">    </span><span style="color:#676E95;font-style:italic;">// that will cause unexpected tap-highlight-color in mobile safari</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#89DDFF;">*</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;">      </span><span style="color:#B2CCD6;">pointer-events</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> none</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#89DDFF;">}</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">&amp;</span><span style="color:#C792EA;">--text</span><span style="color:#89DDFF;">,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">&amp;</span><span style="color:#C792EA;">--html</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#B2CCD6;">width</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> fit-content</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#B2CCD6;">min-width</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-toast-text-min-width</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#B2CCD6;">min-height</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#F78C6C;">0</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#B2CCD6;">padding</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-toast-text-padding</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#89DDFF;">.</span><span style="color:#FFCB6B;">w-toast__text</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;">      </span><span style="color:#B2CCD6;">margin-top</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#F78C6C;">0</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#89DDFF;">}</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">&amp;</span><span style="color:#C792EA;">--top</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#B2CCD6;">top</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-toast-position-top-distance</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">&amp;</span><span style="color:#C792EA;">--bottom</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#B2CCD6;">top</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> auto</span><span style="color:#89DDFF;">;</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#B2CCD6;">bottom</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-toast-position-bottom-distance</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">&amp;</span><span style="color:#C792EA;">__icon</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#B2CCD6;">font-size</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-toast-icon-size</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">&amp;</span><span style="color:#C792EA;">__loading</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#B2CCD6;">padding</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-padding-base</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#B2CCD6;">color</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-toast-loading-icon-color</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">&amp;</span><span style="color:#C792EA;">__text</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#B2CCD6;">margin-top</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#82AAFF;">var</span><span style="color:#89DDFF;">(</span><span style="color:#A6ACCD;">--w-padding-xs</span><span style="color:#89DDFF;">);</span></span>
+<span class="line"><span style="color:#A6ACCD;">  </span><span style="color:#89DDFF;">}</span></span>
+<span class="line"><span style="color:#89DDFF;">}</span></span></code></pre></div></div></div></main><footer class="VPDocFooter" data-v-6c002a39 data-v-1436ca6b><!--[--><!--]--><!----><div class="prev-next" data-v-1436ca6b><div class="pager" data-v-1436ca6b><a class="pager-link prev" href="/wui/guide/notes/popup.html" data-v-1436ca6b><span class="desc" data-v-1436ca6b>Previous page</span><span class="title" data-v-1436ca6b>Popup</span></a></div><div class="has-prev pager" data-v-1436ca6b><!----></div></div></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><footer class="VPFooter has-sidebar" data-v-74341577 data-v-238d219c><div class="container" data-v-238d219c><p class="message" data-v-238d219c>Released under the MIT License.</p><p class="copyright" data-v-238d219c>Copyright © 2022-present WELL</p></div></footer><!--[--><!--]--></div></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"component_button.md\":\"f6d8b843\",\"component_space.md\":\"f07474e8\",\"guide_notes_checkboxgroup.md\":\"41651b88\",\"component_cell.md\":\"2c3eafe6\",\"component_radio.md\":\"b5bd31a9\",\"guide_notes_checker.md\":\"1434aa55\",\"guide_notes_icon.md\":\"9683a31b\",\"guide_notes_col.md\":\"77584c56\",\"guide_notes_hooks.md\":\"89ec0107\",\"guide_notes_overlay.md\":\"cbb2bf9a\",\"index.md\":\"7a49462a\",\"guide_notes_button.md\":\"b68d649f\",\"component_badge.md\":\"256eb5f0\",\"guide_installation.md\":\"084584db\",\"guide_notes_badge.md\":\"88435082\",\"guide_notes_checkbox.md\":\"2037a5cb\",\"component_layout.md\":\"7891fb0e\",\"component_icon.md\":\"f6cc1713\",\"component_popup.md\":\"7a45fac7\",\"guide_notes_row.md\":\"b034780f\",\"guide_notes_radiogroup.md\":\"760403e3\",\"guide_notes_loading.md\":\"be041b67\",\"guide_notes_space.md\":\"b2b34f81\",\"guide_notes_radio.md\":\"db490320\",\"guide_notes_project.md\":\"16f5b803\",\"guide_notes_popup.md\":\"1887c216\",\"guide_notes_utilsfunction.md\":\"8b88f81d\",\"guide_quiestart.md\":\"ec427c1c\",\"guide_notes_cell.md\":\"2158182a\",\"guide_notes_toast.md\":\"30dc88aa\",\"component_loading.md\":\"f9ba3229\",\"component_toast.md\":\"31fc3224\",\"component_checkbox.md\":\"333468ba\",\"guide_notes_vue.md\":\"835cac94\"}")
+__VP_SITE_DATA__ = JSON.parse("{\"lang\":\"en-US\",\"dir\":\"ltr\",\"title\":\"W-UI\",\"description\":\"W-UI\",\"base\":\"/wui/\",\"head\":[],\"appearance\":true,\"themeConfig\":{\"lastUpdated\":\"最后更新时间\",\"docsDir\":\"docs\",\"editLinks\":true,\"editLinkText\":\"编辑此网站\",\"repo\":\"https://gitee.com/login\",\"footer\":{\"message\":\"Released under the MIT License.\",\"copyright\":\"Copyright © 2022-present WELL\"},\"nav\":[{\"text\":\"指南\",\"link\":\"/guide/installation\",\"activeMatch\":\"/guide/\"},{\"text\":\"组件\",\"link\":\"/component/button\",\"activeMatch\":\"/component/button\"}],\"sidebar\":{\"/guide/\":[{\"text\":\"指南\",\"items\":[{\"text\":\"安装\",\"link\":\"/guide/installation\"},{\"text\":\"快速开始\",\"link\":\"/guide/quieStart\"}]},{\"text\":\"笔记\",\"items\":[{\"text\":\"工程搭建\",\"link\":\"/guide/notes/project\"},{\"text\":\"vue\",\"link\":\"/guide/notes/vue\"},{\"text\":\"工具函数\",\"link\":\"/guide/notes/utilsFunction\"},{\"text\":\"hooks\",\"link\":\"/guide/notes/hooks\"},{\"text\":\"Loading 加载\",\"link\":\"/guide/notes/loading\"},{\"text\":\"Badge 徽标\",\"link\":\"/guide/notes/badge\"},{\"text\":\"Icon 图标\",\"link\":\"/guide/notes/icon\"},{\"text\":\"Button 按钮\",\"link\":\"/guide/notes/button\"},{\"text\":\"Cell 单元格\",\"link\":\"/guide/notes/cell\"},{\"text\":\"Space 间距\",\"link\":\"/guide/notes/space\"},{\"text\":\"Layout Row \",\"link\":\"/guide/notes/row\"},{\"text\":\"Layout Col\",\"link\":\"/guide/notes/col\"},{\"text\":\"Checker\",\"link\":\"/guide/notes/checker\"},{\"text\":\"Radio\",\"link\":\"/guide/notes/radio\"},{\"text\":\"RadioGroup\",\"link\":\"/guide/notes/radioGroup\"},{\"text\":\"Checkbox\",\"link\":\"/guide/notes/checkbox\"},{\"text\":\"CheckboxGroup\",\"link\":\"/guide/notes/checkboxGroup\"},{\"text\":\"Overlay\",\"link\":\"/guide/notes/overlay\"},{\"text\":\"Popup\",\"link\":\"/guide/notes/popup\"},{\"text\":\"Toast\",\"link\":\"/guide/notes/toast\"}]}],\"/component/\":[{\"text\":\"基础组件\",\"items\":[{\"text\":\"Button 按钮\",\"link\":\"/component/button\"},{\"text\":\"Cell 单元格\",\"link\":\"/component/cell\"},{\"text\":\"Icon 图标\",\"link\":\"/component/icon\"},{\"text\":\"Layout 布局\",\"link\":\"/component/layout\"},{\"text\":\"Space 间距\",\"link\":\"/component/space\"},{\"text\":\"Popup 弹窗\",\"link\":\"/component/popup\"},{\"text\":\"Toast 轻提示\",\"link\":\"/component/toast\"}]},{\"text\":\"表单组件\",\"items\":[{\"text\":\"Radio 单选框\",\"link\":\"/component/radio\"},{\"text\":\"Checkbox 复选框\",\"link\":\"/component/checkbox\"}]},{\"text\":\"反馈组件\",\"items\":[{\"text\":\"Loading 加载\",\"link\":\"/component/loading\"}]},{\"text\":\"展示组件\",\"items\":[{\"text\":\"Badge 徽标\",\"link\":\"/component/badge\"}]}]}},\"locales\":{},\"scrollOffset\":90,\"cleanUrls\":false}")</script>
+    
+  </body>
+</html>
