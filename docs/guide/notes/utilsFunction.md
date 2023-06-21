@@ -296,3 +296,57 @@ export function callInterceptor(
   }
 }
 ```
+
+## mount-component.ts
+### mountComponent
+- 调用[createApp](vue.html#createapp)把传入的组件挂载在容器中。
+```
+export function mountComponent(RootComponent: Component) {
+  const app = createApp(RootComponent)
+  const root = document.createElement('div')
+
+  document.body.appendChild(root)
+
+  return {
+    instance: app.mount(root),
+    unmount() {
+      app.unmount()
+      document.body.removeChild(root)
+    }
+  }
+}
+```
+### usePopupState
+- 导出 `open、close、state、toggle。`
+```
+export function usePopupState() {
+  const state = reactive<{
+    show: boolean
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [key: string]: any
+  }>({
+    show: false
+  })
+
+  const toggle = (show: boolean) => {
+    state.show = show
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const open = (props: Record<string, any>) => {
+    extend(state, props, { transitionAppear: true })
+    toggle(true)
+  }
+
+  const close = () => toggle(false)
+
+  useExpose({ open, close, toggle })
+
+  return {
+    open,
+    close,
+    state,
+    toggle
+  }
+}
+```

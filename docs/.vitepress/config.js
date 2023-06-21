@@ -88,6 +88,9 @@ module.exports = {
             },
             {
               text: 'Popup', link: '/guide/notes/popup'
+            },
+            {
+              text: 'Toast', link: '/guide/notes/toast'
             }
           ]
         }

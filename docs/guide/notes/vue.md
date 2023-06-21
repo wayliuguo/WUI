@@ -58,3 +58,26 @@ const toggle = () => {
 
 ## WatchSource
 - 是一个泛型接口，用于表示可以作为监视器的值的类型。
+
+## createApp
+- 创建一个应用实例。
+- 第一个参数是根组件。第二个参数可选，它是要传递给根组件的 props。
+```
+function createApp(rootComponent: Component, rootProps?: object): App
+```
+
+## app.mount
+- 将应用实例挂载在一个容器元素中。
+```
+interface App {
+  mount(rootContainer: Element | string): ComponentPublicInstance
+}
+```
+
+## app.unmount
+- 卸载一个已挂载的应用实例。卸载一个应用会触发该应用组件树内所有组件的卸载生命周期钩子。
+```
+interface App {
+  unmount(): void
+}
+```
