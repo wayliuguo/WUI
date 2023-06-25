@@ -148,6 +148,10 @@ module.exports = {
             {
               text: 'Loading 加载',
               link: '/component/loading'
+            },
+            {
+              text: 'Overlay 遮罩层',
+              link: '/component/overlay'
             }
           ]
         },
