@@ -152,6 +152,10 @@ module.exports = {
             {
               text: 'Overlay 遮罩层',
               link: '/component/overlay'
+            },
+            {
+              text: 'ActionSheet 动作面板',
+              link: '/component/actionsheet'
             }
           ]
         },

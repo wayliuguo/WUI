@@ -71,7 +71,7 @@ export default defineComponent({
 
   props: actionSheetProps,
 
-  emits: ['select', 'cancle', 'update:show'],
+  emits: ['select', 'cancel', 'update:show'],
 
   setup(props, { slots, emit }) {
     // 更新显示状态
@@ -80,7 +80,7 @@ export default defineComponent({
     // 取消选择
     const onCancel = () => {
       updateShow(false)
-      emit('cancle')
+      emit('cancel')
     }
 
     // 渲染 header
@@ -89,12 +89,12 @@ export default defineComponent({
         return (
           <div class={bem.e('header')}>
             {props.title}
-            {props.closeable} && (
-            <Icon
-              name={props.closeIcon}
-              class={[bem.m('close'), HAPTICS_FEEDBACK]}
-              onClick={onCancel}></Icon>
-            )
+            {props.closeable && (
+              <Icon
+                name={props.closeIcon}
+                class={[bem.e('close'), HAPTICS_FEEDBACK]}
+                onClick={onCancel}></Icon>
+            )}
           </div>
         )
       }
@@ -106,7 +106,7 @@ export default defineComponent({
         const content = slots.description
           ? slots.description()
           : props.description
-        return <div class={bem.b('description')}>{content}</div>
+        return <div class={bem.e('description')}>{content}</div>
       }
     }
 
@@ -115,8 +115,8 @@ export default defineComponent({
       if (slots.cancel || props.cancelText) {
         return [
           <>
-            <div class={bem.m('gap')}></div>
-            <button type="button" class={bem.b('cancel')} onClick={onCancel}>
+            <div class={bem.e('gap')}></div>
+            <button type="button" class={bem.e('cancel')} onClick={onCancel}>
               {slots.cancel ? slots.cancel() : props.cancelText}
             </button>
           </>

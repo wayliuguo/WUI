@@ -16,6 +16,7 @@ import wSpace from '@w-ui/components/Space'
 import WOverlay from '@w-ui/components/Overlay'
 import WPopup from '@w-ui/components/Popup'
 import WToast from '@w-ui/components/Toast'
+import WActionSheet from '@w-ui/components/ActionSheet'
 import '@w-ui/theme-chalk/index.less'
 
 export default {
@@ -38,5 +39,6 @@ export default {
       .use(WOverlay)
       .use(WPopup)
       .use(WToast)
+      .use(WActionSheet)
   }
 }
