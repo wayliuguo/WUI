@@ -19,6 +19,8 @@ import Radio from '@w-ui/components/Radio'
 import Overlay from '@w-ui/components/Overlay'
 import Popup from '@w-ui/components/Popup'
 import Toast from '@w-ui/components/Toast'
+import ActionSheet from '@w-ui/components/ActionSheet'
+
 const plugins = [
   Loading,
   Icon,
@@ -35,7 +37,8 @@ const plugins = [
   Radio,
   Overlay,
   Popup,
-  Toast
+  Toast,
+  ActionSheet
 ]
 
 const app = createApp(App)
