@@ -20,6 +20,7 @@ import Overlay from '@w-ui/components/Overlay'
 import Popup from '@w-ui/components/Popup'
 import Toast from '@w-ui/components/Toast'
 import ActionSheet from '@w-ui/components/ActionSheet'
+import Barrage from '@w-ui/components/Barrage'
 
 const plugins = [
   Loading,
@@ -38,7 +39,8 @@ const plugins = [
   Overlay,
   Popup,
   Toast,
-  ActionSheet
+  ActionSheet,
+  Barrage
 ]
 
 const app = createApp(App)
