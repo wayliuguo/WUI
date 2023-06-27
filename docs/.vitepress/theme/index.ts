@@ -17,6 +17,7 @@ import WOverlay from '@w-ui/components/Overlay'
 import WPopup from '@w-ui/components/Popup'
 import WToast from '@w-ui/components/Toast'
 import WActionSheet from '@w-ui/components/ActionSheet'
+import WBarrage from '@w-ui/components/Barrage'
 import '@w-ui/theme-chalk/index.less'
 
 export default {
@@ -40,5 +41,6 @@ export default {
       .use(WPopup)
       .use(WToast)
       .use(WActionSheet)
+      .use(WBarrage)
   }
 }

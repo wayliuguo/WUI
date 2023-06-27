@@ -156,6 +156,10 @@ module.exports = {
             {
               text: 'ActionSheet 动作面板',
               link: '/component/actionsheet'
+            },
+            {
+              text: 'Barrage 弹幕',
+              link: '/component/barrage'
             }
           ]
         },
