@@ -148,6 +148,14 @@ module.exports = {
             {
               text: 'Loading 加载',
               link: '/component/loading'
+            },
+            {
+              text: 'Overlay 遮罩层',
+              link: '/component/overlay'
+            },
+            {
+              text: 'ActionSheet 动作面板',
+              link: '/component/actionsheet'
             }
           ]
         },
