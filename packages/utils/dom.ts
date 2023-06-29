@@ -1,3 +1,5 @@
+import { useWindowSize } from "@w-ui/use"
+
 export const stopPropagation = (event: Event) => event.stopPropagation()
 
 export function preventDefault(event: Event, isStopPropagation?: boolean) {
@@ -10,3 +12,5 @@ export function preventDefault(event: Event, isStopPropagation?: boolean) {
     stopPropagation(event)
   }
 }
+
+export const { width: windowWidth, height: windowHeight } = useWindowSize()

@@ -21,6 +21,8 @@ import Popup from '@w-ui/components/Popup'
 import Toast from '@w-ui/components/Toast'
 import ActionSheet from '@w-ui/components/ActionSheet'
 import Barrage from '@w-ui/components/Barrage'
+import DropdownMenu from '@w-ui/components/DropdownMenu'
+import DropdownItem from '@w-ui/components/DropdownItem'
 
 const plugins = [
   Loading,
@@ -40,7 +42,9 @@ const plugins = [
   Popup,
   Toast,
   ActionSheet,
-  Barrage
+  Barrage,
+  DropdownMenu,
+  DropdownItem
 ]
 
 const app = createApp(App)

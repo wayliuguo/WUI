@@ -12,6 +12,7 @@ import PlayPopup from './components/PlayPopup.vue'
 import PlayToast from './components/PlayToast.vue'
 import PlayActionSheet from './components/PlayActionSheet.vue'
 import PlayBarrage from './components/PlayBarrage.vue'
+import PlayDropdownMenu from './components/PlayDropdownMenu.vue'
 </script>
 
 <template>
@@ -27,5 +28,6 @@ import PlayBarrage from './components/PlayBarrage.vue'
   <PlayPopup v-if="false"></PlayPopup>
   <PlayToast v-if="false"></PlayToast>
   <PlayActionSheet v-if="false"></PlayActionSheet>
-  <PlayBarrage></PlayBarrage>
+  <PlayBarrage v-if="false"></PlayBarrage>
+  <PlayDropdownMenu></PlayDropdownMenu>
 </template>
