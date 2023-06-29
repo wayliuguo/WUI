@@ -18,6 +18,8 @@ import WPopup from '@w-ui/components/Popup'
 import WToast from '@w-ui/components/Toast'
 import WActionSheet from '@w-ui/components/ActionSheet'
 import WBarrage from '@w-ui/components/Barrage'
+import WDropdownMenu from '@w-ui/components/DropdownMenu'
+import WDropdownItem from '@w-ui/components/DropdownItem'
 import '@w-ui/theme-chalk/index.less'
 
 export default {
@@ -42,5 +44,7 @@ export default {
       .use(WToast)
       .use(WActionSheet)
       .use(WBarrage)
+      .use(WDropdownMenu)
+      .use(WDropdownItem)
   }
 }

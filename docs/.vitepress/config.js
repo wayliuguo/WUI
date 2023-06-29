@@ -163,6 +163,10 @@ module.exports = {
             {
               text: 'Barrage 弹幕',
               link: '/component/barrage'
+            },
+            {
+              text: 'DropdownMenu 下拉菜单',
+              link: '/component/dropdownMenu'
             }
           ]
         },
