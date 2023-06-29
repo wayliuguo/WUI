@@ -94,6 +94,9 @@ module.exports = {
             },
             {
               text: 'ActionSheet', link: '/guide/notes/actionsheet'
+            },
+            {
+              text: 'Barrage', link: '/guide/notes/barrage'
             }
           ]
         }
