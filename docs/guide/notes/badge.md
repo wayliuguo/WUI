@@ -22,7 +22,7 @@ export const badgeProps = {
 
 ## setup
 
-### hasContent
+## hasContent
 - 通过 `插槽`的`content` 判断是否有定义徽标
 - 通过 `props` 的 `content、showZero`，判断是否需要展示0
 ```
@@ -39,7 +39,7 @@ const hasContent = () => {
 }
 ```
 
-### renderContent
+## renderContent
 - 优先渲染`插槽``content`
 - 如果有定义`max`，返回`${max}+`
 ```
@@ -59,7 +59,7 @@ const renderContent = () => {
 }
 ```
 
-### style Computed
+## style Computed
 - 根据 `offset` 和 `positon` 设置徽标的偏移量及位置
 ```
 const getOffsetWithMinusString = (val: string) =>
@@ -102,7 +102,7 @@ const style = computed(() => {
 })
 ```
 
-### renderBadge
+## renderBadge
 - 渲染徽标
 ```
 const renderBadge = () => {
@@ -123,7 +123,7 @@ const renderBadge = () => {
   }
 }
 ```
-### render
+## render
 - 如果有默认插槽才进行插槽和徽标的渲染
 - 否则只渲染徽标
 ```

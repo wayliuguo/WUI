@@ -20,7 +20,7 @@ emits: ['change', 'update:modelValue']
 
 ## setup
 
-### injection
+## injection
 - 使用 `InjectionKey` 指定注入的类型。
 ```
 export type RadioGroupProvide = {
@@ -30,7 +30,7 @@ export type RadioGroupProvide = {
 export const RADIO_KEY: InjectionKey<RadioGroupProvide> = Symbol('radio-group')
 ```
 
-### useChildren
+## useChildren
 - 使用 [useChildren](hooks.html#useChildren.ts)
 - 通过`linkChildren`，导出方法和值。
 ```
@@ -43,7 +43,7 @@ linkChildren({
 })
 ```
 
-### watch
+## watch
 - 根据绑定值的变更触发`change`
 ```
 watch(
@@ -52,13 +52,13 @@ watch(
 )
 ```
 
-### useCustomFieldValue
+## useCustomFieldValue
 - [useCustomFieldValue](hooks.html#usecustomfieldvalue)
 ```
 useCustomFieldValue(() => props.modelValue)
 ```
 
-### render
+## render
 ```
 return () => (
   <div

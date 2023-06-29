@@ -13,14 +13,14 @@ export type ColProps = ExtractPropTypes<typeof colProps>
 
 ## setup
 
-### useParent
+## useParent
 - 使用 [useParent](hooks.html#useParent.ts)
 - 获取其父组件及该组件下标。
 ```
 const { parent, index } = useParent(ROW_KEY)
 ```
 
-### style
+## style
 - 获取父组件中收集的`spaces`
 - 根据下标找到对应的样式数值
 ```
@@ -41,7 +41,7 @@ const style = computed(() => {
   return {}
 })
 ```
-### render
+## render
 - 添加上属性控制的样式
 - 把插槽渲染
 ```

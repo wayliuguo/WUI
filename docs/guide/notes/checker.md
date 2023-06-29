@@ -40,7 +40,7 @@ emits: ['click', 'toggle']
 
 ## setup
 
-### getParentProp
+## getParentProp
 - 获取父组件`props`
 - `T extends keyof CheckerParent['props']`对父组件的`props`又可以做类型校验
 ```
@@ -51,7 +51,7 @@ const getParentProp = <T extends keyof CheckerParent['props']>(name: T) => {
 }
 ```
 
-### direction、disable、iconStyle
+## direction、disable、iconStyle
 - 获取 `direction、disable、iconStyle`
 ```
 const direction = computed(() => getParentProp('direction'))
@@ -71,7 +71,7 @@ const iconStyle = computed(() => {
 })
 ```
 
-### onClick
+## onClick
 - 点击触发
 - 如果非不可选中且（点击的是icon或者没有禁用label点击），`emit('toggle')`
 - `emit('click', event)`
@@ -90,7 +90,7 @@ const onClick = (event: MouseEvent) => {
 }
 ```
 
-### renderIcon
+## renderIcon
 - 如果有定义`icon 插槽`，则通过`作用域插槽`给`插槽`传递状态[使用](/component/radio.html#自定义图标)
 ```
 const renderIcon = () => {
@@ -117,7 +117,7 @@ const renderIcon = () => {
   )
 }
 ```
-### renderLabel
+## renderLabel
 - 渲染`label`,指定样式
 ```
 const renderLabel = () => {
@@ -136,7 +136,7 @@ const renderLabel = () => {
   }
 }
 ```
-### render
+## render
 ```
 return () => {
   const nodes: (JSX.Element | undefined)[] =

@@ -24,7 +24,7 @@ export type OverlayProps = ExtractPropTypes<typeof overlayProps>
 
 ## setup
 
-### useLazyRender & renderOverlay
+## useLazyRender & renderOverlay
 - [useLazyRender](hooks.html#use-lazy-render-ts)返回一个函数。
 - 这个函数接收一个`JSX.Element`入参的函数，这个函数根据`props.show`执行。
 - [getZIndexStyle](utilsFunction.html#getzindexstyle)返回层级。
@@ -53,7 +53,7 @@ const renderOverlay = lazyRender(() => {
 
 ```
 
-### onTouchMove & useEventListener
+## onTouchMove & useEventListener
 - [useEventListener](hooks.html#useeventlistener),监听`root`的`touchmove`事件。
 - 该事件对应的执行函数，如果配置了`lockScroll`,[preventDefault](utilsFunction.html#stoppropagation-preventdefault)不执行默认行为。
 ```
@@ -70,7 +70,7 @@ useEventListener('touchmove', onTouchMove, {
 })
 ```
 
-### render
+## render
 - 使用`Transition`结合`name`属性控制渐变。
 ```
 return () => (

@@ -30,7 +30,7 @@ export type SpaceProps = ExtractPropTypes<typeof spaceProps>
 
 ## setup
 
-### mergedAlign
+## mergedAlign
 - 获取对齐方式，用于设置类名
 ```
 const mergedAlign = computed(
@@ -38,7 +38,7 @@ const mergedAlign = computed(
 )
 ```
 
-### getMargin
+## getMargin
 - 通过`size`获取间距
 ```
 const getMargin = (size: SpaceSize) => {
@@ -49,7 +49,7 @@ const getMargin = (size: SpaceSize) => {
 }
 ```
 
-### getMarginStyle
+## getMarginStyle
 - 获取右、下 `margin`
 - 如果是最后一个则不设置
 - 如果间距方向为`horizontal`设置右边距
@@ -80,7 +80,7 @@ const getMarginStyle = (isLast: boolean): CSSProperties => {
 }
 ```
 
-### filterEmpty
+## filterEmpty
 - 过滤空 VNode 
 ```
 const filterEmpty = (children: VNode[] = []) => {
@@ -105,7 +105,7 @@ const filterEmpty = (children: VNode[] = []) => {
   )
 }
 ```
-### render
+## render
 - 遍历过滤后的vNode进行渲染
 ```
 return () => {

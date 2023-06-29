@@ -34,7 +34,7 @@ emits: ['update:show']
 
 ## setup
 
-### toggleClickable
+## toggleClickable
 - 切换是否可以点击。
 ```
 let clickable = false
@@ -48,7 +48,7 @@ const toggleClickable = () => {
 }
 ```
 
-### onClick
+## onClick
 - 点击更新。
 ```
 const updateShow = (show: boolean) => emit('update:show', show)
@@ -60,7 +60,7 @@ const onClick = () => {
 }
 ```
 
-### renderIcon
+## renderIcon
 - 渲染 `icon`。
 ```
 const renderIcon = () => {
@@ -90,7 +90,7 @@ const renderIcon = () => {
 }
 ```
 
-### watch
+## watch
 - 监听值切换是否可以点击。
 - 监听值进行更新值`show`，如果是0则不关闭。
 ```
@@ -112,14 +112,14 @@ watch(
 )
 ```
 
-### onMounted & onUnmounted
+## onMounted & onUnmounted
 - 在这两个钩子中进行是否可以点击更新。
 ```
 onMounted(toggleClickable)
 onUnmounted(toggleClickable)
 ```
 
-### render
+## render
 ```
 return () => (
   <Popup

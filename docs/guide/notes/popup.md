@@ -71,7 +71,7 @@ emits: [
 
 ## setup
 
-### useLazyRender & lazyRender
+## useLazyRender & lazyRender
 - [useLazyRender](hooks.html#use-lazy-render-ts)返回一个函数。
 - 这个函数接收一个`JSX.Element`入参的函数，这个函数根据`props.show || !props.lazyRender`执行。
 - `position` 设置位置。
@@ -107,7 +107,7 @@ const renderPopup = lazyRender(() => {
 })
 ```
 
-### style
+## style
 - 设置层级与动画/渐变时间。
 ```
 const style = computed(() => {
@@ -125,7 +125,7 @@ const style = computed(() => {
 })
 ```
 
-### open
+## open
 - 使用自定义`zIndex` 或[全局zIndex](hooks.html#use-global-z-index-ts)
 - `emit('open')`
 ```
@@ -141,7 +141,7 @@ const open = () => {
 }
 ```
 
-### close
+## close
 - 这里的`props.beforeClose` 已经通过类型定义为一个 `Function`
 - 通过[callInterceptor](utilsFunction.html#interceptor-ts)拦截`beforeClose`, 在执行`beforeClose`后进行`done`的调用。
 - 
@@ -159,7 +159,7 @@ const close = () => {
 }
 ```
 
-### onClickOverlay
+## onClickOverlay
 - 派发`clickOverlay`
 - 根据`closeOnClickOverlay`调用`close`
 ```
@@ -171,7 +171,7 @@ const onClickOverlay = (event: MouseEvent): void => {
 }
 ```
 
-### renderOverlay
+## renderOverlay
 - 渲染遮罩层。
 ```
 const renderOverlay = () => {
@@ -193,7 +193,7 @@ const renderOverlay = () => {
 }
 ```
 
-### renderCloseIcon
+## renderCloseIcon
 - 渲染关闭按钮。
 ```
 const renderCloseIcon = () => {
@@ -216,7 +216,7 @@ const renderCloseIcon = () => {
 }
 ```
 
-### onClickCloseIcon
+## onClickCloseIcon
 - 点击关闭按钮。
 ```
 const onClickCloseIcon = (event: MouseEvent) => {
@@ -225,7 +225,7 @@ const onClickCloseIcon = (event: MouseEvent) => {
 }
 ```
 
-### onOpened
+## onOpened
 - 弹窗打开后派发`opened`事件。
 ```
 let timer: ReturnType<typeof setTimeout> | null
@@ -237,19 +237,19 @@ const onOpened = () => {
 }
 ```
 
-### onClosed
+## onClosed
 - 派发`closed`事件。
 ```
 const onClosed = () => emit('closed')
 ```
 
-### onKeydown
+## onKeydown
 - 派发`keydown`事件。
 ```
 const onKeydown = (event: KeyboardEvent) => emit('keydown', event)
 ```
 
-### renderTransition
+## renderTransition
 - 使用`Transition`, 定义`onAfterEnter`与`onAfterLeave`。
 ```
 const renderTransition = () => {
@@ -269,7 +269,7 @@ const renderTransition = () => {
 }
 ```
 
-### watch
+## watch
 - 监听 `props.show`，进行关闭与开启。
 ```
 watch(
@@ -292,19 +292,19 @@ watch(
 )
 ```
 
-### useExpose
+## useExpose
 - 通过自定义`hooks`[useExpose](hooks.html#use-expose-ts)暴露 popupRef。
 ```
 useExpose({ popupRef })
 ```
 
-### useLockScroll
+## useLockScroll
 - 通过[useLockScroll](hooks.html#use-lock-scroll-ts)进行滚动的控制。
 ```
 useLockScroll(popupRef, () => props.show && props.lockScroll)
 ```
 
-### useEventListener
+## useEventListener
 - 路由退出后根据配置关闭。
 ```
 useEventListener('popstate', () => {
@@ -315,7 +315,7 @@ useEventListener('popstate', () => {
 })
 ```
 
-### onMounted & onActivated & onDeactivated
+## onMounted & onActivated & onDeactivated
 ```
 onMounted(() => {
   if (props.show) {
@@ -339,12 +339,12 @@ onDeactivated(() => {
 })
 ```
 
-### provide
+## provide
 ```
 provide(POPUP_TOGGLE_KEY, () => props.show)
 ```
 
-### render
+## render
 - 如果`teleport`，结合`Teleport`组件`to`属性渲染到特定`DOM`。
 ```
 return () => {
