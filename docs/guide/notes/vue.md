@@ -118,3 +118,22 @@ interface ComponentOptions {
   inheritAttrs?: boolean // 默认值：true
 }
 ```
+
+## v-model
+```
+// 默认
+<CustomInput v-model="searchText"/>
+<CustomInput
+  :modelValue="searchText"
+  @update:modelValue="newValue => searchText = newValue"
+/>
+emit('update:modelValue', ×××)
+
+// 自定义绑定属性
+<MyComponent v-model:title="bookTitle" />
+<MyComponent 
+  :title="bookTitle"
+  @update:title="newValue => bookTitle = newValue" 
+/>
+$emit('update:title', ×××)
+```

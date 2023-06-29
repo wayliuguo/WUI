@@ -91,6 +91,9 @@ module.exports = {
             },
             {
               text: 'Toast', link: '/guide/notes/toast'
+            },
+            {
+              text: 'ActionSheet', link: '/guide/notes/actionsheet'
             }
           ]
         }
