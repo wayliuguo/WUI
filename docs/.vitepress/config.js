@@ -97,6 +97,12 @@ module.exports = {
             },
             {
               text: 'Barrage', link: '/guide/notes/barrage'
+            },
+            {
+              text: 'DropdownMenu', link: '/guide/notes/dropdownMenu'
+            },
+            {
+              text: 'DropdownItem', link: '/guide/notes/dropdownItem'
             }
           ]
         }

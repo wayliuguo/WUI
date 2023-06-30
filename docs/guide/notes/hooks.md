@@ -558,3 +558,83 @@ export function useLockScroll(
   })
 }
 ```
+## useRect
+- 接受一个元素或元素的引用作为参数，并返回一个 DOMRect 对象，表示该元素的尺寸。
+- 如果参数是一个 window 对象，则返回窗口的尺寸。
+- 如果不是则检查元素是否有 [getBoundingClientRect](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect) 方法，并返回该方法的结果。如果元素没有 getBoundingClientRect 方法，则返回一个大小为 0 的 DOMRect 对象。
+- 在函数中使用了 Vue 3 中的 Ref 和 unref 函数，用于处理传入的参数可能是一个引用的情况。
+```
+import { Ref, unref } from 'vue'
+
+const isWindow = (val: unknown): val is Window => val === window
+
+const makeDOMRect = (width: number, height: number) =>
+  ({
+    top: 0,
+    left: 0,
+    right: width,
+    bottom: height,
+    width,
+    height
+  } as DOMRect)
+
+export const useRect = (
+  elementOrRef: Element | Window | Ref<Element | Window | undefined>
+) => {
+  const element = unref(elementOrRef)
+
+  if (isWindow(element)) {
+    const width = element.innerWidth
+    const height = element.innerHeight
+    return makeDOMRect(width, height)
+  }
+
+  if (element?.getBoundingClientRect) {
+    return element.getBoundingClientRect()
+  }
+
+  return makeDOMRect(0, 0)
+}
+```
+
+## useClickAway
+- 通过[useEventListener](hooks.html#useeventlistener)监听`click`事件，如果点击的不是传入的`target`，则执行传入的函数`listener`。
+```
+import { Ref, unref } from 'vue'
+import { inBrowser } from '../utils'
+import { useEventListener } from '../useEventListener'
+
+export type UseClickAwayOptions = {
+  eventName?: string
+}
+
+export function useClickAway(
+  target:
+    | Element
+    | Ref<Element | undefined>
+    | Array<Element | Ref<Element | undefined>>,
+  listener: EventListener,
+  options: UseClickAwayOptions = {}
+) {
+  if (!inBrowser) {
+    return
+  }
+
+  const { eventName = 'click' } = options
+
+  const onClick = (event: Event) => {
+    const targets = Array.isArray(target) ? target : [target]
+    const isClickAway = targets.every(item => {
+      const element = unref(item)
+      return element && !element.contains(event.target as Node)
+    })
+
+    if (isClickAway) {
+      listener(event)
+    }
+  }
+
+  useEventListener(eventName, onClick, { target: document })
+}
+
+```
