@@ -1,9 +1,9 @@
 {
-  "name": "wui",
-  "version": "0.1.0",
+  "name": "w-view",
+  "version": "0.1.1",
   "description": "A lightweight, customizable Vue UI library for mobile web apps.",
   "keywords": [
-    "WUI",
+    "w-view",
     "vuejs",
     "components",
     "ui",
