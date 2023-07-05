@@ -28,7 +28,7 @@ export type RowProps = ExtractPropTypes<typeof rowProps>
 
 ## setup
 
-### injection
+## injection
 - 使用 InjectionKey 指定注入的类型。
 ```
 export type RowSpaces = { left?: number; right: number }[]
@@ -40,7 +40,7 @@ export type RowProvide = {
 export const ROW_KEY: InjectionKey<RowProvide> = Symbol(name)
 ```
 
-### useChildren
+## useChildren
 - 使用 [useChildren](hooks.html#useChildren.ts)
 - 通过`linkChildren`，导出方法和值。
 ```
@@ -49,7 +49,7 @@ const { children, linkChildren } = useChildren(ROW_KEY)
 linkChildren({ spaces })
 ```
 
-### groups
+## groups
 - groups 依赖的是 `useChildren` 的 `children`
 - 这是一个二维数组，每一项包括了包含的24份内的项的下标`[[0,1,2],[3,4],[5]]`
 ```
@@ -72,7 +72,7 @@ const groups = computed(() => {
 })
 ```
 
-### spaces
+## spaces
 - `averagePadding`：平均的padding，如`[0,1,2]`需要`2*gutter/3`
 ```
 const spaces = computed(() => {
@@ -101,7 +101,7 @@ const spaces = computed(() => {
 })
 ```
 
-### render
+## render
 - 添加上属性控制的样式
 - 把插槽渲染
 ```

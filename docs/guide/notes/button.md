@@ -82,7 +82,7 @@ export type ButtonProps = ExtractPropTypes<typeof buttonProps>
 
 ## setup
 
-### renderLoadingIcon
+## renderLoadingIcon
 - 提供了loading插槽
 - 或者使用`Loading`组件自定义size与type 
 ```
@@ -101,7 +101,7 @@ const renderLoadingIcon = () => {
 }
 ```
 
-### renderIcon
+## renderIcon
 - 如果 props `loading`
 - 如果使用 `icon` 插槽
 - 如果 props `icon`
@@ -127,7 +127,7 @@ const renderIcon = () => {
 }
 ```
 
-### renderText
+## renderText
 - 如果是 props `loading`,则显示 `loadingText`
 - 否则使用默认插槽的值
 ```
@@ -145,7 +145,7 @@ const renderText = () => {
 }
 ```
 
-### getStyle
+## getStyle
 - color: plain ? color : 'white'
 - hide border when color is linear-gradient
 ```
@@ -172,7 +172,7 @@ const getStyle = () => {
   }
 }
 ```
-### classes
+## classes
 ```
 const {
   type,
@@ -202,7 +202,7 @@ const classes = [
   { [BORDER_SURROUND]: hairline }
 ]
 ```
-### onClick
+## onClick
 ```
 const onClick = (event: MouseEvent) => {
   if (props.loading) {
@@ -212,7 +212,7 @@ const onClick = (event: MouseEvent) => {
   }
 }
 ```
-### render
+## render
 - `class` 与 `style`, 点击事件
 - `icon` 的渲染位置
 ```

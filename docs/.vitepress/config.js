@@ -91,6 +91,18 @@ module.exports = {
             },
             {
               text: 'Toast', link: '/guide/notes/toast'
+            },
+            {
+              text: 'ActionSheet', link: '/guide/notes/actionsheet'
+            },
+            {
+              text: 'Barrage', link: '/guide/notes/barrage'
+            },
+            {
+              text: 'DropdownMenu', link: '/guide/notes/dropdownMenu'
+            },
+            {
+              text: 'DropdownItem', link: '/guide/notes/dropdownItem'
             }
           ]
         }
@@ -156,6 +168,14 @@ module.exports = {
             {
               text: 'ActionSheet 动作面板',
               link: '/component/actionsheet'
+            },
+            {
+              text: 'Barrage 弹幕',
+              link: '/component/barrage'
+            },
+            {
+              text: 'DropdownMenu 下拉菜单',
+              link: '/component/dropdownMenu'
             }
           ]
         },

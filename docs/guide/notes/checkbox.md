@@ -18,13 +18,13 @@ emits: ['change', 'update:modelValue']
 
 ## setup
 
-### useParent
+## useParent
 - 通过自定义`hooks`[useParent](hooks.html#useParent),`inject` 父组件暴露的属性和方法。
 ```
 const { parent } = useParent(CHECKBOX_GROUP_KEY)
 ```
 
-### toggle & setParentValue
+## toggle & setParentValue
 - 如果有`checkboxGroup`，则触发`setParentValue`,否则更新绑定值。
 - `setParentValue`最后会调用`checkboxGroup` 暴露的`updateValue`方法。
 ```
@@ -68,14 +68,14 @@ const setParentValue = (checked: boolean) => {
 }
 ```
 
-### useExpose
+## useExpose
 - 通过自定义`hooks`[useExpose](hooks.html#use-expose-ts)实现更全面的[expose](vue.html#expose)。
 - 暴露了`toggle`、`props`、`checked`。
 ```
 useExpose<CheckboxExpose>({ toggle, props, checked })
 ```
 
-### watch
+## watch
 - 监听绑定值的变更派发`change`事件。
 ```
 watch(
@@ -83,7 +83,7 @@ watch(
   value => emit('change', value)
 )
 ```
-### checked
+## checked
 - 如果有`checkboxGroup`，则依赖其`parent.props.modelValue`
 ```
 const checked = computed(() => {
@@ -93,7 +93,7 @@ const checked = computed(() => {
   return !!props.modelValue
 })
 ```
-### render
+## render
 ```
 return () => (
   <Checker

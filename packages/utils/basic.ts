@@ -1,3 +1,4 @@
+import { ComponentPublicInstance } from 'vue'
 import { isObject } from './validate'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
@@ -33,3 +34,6 @@ export function pick<T, U extends keyof T>(
     return ret
   }, {} as Writeable<Pick<T, U>>)
 }
+
+// eslint-disable-next-line
+export type ComponentInstance = ComponentPublicInstance<{}, any>

@@ -32,7 +32,7 @@ export const cellSharedProps = {
 
 ## setup
 
-### renderLeftIcon
+## renderLeftIcon
 - 渲染左侧`icon`
 - 优先渲染插槽，其次props
 ```
@@ -51,7 +51,7 @@ const renderLoadingIcon = () => {
 }
 ```
 
-### renderLabel
+## renderLabel
 - 渲染 `label`
 - 优先渲染插槽，其次props
 ```
@@ -68,7 +68,7 @@ const renderLabel = () => {
 }
 ```
 
-### renderTitle
+## renderTitle
 - 渲染`title`
 - 优先渲染插槽，其次props
 ```
@@ -86,7 +86,7 @@ const renderText = () => {
 }
 ```
 
-### renderValue
+## renderValue
 - 渲染value
 ```
 const renderValue = () => {
@@ -103,7 +103,7 @@ const renderValue = () => {
   }
 }
 ```
-### renderRightIcon
+## renderRightIcon
 - 渲染右侧 icon
 ```
 const renderRightIcon = () => {
@@ -120,7 +120,7 @@ const renderRightIcon = () => {
   }
 }
 ```
-### classes
+## classes
 ```
 const classes = [
   bem.b(),
@@ -131,7 +131,7 @@ const classes = [
   size && bem.m(`${size}`)
 ]
 ```
-### render
+## render
 - `class` 与 `style`, 点击事件
 - `icon` 的渲染位置
 ```

@@ -22,13 +22,13 @@ emits: ['update:modelValue']
 
 ## setup
 
-### useParent
+## useParent
 - 获取父组件`inject`的数据
 ```
 const { parent } = useParent(RADIO_KEY)
 ```
 
-### checked
+## checked
 - 选中判断
 ```
 const checked = () => {
@@ -37,7 +37,7 @@ const checked = () => {
 }
 ```
 
-### toggle
+## toggle
 - 状态切换
 ```
 const toggle = () => {
@@ -49,7 +49,7 @@ const toggle = () => {
 }
 ```
 
-### renderIcon
+## renderIcon
 - 使用`Checker`进行渲染
 ```
 return () => (

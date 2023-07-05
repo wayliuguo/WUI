@@ -1,10 +1,10 @@
 # ActionSheet 动作面板
 
-### 介绍
+## 介绍
 
 底部弹起的模态面板，包含与当前情境相关的多个选项。
 
-### 引入
+## 引入
 
 通过以下方式来全局注册组件。
 
@@ -209,9 +209,9 @@ export default {
 </style>
 ```
 
-## API
+# API
 
-### Props
+## Props
 
 | 参数 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
@@ -251,7 +251,7 @@ export default {
 | disabled  | 是否为禁用状态           | _boolean_                   |
 | callback  | 点击时触发的回调函数     | _action: ActionSheetAction_ |
 
-### Events
+## Events
 
 | 事件名 | 说明 | 回调参数 |
 | --- | --- | --- |
@@ -263,7 +263,7 @@ export default {
 | closed | 关闭面板且动画结束后触发 | - |
 | click-overlay | 点击遮罩层时触发 | _event: MouseEvent_ |
 
-### Slots
+## Slots
 
 | 名称 | 说明 | 参数 |
 | --- | --- | --- |
@@ -272,7 +272,7 @@ export default {
 | cancel | 自定义取消按钮内容 | - |
 | action | 自定义选项内容 | _{ action: ActionSheetAction, index: number }_ |
 
-### 类型定义
+## 类型定义
 
 组件导出以下类型定义：
 
@@ -280,11 +280,11 @@ export default {
 import type { ActionSheetProps, ActionSheetAction } from 'w-view';
 ```
 
-## 主题定制
+# 主题定制
 
-### 样式变量
+## 样式变量
 
-组件提供了下列 CSS 变量，可用于自定义样式，使用方法请参考 [ConfigProvider 组件](#/zh-CN/config-provider)。
+组件提供了下列 CSS 变量，可用于自定义样式。
 
 | 名称 | 默认值 | 描述 |
 | --- | --- | --- |

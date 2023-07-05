@@ -18,7 +18,7 @@ emits: ['change', 'update:modelValue']
 
 ## setup
 
-### injection
+## injection
 - 使用 InjectionKey 指定注入的类型。
 - 通过 `linkChildren` `provide` 了`props`和`updateValue`方法。
 ```
@@ -34,7 +34,7 @@ linkChildren({
 })
 ```
 
-### watch
+## watch
 - 绑定值改变派发`change`事件。
 ```
 watch(
@@ -43,7 +43,7 @@ watch(
 )
 ```
 
-### useExpose
+## useExpose
 - 通过自定义`hooks`[useExpose](hooks.html#use-expose-ts)实现更全面的[expose](vue.html#expose)。
 - 这样组件就可以通过`ref.value.toggleAll` 进行消费。
 ```
@@ -73,7 +73,7 @@ const toggleAll = (options: CheckboxGroupToggleAllOptions = {}) => {
 useExpose<CheckboxGroupExpose>({ toggleAll })
 ```
 
-### render
+## render
 ```
 return () => (
   <div class={[bem.b(), props.direction && bem.m(props.direction)]}>

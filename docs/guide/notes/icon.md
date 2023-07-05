@@ -18,13 +18,13 @@ export type IconProps = ExtractPropTypes<typeof iconProps>
 
 ## setup
 
-### isImage
+## isImage
 - 判断是否图片链接
 ```
 const isImage = (name?: string) => name?.includes('/')
 const isImageIcon = isImage(name)
 ```
-### render
+## render
 ```
 return (
   <Badge

@@ -1,0 +1,80 @@
+:root {
+  --w-dropdown-menu-height: 48px;
+  --w-dropdown-menu-background: var(--w-background-2);
+  --w-dropdown-menu-shadow: 0 2px 12px rgba(100, 101, 102, 0.12);
+  --w-dropdown-menu-title-font-size: 15px;
+  --w-dropdown-menu-title-text-color: var(--w-text-color);
+  --w-dropdown-menu-title-active-text-color: var(--w-primary-color);
+  --w-dropdown-menu-title-disabled-text-color: var(--w-text-color-2);
+  --w-dropdown-menu-title-padding: 0 var(--w-padding-xs);
+  --w-dropdown-menu-title-line-height: var(--w-line-height-lg);
+  --w-dropdown-menu-option-active-color: var(--w-primary-color);
+  --w-dropdown-menu-content-max-height: 80%;
+}
+
+.w-dropdown-menu {
+  user-select: none;
+
+  &__bar {
+    position: relative;
+    display: flex;
+    height: var(--w-dropdown-menu-height);
+    background: var(--w-dropdown-menu-background);
+    box-shadow: var(--w-dropdown-menu-shadow);
+
+    &--opened {
+      z-index: calc(var(--w-dropdown-item-z-index) + 1);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    min-width: 0; // hack for flex ellipsis
+
+    &--disabled {
+      .w-dropdown-menu__title {
+        color: var(--w-dropdown-menu-title-disabled-text-color);
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: var(--w-dropdown-menu-title-padding);
+    color: var(--w-dropdown-menu-title-text-color);
+    font-size: var(--w-dropdown-menu-title-font-size);
+    line-height: var(--w-dropdown-menu-title-line-height);
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: -4px;
+      margin-top: -5px;
+      border: 3px solid;
+      border-color: transparent transparent var(--w-gray-4) var(--w-gray-4);
+      transform: rotate(-45deg);
+      opacity: 0.8;
+      content: '';
+    }
+
+    &--active {
+      color: var(--w-dropdown-menu-title-active-text-color);
+
+      &::after {
+        border-color: transparent transparent currentColor currentColor;
+      }
+    }
+
+    &--down {
+      &::after {
+        margin-top: -1px;
+        transform: rotate(135deg);
+      }
+    }
+  }
+}

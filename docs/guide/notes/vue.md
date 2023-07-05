@@ -1,6 +1,26 @@
 # Vue
 - 主要记录一些内置函数及API
 
+## PropType
+- 用于在用运行时 props 声明时给一个 prop 标注更复杂的类型定义。
+- 例子解析
+  - 提供一个比 `Object` 更具体的类型
+  - 提供一个比 `String` 更具体的类型
+```
+export type CellSize = 'normal' | 'large'
+interface Book {
+  title: string
+  author: string
+  year: number
+}
+
+export const props = {
+  ...
+  size: String as PropType<CellSize>,
+  book: Object as PropType<Book>
+}
+```
+
 ## ExtractPropTypes
 `ExtractPropTypes` 是 `Vue` 内置的函数，用于从组件属性的定义对象中提取出 `Props` 类型。[Loading 的 ExtractPropTypes](loading.md#props)
 
@@ -80,4 +100,40 @@ interface App {
 interface App {
   unmount(): void
 }
+```
+
+## ComponentPublicInstance
+- 表示组件实例公共接口
+- 第一个泛型参数表示组件 props 的类型
+- 第一个泛型参数表示组件数据的类型
+```
+ComponentPublicInstance<{}, any>
+```
+
+## inheritAttrs
+- 用于控制是否启用默认的组件 `attribute` 透传行为。
+- 默认情况下没有被子组件解析为 `props` 的 `attribute` 会作为 `HTML attribute` 挂载到根元素上。
+```
+interface ComponentOptions {
+  inheritAttrs?: boolean // 默认值：true
+}
+```
+
+## v-model
+```
+// 默认
+<CustomInput v-model="searchText"/>
+<CustomInput
+  :modelValue="searchText"
+  @update:modelValue="newValue => searchText = newValue"
+/>
+emit('update:modelValue', ×××)
+
+// 自定义绑定属性
+<MyComponent v-model:title="bookTitle" />
+<MyComponent 
+  :title="bookTitle"
+  @update:title="newValue => bookTitle = newValue" 
+/>
+$emit('update:title', ×××)
 ```

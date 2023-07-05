@@ -18,7 +18,7 @@ export type LoadingProps = ExtractPropTypes<typeof loadingProps>
 
 ## setup
 
-### spinnerStyle
+## spinnerStyle
 - 获取 `color`、`size` 样式
 ```
 const spinnerStyle = computed(() =>
@@ -26,7 +26,7 @@ const spinnerStyle = computed(() =>
 )
 ```
 
-### renderIcon
+## renderIcon
 - 根据`props`定义默认`icon`或者使用插槽的`icon`
 ```
 const renderIcon = () => {
@@ -42,7 +42,7 @@ const renderIcon = () => {
 }
 ```
 
-### SpinIcon & CircularIcon
+## SpinIcon & CircularIcon
 - 两种类型的加载默认样式
 ```
 onst SpinIcon: JSX.Element[] = Array(12)
@@ -56,7 +56,7 @@ const CircularIcon = (
 )
 ```
 
-### renderText
+## renderText
 - 默认插槽就是文字的插槽，如果定义了文字就执行
 ```
 const renderText = () => {
@@ -75,7 +75,7 @@ const renderText = () => {
   }
 }
 ```
-### render
+## render
 ```
 return () => {
   const { type, vertical } = props
