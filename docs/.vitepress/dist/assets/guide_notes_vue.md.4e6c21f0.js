@@ -1,0 +1,56 @@
+import{_ as a,o as s,c as n,O as e}from"./chunks/framework.ff144929.js";const A=JSON.parse('{"title":"Vue","description":"","frontmatter":{},"headers":[],"relativePath":"guide/notes/vue.md"}'),l={name:"guide/notes/vue.md"},t=e(`<h1 id="vue" tabindex="-1">Vue <a class="header-anchor" href="#vue" aria-label="Permalink to &quot;Vue&quot;">​</a></h1><ul><li>主要记录一些内置函数及API</li></ul><h2 id="proptype" tabindex="-1">PropType <a class="header-anchor" href="#proptype" aria-label="Permalink to &quot;PropType&quot;">​</a></h2><ul><li>用于在用运行时 props 声明时给一个 prop 标注更复杂的类型定义。</li><li>例子解析 <ul><li>提供一个比 <code>Object</code> 更具体的类型</li><li>提供一个比 <code>String</code> 更具体的类型</li></ul></li></ul><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">export type CellSize = &#39;normal&#39; | &#39;large&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;">interface Book {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  title: string</span></span>
+<span class="line"><span style="color:#A6ACCD;">  author: string</span></span>
+<span class="line"><span style="color:#A6ACCD;">  year: number</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">export const props = {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  ...</span></span>
+<span class="line"><span style="color:#A6ACCD;">  size: String as PropType&lt;CellSize&gt;,</span></span>
+<span class="line"><span style="color:#A6ACCD;">  book: Object as PropType&lt;Book&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span></code></pre></div><h2 id="extractproptypes" tabindex="-1">ExtractPropTypes <a class="header-anchor" href="#extractproptypes" aria-label="Permalink to &quot;ExtractPropTypes&quot;">​</a></h2><p><code>ExtractPropTypes</code> 是 <code>Vue</code> 内置的函数，用于从组件属性的定义对象中提取出 <code>Props</code> 类型。<a href="./loading.html#props">Loading 的 ExtractPropTypes</a></p><h2 id="cssproperties" tabindex="-1">CSSProperties <a class="header-anchor" href="#cssproperties" aria-label="Permalink to &quot;CSSProperties&quot;">​</a></h2><p>用于扩展在样式属性绑定上允许的值的类型。<a href="./badge.html#style-computed">Badge 的 CSSProperties</a></p><h2 id="computedref" tabindex="-1">ComputedRef <a class="header-anchor" href="#computedref" aria-label="Permalink to &quot;ComputedRef&quot;">​</a></h2><p>响应式对象函数类型<a href="./row.html#row-key">用法</a></p><h2 id="injectionkey-provide" tabindex="-1">InjectionKey &amp;&amp; provide <a class="header-anchor" href="#injectionkey-provide" aria-label="Permalink to &quot;InjectionKey &amp;&amp; provide&quot;">​</a></h2><p>InjectionKey 类型是一个用于创建注入键（也称为依赖项注入）的工具，它可以确保提供和注入的对象类型相匹配。</p><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">export interface TreeContext {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  slots: SetupContext[&#39;slots&#39;]</span></span>
+<span class="line"><span style="color:#A6ACCD;">  // emit: SetupContext&lt;typeof treeEmitts&gt;[&#39;emit&#39;]</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span>
+<span class="line"><span style="color:#A6ACCD;">// 此变量作为提供出去的属性</span></span>
+<span class="line"><span style="color:#A6ACCD;">export const treeInjectKey: InjectionKey&lt;TreeContext&gt; = Symbol()</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">provide(treeInjectKey, {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  slots: useSlots()</span></span>
+<span class="line"><span style="color:#A6ACCD;">})</span></span></code></pre></div><h2 id="componentinternalinstance" tabindex="-1">ComponentInternalInstance <a class="header-anchor" href="#componentinternalinstance" aria-label="Permalink to &quot;ComponentInternalInstance&quot;">​</a></h2><p>其是一个内部类型，用于表示组件实例。</p><h2 id="expose" tabindex="-1">expose <a class="header-anchor" href="#expose" aria-label="Permalink to &quot;expose&quot;">​</a></h2><ul><li>可以暴露组件内部的数据或方法</li><li>不可以暴露<code>props</code></li><li><a href="./hooks.html#use-expose-ts">expose hooks</a></li></ul><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">// expose</span></span>
+<span class="line"><span style="color:#A6ACCD;">setup(props, {expose}) {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  name: &#39;w-checkbox&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  const toggle = () =&gt; {}</span></span>
+<span class="line"><span style="color:#A6ACCD;">  expose({toggle})</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">...</span></span>
+<span class="line"><span style="color:#A6ACCD;">// 使用</span></span>
+<span class="line"><span style="color:#A6ACCD;">const checkboxRef = ref()</span></span>
+<span class="line"><span style="color:#A6ACCD;">const toggle = () =&gt; {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  checkboxRef.value.toggle()</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">&lt;w-checkbox ref=&quot;checkboxRef&quot; v-model=&quot;checked&quot;&gt;复选框&lt;/w-checkbox&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">&lt;w-button @click=&quot;toggle&quot;&gt;toggle&lt;/w-button&gt;</span></span></code></pre></div><h2 id="getcurrentinstance" tabindex="-1">getCurrentInstance <a class="header-anchor" href="#getcurrentinstance" aria-label="Permalink to &quot;getCurrentInstance&quot;">​</a></h2><ul><li>用于获取当前组件实例，可以在组件的任何地方调用。</li><li>返回一个组件实例对象，包含了当前组件实例的所有属性和方法。</li></ul><h2 id="watchsource" tabindex="-1">WatchSource <a class="header-anchor" href="#watchsource" aria-label="Permalink to &quot;WatchSource&quot;">​</a></h2><ul><li>是一个泛型接口，用于表示可以作为监视器的值的类型。</li></ul><h2 id="createapp" tabindex="-1">createApp <a class="header-anchor" href="#createapp" aria-label="Permalink to &quot;createApp&quot;">​</a></h2><ul><li>创建一个应用实例。</li><li>第一个参数是根组件。第二个参数可选，它是要传递给根组件的 props。</li></ul><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">function createApp(rootComponent: Component, rootProps?: object): App</span></span></code></pre></div><h2 id="app-mount" tabindex="-1">app.mount <a class="header-anchor" href="#app-mount" aria-label="Permalink to &quot;app.mount&quot;">​</a></h2><ul><li>将应用实例挂载在一个容器元素中。</li></ul><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">interface App {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  mount(rootContainer: Element | string): ComponentPublicInstance</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span></code></pre></div><h2 id="app-unmount" tabindex="-1">app.unmount <a class="header-anchor" href="#app-unmount" aria-label="Permalink to &quot;app.unmount&quot;">​</a></h2><ul><li>卸载一个已挂载的应用实例。卸载一个应用会触发该应用组件树内所有组件的卸载生命周期钩子。</li></ul><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">interface App {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  unmount(): void</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span></code></pre></div><h2 id="componentpublicinstance" tabindex="-1">ComponentPublicInstance <a class="header-anchor" href="#componentpublicinstance" aria-label="Permalink to &quot;ComponentPublicInstance&quot;">​</a></h2><ul><li>表示组件实例公共接口</li><li>第一个泛型参数表示组件 props 的类型</li><li>第一个泛型参数表示组件数据的类型</li></ul><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">ComponentPublicInstance&lt;{}, any&gt;</span></span></code></pre></div><h2 id="inheritattrs" tabindex="-1">inheritAttrs <a class="header-anchor" href="#inheritattrs" aria-label="Permalink to &quot;inheritAttrs&quot;">​</a></h2><ul><li>用于控制是否启用默认的组件 <code>attribute</code> 透传行为。</li><li>默认情况下没有被子组件解析为 <code>props</code> 的 <code>attribute</code> 会作为 <code>HTML attribute</code> 挂载到根元素上。</li></ul><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">interface ComponentOptions {</span></span>
+<span class="line"><span style="color:#A6ACCD;">  inheritAttrs?: boolean // 默认值：true</span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span></code></pre></div><h2 id="v-model" tabindex="-1">v-model <a class="header-anchor" href="#v-model" aria-label="Permalink to &quot;v-model&quot;">​</a></h2><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki material-theme-palenight"><code><span class="line"><span style="color:#A6ACCD;">// 默认</span></span>
+<span class="line"><span style="color:#A6ACCD;">&lt;CustomInput v-model=&quot;searchText&quot;/&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">&lt;CustomInput</span></span>
+<span class="line"><span style="color:#A6ACCD;">  :modelValue=&quot;searchText&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  @update:modelValue=&quot;newValue =&gt; searchText = newValue&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;">/&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">emit(&#39;update:modelValue&#39;, ×××)</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">// 自定义绑定属性</span></span>
+<span class="line"><span style="color:#A6ACCD;">&lt;MyComponent v-model:title=&quot;bookTitle&quot; /&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">&lt;MyComponent </span></span>
+<span class="line"><span style="color:#A6ACCD;">  :title=&quot;bookTitle&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;">  @update:title=&quot;newValue =&gt; bookTitle = newValue&quot; </span></span>
+<span class="line"><span style="color:#A6ACCD;">/&gt;</span></span>
+<span class="line"><span style="color:#A6ACCD;">$emit(&#39;update:title&#39;, ×××)</span></span></code></pre></div>`,40),o=[t];function p(c,i,r,u,C,d){return s(),n("div",null,o)}const y=a(l,[["render",p]]);export{A as __pageData,y as default};

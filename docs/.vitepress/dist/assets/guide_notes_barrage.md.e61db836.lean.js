@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,O as l}from"./chunks/framework.ff144929.js";const d=JSON.parse('{"title":"Barrage","description":"","frontmatter":{},"headers":[],"relativePath":"guide/notes/barrage.md"}'),p={name:"guide/notes/barrage.md"},e=l("",31),o=[e];function t(c,r,C,i,A,y){return a(),n("div",null,o)}const F=s(p,[["render",t]]);export{d as __pageData,F as default};

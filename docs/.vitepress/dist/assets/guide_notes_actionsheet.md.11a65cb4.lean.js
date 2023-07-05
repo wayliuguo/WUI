@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,O as l}from"./chunks/framework.ff144929.js";const F=JSON.parse('{"title":"ActionSheet","description":"","frontmatter":{},"headers":[],"relativePath":"guide/notes/actionsheet.md"}'),p={name:"guide/notes/actionsheet.md"},o=l("",33),e=[o];function c(t,r,D,C,A,y){return n(),a("div",null,e)}const d=s(p,[["render",c]]);export{F as __pageData,d as default};

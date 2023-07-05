@@ -1,1 +1,0 @@
-import{_ as s,o as n,c as a,O as o}from"./chunks/framework.4015372c.js";const y=JSON.parse('{"title":"工程搭建","description":"","frontmatter":{},"headers":[],"relativePath":"guide/notes/project.md"}'),p={name:"guide/notes/project.md"},e=o("",16),l=[e];function t(c,i,r,u,C,A){return n(),a("div",null,l)}const m=s(p,[["render",t]]);export{y as __pageData,m as default};
