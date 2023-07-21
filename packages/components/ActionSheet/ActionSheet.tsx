@@ -75,7 +75,7 @@ export default defineComponent({
 
   setup(props, { slots, emit }) {
     // 更新显示状态
-    const updateShow = (show: Boolean) => emit('update:show', show)
+    const updateShow = (show: boolean) => emit('update:show', show)
 
     // 取消选择
     const onCancel = () => {

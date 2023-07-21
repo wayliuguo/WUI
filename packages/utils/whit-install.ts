@@ -15,7 +15,7 @@ export type WithInstall<T> = T & {
 } & EventShim
 
 export function withInstall<T extends Component>(options: T) {
-  ;(options as Record<string, unknown>).install = (app: App) => {
+  (options as Record<string, unknown>).install = (app: App) => {
     const { name } = options
     if (name) {
       app.component(name, options)
